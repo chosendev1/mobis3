@@ -1,0 +1,6 @@
+  <input type="text" name="dob" id="datepicker4" class="form-control">
+<script language="javascript">
+	xajax_addCustForm();
+	//alert(1);
+</script>
+

@@ -1,0 +1,179 @@
+<?php date_default_timezone_set("Africa/Kampala"); ?>
+<?php 
+	require_once("ussdOperations.php"); 
+	$ussdOps = new ussdOperations();
+?>
+<?php
+ $headers = getallheaders();
+// print_r($headers); exit;
+ if(/*trim($headers['Authorization']) == "Basic ".sha1("ensibuuko:ensibuuko123")*/true)
+ {
+		 //ini_set("show_warnings", "on");
+		 $json=file_get_contents('php://input'); //getting the file input
+		 //$json = json_encode(array("routine"=>"ValidateSaccoIdRequest","variables"=>array("saccoID"=>25)));
+		 //$json = '{"routine":"PaymentNotification","variables":{"DepositRequest":"32","status":1,"description":"SUCCESS","phone":"256757934070","reference":"269080151"}}';
+		 //$json = '{"routine":"PaymentNotification","variables":{"DepositRequest":"34","status":1,"description":"SUCCESS","phone":"256782157074","reference":"269405726"}}';
+		 $fp = fopen("lipa_mobile_log.txt","a");
+		 fwrite($fp, $_SERVER['REMOTE_ADDR']."- ".$json."- ".date("Y-m-d H:i:s")."\r\n");
+		 fclose($fp);
+
+		 $response = array();
+		 
+		 $params = json_decode($json,true);
+		 switch($params['routine'])
+		 {
+			 //Validates Sacco ID {"routine":"ValidateSaccoIdRequest",variables":["saccoID":"x"]}
+			 case 'ValidateSaccoIdRequest': $sacco_status = ($ussdOps->SACCOCodeExists($params['variables']['saccoID']) ? "1" : "0");
+			 								$sacco_name = "";
+			 								if($sacco_status == "1")
+											{
+												$sacco = $ussdOps->getSACCO($params['variables']['saccoID']);
+												$sacco_name = trim($sacco['companyName']);
+											}
+											$response[] = array("routine"=>"ValidateSaccoIdResponse","variables"=>array("status"=>$sacco_status,"remarks"=>str_replace("&","AND",$sacco_name)));
+											break;
+			 //Validate Account Number {"routine":"ValidateAccNumberRequest","variables":["saccoID":"x",.accNumber.:.xx.]}
+			 case 'ValidateAccNumberRequest': //Connect to SaccoDB
+			 								  $ussdOps->connectNewDB($params['variables']['saccoID']);
+											  if($ussdOps->isValidAccount(strtoupper($params['variables']['accNumber'])))
+											  {
+			 								  	$response[] = array("routine"=>"ValidateAccNumberResponse","variables"=>array("status"=>"1","remarks"=>$ussdOps->member_name($params['variables']['accNumber'])));
+											  } else
+											  {
+												 $response[] = array("routine"=>"ValidateAccNumberResponse","variables"=>array("status"=>"0","remarks"=>"Please try again")); 
+											  }
+											  break;
+			 //Deposit Request {"routine":"DepositMoneyRequest","variables":["saccoID":"x",.accNumber.:.xx.,"":"",.amount.:.xxx.]}
+			 case 'DepositMoneyRequest': $log_rqst = mysql_query("insert into deposit_request (sacco, acc_number, amount, rqst_date) values ('".mysql_real_escape_string($params['variables']['saccoID'])."', '".mysql_real_escape_string($params['variables']['accNumber'])."', '".mysql_real_escape_string($params['variables']['amount'])."', '".date("Y-m-d H:i:s")."')");
+			 							 if($log_rqst)
+										 {
+											 $response[] = array("routine"=>"DepositMoneyResponse","variables"=>array("status"=>"1","remarks"=>$ussdOps->member_name($params['variables']['accNumber'])." DEPOSIT","DepositRequestID"=>mysql_insert_id()));
+										 } else
+										 {
+											$response[] = array("routine"=>"DepositMoneyResponse","variables"=>array("status"=>"0","remarks"=>"Please try again","DepositRequestID"=>"")); 
+										 }
+										 break;
+			 
+			 //Withdraw Request {"routine":"WithdrawRequest","variables":["saccoID":"x","accNumber":"xx","pin":"xxx","amount":"xxx"]}
+			 case 'WithdrawMoneyRequest': $log_rqst = mysql_query("insert into withdraw_request (sacco, acc_number, amount, rqst_date) values ('".mysql_real_escape_string($params['variables']['saccoID'])."', '".mysql_real_escape_string($params['variables']['accNumber'])."', '".mysql_real_escape_string($params['variables']['amount'])."', '".date("Y-m-d H:i:s")."')");
+			 							 if($log_rqst)
+										 {
+											 $rqst_id = mysql_insert_id();
+											 $ussdOps->connectNewDB($params['variables']['saccoID']);
+								   			 if($ussdOps->evaluatePin($params['variables']['pin'], $params['variables']['accNumber']))
+								   			 {
+												$response[] = array("routine"=>"WithdrawMoneyResponse","variables"=>array("status"=>"1","remarks"=>$ussdOps->member_name($params['variables']['accNumber'])." WITHDRAW","WithdrawRequestID"=>$rqst_id)); 
+								   			 } else
+											 {
+												 $response[] = array("routine"=>"WithdrawMoneyResponse","variables"=>array("status"=>"0","remarks"=>"Invalid PIN entered.","WithdrawRequestID"=>"")); 
+											 }
+			 
+										 } else
+										 {
+											$response[] = array("routine"=>"WithdrawMoneyResponse","variables"=>array("status"=>"0","remarks"=>"Please try again","WithdrawRequestID"=>"")); 
+										 }
+										  break;
+			 //Notification for Suczcessful Payment {"routine":"SuccessfulPaymentNotification","variables":["DepositRequestID":"x",.status.:.xxxx.,.description.:.xxx.,.phone.:.256xxx.,.reference.:.xxx.]}
+			 case 'PaymentNotification':
+			 case 'SuccessfulPaymentNotification': if($ussdOps->deposit_request_exists($params['variables']['DepositRequest']))
+			 									   {
+													  switch($params['variables']['status'])
+													  {
+														  case 1: $n = mysql_query("update deposit_request set phone_no='".mysql_real_escape_string($params['variables']['phone'])."', `status` = 'successful' where id = '".mysql_real_escape_string($params['variables']['DepositRequest'])."' and `status` = 'pending'");
+														  					 if(mysql_affected_rows() > 0)
+																			 {
+																				 $response[] = array("routine"=>"PaymentNotification","variables"=>array("status"=>1,"remarks"=>"PAYMENT SUCCESFUL"));
+																				 //Start Deposit on System
+																				 $fields = mysql_fetch_assoc(mysql_query("select * from deposit_request where id = '".mysql_real_escape_string($params['variables']['DepositRequest'])."'"));
+																				 //Connect DB
+																				 $ussdOps->connectNewDB($fields['sacco']);
+																				 //Run Deposit
+																				 $ussdOps->deposit($fields['acc_number'],$fields['amount'],$params['variables']['phone']);
+																				 $response[] = array("routine"=>"PaymentNotification","variables"=>array("status"=>"1","remarks"=>"DEPOSIT SUCCESSFULLY LOGGED"));
+																			 } 
+																			 else
+																			 {
+																				 $response[] = array("routine"=>"PaymentNotification","variables"=>array("status"=>"0","remarks"=>"DUPLICATE NOTIFICATION"));
+																			 }
+														  				    break;
+														  case 0: $n = mysql_query("update deposit_request set phone_no='".mysql_real_escape_string($params['variables']['phone'])."', `status` = 'failed' where id = '".mysql_real_escape_string($params['variables']['DepositRequest'])."' and `status` = 'pending'");
+														  		  $response[] = array("routine"=>"PaymentNotification","variables"=>array("status"=>"0","remarks"=>"Deposit failed."));
+													  }
+			 									   } 
+												   else
+												   {
+													   $response[] = array("routine"=>"PaymentNotification","variables"=>array("status"=>"0","remarks"=>"Please try again"));
+												   }
+												   break;
+			  //{"routine":"CheckBalance","variables":["saccoID":"x","accNumber":"xx","pin":"xxxxx"]}
+			  case 'CheckBalance': $ussdOps->connectNewDB($params['variables']['saccoID']);
+								   if($ussdOps->evaluatePin($params['variables']['pin'], $params['variables']['accNumber']))
+								   {
+			 							//$bal = $ussdOps->checkBalance($params['variables']['accNumber']);
+										//$response[] = array("routine"=>"CheckBalance","variables"=>array("status"=>"1","remarks"=>"Dear ".$ussdOps->member_name($params['variables']['accNumber']).", your savings balance is: ".(/*is_numeric($bal) ? number_format($bal)." UGX" : $bal*/(12894+4000))));
+										$response[] = array("routine"=>"CheckBalance","variables"=>array("status"=>"1","remarks"=>"Dear ".$ussdOps->member_name($params['variables']['accNumber']).", your savings balance is: ".$ussdOps->checkBalance($params['variables']['accNumber'])));
+								   } 
+								   else
+								   {
+										$response[] = array("routine"=>"CheckBalance","variables"=>array("status"=>"0","remarks"=>"Invalid PIN")); 
+								   }
+									break;
+			  case 'miniStatement': $ussdOps->connectNewDB($params['variables']['saccoID']);
+								   if($ussdOps->evaluatePin($params['variables']['pin'], $params['variables']['accNumber']))
+								   {
+			 							//Transactions
+										$transacts = array();
+										//Deposits
+										$deposits = mysql_query("SELECT deposit.amount AS d_amount, deposit.date AS d_date FROM deposit /*where deposit.memaccount_id = '".getMemAccountId($params['variables']['accNumber'])."'*/ order by deposit.date desc limit 5");
+										if(mysql_num_rows($deposits) > 0)
+										{
+											$deposits_ = mysql_fetch_assoc($deposits);
+											do
+											{
+												
+												$transacts[] = array("type"=>"D", "date"=>$deposits_['d_date'],"amount"=>$deposits_['d_amount']);
+											} while ($deposits_ = mysql_fetch_assoc($deposits));
+											
+										} 
+										else
+										{
+											$withdrawals = mysql_query("SELECT withdrawal.memaccount_id AS w_member, withdrawal.amount AS w_amount, withdrawal.date AS w_date FROM withdrawal where withdrawal.memaccount_id = '' order by withdrawal.date desc LIMIT 5");
+											if(mysql_num_rows($withdrawals) > 0)
+											{
+												$withdrawals_ = mysql_fetch_assoc($withdrawals);
+												do
+												{
+													$transacts[] = array("type"=>"W", "date"=>$withdrawals_['w_date'],"amount"=>$withdrawals_['w_amount']);
+												} while ($withdrawals_ = mysql_fetch_assoc($withdrawals));
+											}
+										}
+										
+										$temp = ""; $x=1;
+										foreach($transacts as $u)
+										{
+											$temp .= $x++.". ".$u['type']." - ".number_format($u['amount'])." - ".date("D jS M, Y", strtotime($u['date'])).chr(13);
+										}
+										
+										$response[] = array("routine"=>"miniStatement","variables"=>array("status"=>"1","remarks"=>$temp));
+										//$response[] = array("routine"=>"miniStatement","variables"=>array("status"=>"1","remarks"=>"1. D - 500 - 2nd-Dec-2015".chr(13)."2. D - 500 - 2nd-Dec-2015".chr(13)."3. D - 500 - 2nd-Dec-2015".chr(13)."4. D - 500 - 2nd-Dec-2015".chr(13)."5. D - 600 - 2nd-Dec-2015"));
+								   } 
+								   else
+								   {
+										$response[] = array("routine"=>"miniStatement","variables"=>array("status"=>"0","remarks"=>"Invalid PIN")); 
+								   }
+									break;
+			 									   
+		 }
+		 
+		 header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+       	 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past to avoid caching
+       	 header("Content-type: application/json; charset=utf-8");
+	   	 echo json_encode($response);
+	   	 exit;
+ }
+ else
+ {
+	 header("HTTP/1.1 500 Internal Server Error");
+	 exit;
+ }
+?>

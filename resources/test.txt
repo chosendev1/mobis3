@@ -1,0 +1,1104 @@
+select ussdString from ussdsessions where transactionId=23075225select companyName from craneapp_mobis.company where companyId=25select ussdString from ussdsessions where transactionId=23075225select companyName from craneapp_mobis.company where companyId=25select ussdString from ussdsessions where transactionId=23075225select companyName from craneapp_mobis.company where companyId=25select ussdString from ussdsessions where transactionId=23075225select companyName from craneapp_mobis.company where companyId=25select ussdString from ussdsessions where transactionId=23075225select companyName from craneapp_mobis.company where companyId=25select id from member where mem_no='AD1001'select branch_id from member where id=2select id from bank_account where bank='MTN MOBILE MONEY'select id from member where mem_no=AD1001select mem_id from mem_accounts where id=AD1001select ussdString from ussdsessions where transactionId=14375698058433945select companyName from craneapp_mobis.company where companyId=25select ussdString from ussdsessions where transactionId=14375698058433945select companyName from craneapp_mobis.company where companyId=25select ussdString from ussdsessions where transactionId=14375698058433945select companyName from craneapp_mobis.company where companyId=25select ussdString from ussdsessions where transactionId=14375698058433945select companyName from craneapp_mobis.company where companyId=25select id from member where mem_no='ad1033'
+select ussdString from ussdsessions where transactionId=51177463
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=51177463
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=51177463
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=51177463
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=51177463
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=51177463
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select id from member where mem_no='AD1002'
+
+select id from member where mem_no='AD1001'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=44190088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=44190088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375702740056507
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=44190088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=44190088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=44190088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select id from member where mem_no='AD1001'
+
+select mem_id from mem_accounts where id=AD1001
+
+select ussdString from ussdsessions where transactionId=14375702740056507
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375702740056507
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375702740056507
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375702740056507
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375702740056507
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select id from member where mem_no='AD1002'
+
+select id from member where mem_no='AD1001'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=13211482
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=13211482
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=13211482
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=13211482
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=13211482
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=13211482
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select id from member where mem_no='AD1003'
+
+select id from member where mem_no='AD1001'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=14375710825564790
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375710825564790
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375710825564790
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375710825564790
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1001'
+
+select ussdString from ussdsessions where transactionId=14375719317716994
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375719317716994
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375719317716994
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375719317716994
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14375719317716994
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=48272141
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=48272141
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=48272141
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=48272141
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1002'
+
+select ussdString from ussdsessions where transactionId=23514025
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=23514025
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=23514025
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=23514025
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1037'
+
+select ussdString from ussdsessions where transactionId=18546090
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=18546090
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=18546090
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=18546090
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1035'
+
+select ussdString from ussdsessions where transactionId=6888154
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=6888154
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10213097
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10213097
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10213097
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10213097
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1022'
+
+select ussdString from ussdsessions where transactionId=38248959
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=38248959
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=38248959
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=38248959
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1002'
+
+select ussdString from ussdsessions where transactionId=27468547
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=27468547
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376280349163838
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376280349163838
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376280349163838
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376280349163838
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376280349163838
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376280349163838
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1001'
+
+select id from member where mem_no='Ad1002'
+
+select id from member where mem_no='Ad1001'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=14376281779687126
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376281779687126
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376281779687126
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376281779687126
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376281779687126
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376281779687126
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1001'
+
+select id from member where mem_no='Ad1003'
+
+select id from member where mem_no='Ad1001'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=14376282827154592
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376282827154592
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376283555441088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376283555441088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376283555441088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376283555441088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376283555441088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376283555441088
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1001'
+
+select id from member where mem_no='Ad1003'
+
+select id from member where mem_no='Ad1001'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=14376284721748897
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376284721748897
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376284721748897
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376284721748897
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376284721748897
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select id from member where mem_no='AD1001'
+
+select mem_id from mem_accounts where id=AD1001
+
+select ussdString from ussdsessions where transactionId=20570742
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=20570742
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=20570742
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=20570742
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1039'
+
+select ussdString from ussdsessions where transactionId=14376405218433225
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376406331686771
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376406331686771
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10131193
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10131193
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10131193
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10131193
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10131193
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1001'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select id from member where mem_no='Ad1001'
+
+select mem_id from mem_accounts where id=Ad1001
+
+select ussdString from ussdsessions where transactionId=14376487003605513
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376487003605513
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376487003605513
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376487003605513
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376487003605513
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14376487003605513
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select id from member where mem_no='ad1002'
+
+select id from member where mem_no='AD1001'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=56394571
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=56394571
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=56394571
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=56394571
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=56394571
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=56394571
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select id from member where mem_no='AD1002'
+
+select id from member where mem_no='AD1001'
+
+select tel_no from member where mem_no='AD1002'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=39403350
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=39403350
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=39403350
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=39403350
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=39403350
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=39403350
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select id from member where mem_no='AD1002'
+
+select id from member where mem_no='AD1001'
+
+select tel_no from member where mem_no='AD1002'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=35603649
+
+select companyName from craneapp_mobis.company where companyId=AD 1040
+
+select ussdString from ussdsessions where transactionId=35603649
+
+select companyName from craneapp_mobis.company where companyId=AD 1040
+
+select ussdString from ussdsessions where transactionId=35603649
+
+select companyName from craneapp_mobis.company where companyId=AD 1040
+
+select ussdString from ussdsessions where transactionId=6649393
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=6649393
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=6649393
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=6649393
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1001'
+
+select ussdString from ussdsessions where transactionId=20872851
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=20872851
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=20872851
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=40878342
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=40878342
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=40878342
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=40878342
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1002'
+
+select ussdString from ussdsessions where transactionId=46131903
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=46131903
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=46131903
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=132985
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=46131903
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select ussdString from ussdsessions where transactionId=132985
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=132985
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=132985
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=132985
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=132985
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1001'
+
+select id from member where mem_no='Ad1003'
+
+select id from member where mem_no='Ad1001'
+
+select tel_no from member where mem_no='Ad1003'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=54572618
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14377274434393683
+
+select companyName from craneapp_mobis.company where companyId=2
+
+select ussdString from ussdsessions where transactionId=14377274434393683
+
+select companyName from craneapp_mobis.company where companyId=2
+
+select ussdString from ussdsessions where transactionId=14377274434393683
+
+select companyName from craneapp_mobis.company where companyId=2
+
+select ussdString from ussdsessions where transactionId=35663649
+
+select companyName from craneapp_mobis.company where companyId=1
+
+select ussdString from ussdsessions where transactionId=35663649
+
+select companyName from craneapp_mobis.company where companyId=1
+
+select ussdString from ussdsessions where transactionId=50681605
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=50681605
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=50681605
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=42712896
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=42712896
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=42712896
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=42712896
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1006'
+
+select ussdString from ussdsessions where transactionId=14377750171413083
+
+select companyName from craneapp_mobis.company where companyId=16
+
+select ussdString from ussdsessions where transactionId=14378035736327083
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378035736327083
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378035736327083
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378035736327083
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1042'
+
+select ussdString from ussdsessions where transactionId=14378074810475702
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378074810475702
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378074810475702
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378074810475702
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1043'
+
+select ussdString from ussdsessions where transactionId=14378094695632310
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378094695632310
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378107293252497
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378107293252497
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378107293252497
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378108025934630
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378108025934630
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378108025934630
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378162783156021
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378162783156021
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378162783156021
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378162783156021
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378162783156021
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378162783156021
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1001'
+
+select id from member where mem_no='Ad1002'
+
+select id from member where mem_no='Ad1001'
+
+select tel_no from member where mem_no='Ad1002'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=14378164036889789
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378164036889789
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378164036889789
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378164036889789
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378164036889789
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378164036889789
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1001'
+
+select id from member where mem_no='Ad1002'
+
+select id from member where mem_no='Ad1001'
+
+select tel_no from member where mem_no='Ad1002'
+
+select branch_id from member where id=2
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select ussdString from ussdsessions where transactionId=3226987
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=3226987
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=3226987
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=3226987
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1041'
+
+select ussdString from ussdsessions where transactionId=31233922
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=31233922
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=31233922
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=31233922
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=31233922
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1041'
+
+select branch_id from member where id=42
+
+select id from bank_account where bank='MTN MOBILE MONEY'
+
+select id from member where mem_no='Ad1041'
+
+select mem_id from mem_accounts where id=Ad1041
+
+select ussdString from ussdsessions where transactionId=10277016
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10277016
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=10277016
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=43290237
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=43290237
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=43290237
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=43290237
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=57324224
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=57324224
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=57324224
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=57324224
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='Ad1024'
+
+select ussdString from ussdsessions where transactionId=14378460726501083
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14378463349504192
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=14379013160013743
+
+select companyName from craneapp_mobis.company where companyId=2
+
+select ussdString from ussdsessions where transactionId=14379013160013743
+
+select companyName from craneapp_mobis.company where companyId=2
+
+select ussdString from ussdsessions where transactionId=14379013160013743
+
+select companyName from craneapp_mobis.company where companyId=2
+
+select ussdString from ussdsessions where transactionId=41866176
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=871718
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=871718
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=4880497
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=4880497
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=4880497
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=4880497
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1033'
+
+select ussdString from ussdsessions where transactionId=12906689
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=12906689
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=12906689
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=12906689
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1033'
+
+select ussdString from ussdsessions where transactionId=49094759
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=49094759
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=49094759
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=49094759
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select ussdString from ussdsessions where transactionId=107878
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=107878
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=107878
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select ussdString from ussdsessions where transactionId=107878
+
+select companyName from craneapp_mobis.company where companyId=25
+
+select id from member where mem_no='AD1001'
+
+select ussdString from ussdsessions where transactionId=14379386732713132
+
+select companyName from craneapp_mobis.company where companyId=0000
+
+select ussdString from ussdsessions where transactionId=14379386732713132
+
+select companyName from craneapp_mobis.company where companyId=0000
+
+select ussdString from ussdsessions where transactionId=14379386732713132
+
+select companyName from craneapp_mobis.company where companyId=0000

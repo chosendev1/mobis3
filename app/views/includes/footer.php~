@@ -1,0 +1,11 @@
+  </div>
+            <!--/ END Template Container -->
+ <!-- START To Top Scroller -->
+            <a href="#" class="totop animation" data-toggle="waypoints totop" data-showanim="bounceIn" data-hideanim="bounceOut" data-offset="50%"><i class="ico-angle-up"></i></a>
+            <!--/ END To Top Scroller -->
+        </section>
+        <!--/ END Template Main -->
+        
+<?php
+//include_once('chat.php');
+?>

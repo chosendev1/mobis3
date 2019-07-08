@@ -1,0 +1,18 @@
+<?php
+class export extends CI_Controller{
+	public function __construct(){
+		parent::__construct();
+	}
+	
+	public function index(){
+		echo("Access Denied!");
+	}
+	
+	public function customers(){
+		//include_once("resources/exports/list_members.php");
+		$data['type'] = $_GET['type'];
+		$this->load->view("includes/headerReport",$data);
+		$this->load->view("exports/list_members",$data);
+	}
+}
+?>

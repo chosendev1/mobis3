@@ -1,0 +1,73 @@
+<?php
+
+if(!isset($_GET['format']))
+echo("<head>
+	<title>LIST OF CLEARED LOANS</title>
+		<style>
+.headings{ color:#ffffff; background-color:#00008b;}
+	</style>
+	</head><body>");
+//LIST CLEARED LOANS
+function list_cleared($cust_name, $cust_no, $account_name, $loan_officer, $from_year, $from_month, $from_mday, $to_year, $to_month, $to_mday, $format,$branch_id){
+	$calc = new Date_Calc();
+	$branch_res = mysql_query("select * from branch");
+	$branch = mysql_fetch_array($branch_res);
+	$branch_ = ($branch_id=='all'||$branch_id=='')?NULL:"and d.branch_id=".$branch_id;
+	$content .= "<center><p><font color=#00008b size=4pt><b>".$branch['branch_name']."</b></font></p></center>";
+	$content .= "<center><font color=#00008b size=3pt><b>LIST OF CLEARED LOANS</b></font></center><table height=100 border='0' cellpadding='0' cellspacing='0' style='border-collapse: collapse' bordercolor='#111111' width='80%' id='AutoNumber2' align=center><tr><td>
+		<table height=100 border='1' cellpadding='0' cellspacing='1' style='border-collapse: collapse' bordercolor='#111111' width='80%' id='AutoNumber2' align=center>";
+	if($from_year==''){
+		$content .= "<tr bgcolor=lightgrey><td><center><font color=red>Please select the Cleared loans you would like to list!</font></center></td></tr></table></td></tr></table>";
+	}
+	$name = ($cust_name == 'All') ? "" : $cust_name;
+	$mem_no = ($cust_no == 'All') ? "" : $cust_no;
+	$from_date = sprintf("%d-%02d-%02d 00:00:00", $from_year, $from_month, $from_mday);
+	$to_date = sprintf("%d-%02d-%02d 23:59:59", $to_year, $to_month, $to_mday);
+	if($loan_officer >0)
+		$officer = "o.id='".$loan_officer."'";
+	else
+		$officer = "o.id > 0";
+	
+	$sth = mysql_query("select d.id as id, applic.id as applic_id, m.first_name as first_name, m.last_name as last_name, m.mem_no as mem_no, o.first_name as of_first_name, o.last_name as of_last_name, a.account_no as account_no, a.name as account_name, d.id as id, d.amount as amount, d.date as date, d.balance as balance, (d.period/30) as loan_period,  DATEDIFF(d.last_pay_date, d.date) as actual_days from disbursed d join loan_applic applic on d.applic_id=applic.id join member m on applic.mem_id=m.id join loan_product p on applic.product_id=p.id join accounts a on p.account_id= a.id join officer o on applic.officer_id=o.id where (m.first_name like '%".$name."%' or m.last_name like '%".$name."%') and m.mem_no like '%".$mem_no."%' and a.name like '%".$account_name."%' and ".$officer." and d.date >= '".$from_date."' and d.date <='".$to_date."' and d.balance <=0 ".$branch_." order by o.first_name, o.last_name ");
+	
+	if(@ mysql_numrows($sth) == 0){
+		$content .= "<tr bgcolor=lightgrey><td><center><font color=red>No cleared loans in your search options</font></center></td></tr></table></td></tr></table>";
+	}
+	
+	$former_officer ="";
+	$i=$stat+1;
+	while($row = mysql_fetch_array($sth)){
+		$officer = $row['of_first_name']." ".$row['of_last_name'];
+		if(strcmp($former_officer, $officer) != 0){
+			$content .="<tr class='headings'><td colspan=16><b>Loan Officer:  ".$officer."</b></td></tr> <tr class='headings'><td><b>No</b></td><td><b>Date</b></td><td><b>MemberNo</b></td><td><b>Member Name</b></td><td><b>Product</b></td><td><b>Amount</b></td><td><b>Total Interest Paid</b></td><td><b>Total Penalties Paid</b></td><td><b>Loan Period Awarded</b></td><td><b>Actual Period Taken</b></td></tr>";
+			$former_officer = $officer;
+		}
+		//INTEREST
+		$int_res = mysql_query("select sum(int_amt) as int_amt from payment where loan_id='".$row['id']."'");
+		$int = mysql_fetch_array($int_res);
+		//PENALTIES
+		$pen_res = mysql_query("select * from penalty where loan_id='".$row['id']."'");
+		$pen = mysql_fetch_array($pen_res);
+		$pen_amt = ($pen['amount'] == NULL) ? "--" : $pen['amount']; 
+		//ACTUAL PERIOD TAKEN
+		$actual_months = floor($row['actual_days']/30);
+		$actual_days = $row['actual_days'] % 30;
+		$actual_period = $actual_months. " Months, ". $actual_days. " Days";
+		
+
+
+		//PENALTY
+		$pen_res = mysql_query("select sum(amount) as amount from penalty where status='pending' and loan_id='".$row['id']."'");
+		$pen = mysql_fetch_array($pen_res);
+		$penalty = ($pen['amount'] == NULL) ? "--" : $pen['amount'];
+		$color = ($i%2 == 0) ? "lightgrey" : "white";
+		$content .= "<tr bgcolor=$color><td>".$i."</td><td>".$row['date']."</td><td>".$row['mem_no']."</td><td>".$row['first_name']." ".$row['last_name']."</td><td>".$row['account_no']." - ".$row['account_name']."</td><td>".$row['amount']."</td><td>".$int['int_amt']."</td><td>".$pen_amt."</td><td>".ceil($row['loan_period'])." Months</td><td>".$actual_period."</td></tr>";
+		$i++;
+	}
+	$content .= "</table></td></tr></table>";
+	export($format, $content);
+}
+//reports_header();
+list_cleared($_GET['cust_name'], $_GET['cust_no'], $_GET['account_name'], $_GET['loan_officer'], $_GET['from_year'], $_GET['from_month'], $_GET['from_mday'], $_GET['to_year'], $_GET['to_month'], $_GET['to_mday'], $_GET['format'],$_GET['branch_id']);
+//reports_footer();
+?>

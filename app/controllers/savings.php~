@@ -1,0 +1,121 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Savings extends CI_Controller {
+	public $data;
+    function __construct() {
+        parent::__construct();
+        $this->load->model('savings_model');
+                
+        /**** Generate pagination ****/
+        //$this->load->library('pagination');
+       // $this->load->library('table');
+        $this->data['lang'] = strings();
+		$this->data['xajaxOn'] = true;
+		$this->data['heading'] = "Savings";
+		$this->data['xjf'] = array("resources/xajax/savings.php");
+		$this->data['js'] = array("resources/themes/admire/plugins/sparkline/js/jquery.sparkline.min.js",
+					"resources/themes/admire/plugins/sparkline/js/jquery.sparkline.min.js",
+					"resources/themes/admire/javascript/app.min.js",
+					"resources/themes/admire/plugins/inputmask/js/inputmask.min.js",
+					"resources/themes/admire/plugins/selectize/js/selectize.min.js",
+					"resources/themes/admire/plugins/jqueryui/js/jquery-ui.min.js",
+					"resources/themes/admire/plugins/jqueryui/js/jquery-ui-timepicker.min.js",
+					"resources/themes/admire/plugins/jqueryui/js/jquery-ui-touch.min.js",
+					"resources/themes/admire/javascript/forms/element.js",
+					"resources/js/employeeprofiles.js"
+					);
+		$this->data['css'] = array("resources/themes/admire/plugins/jqueryui/css/jquery-ui-timepicker.min.css","resources/themes/admire/plugins/jqueryui/css/jquery-ui.min.css");
+		$uid = CAP_Session::get('userId');
+		if(!isset($uid))
+			redirect(base_url()."serviceAuth");
+    }
+    
+    public function index(){
+    	echo ("Direct Access prohibited");
+    }
+    
+     public function createProduct(){
+		$this->data['subheading'] = "Create A Savings Product";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/createProduct", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfSavingsProducts(){
+		$this->data['subheading'] = "List Of Savings Products";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/listSavingProducts", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function openAccount(){
+		$this->data['subheading'] = "Open Account";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/openAccount", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfAccounts(){
+		$this->data['subheading'] = "List Of Accounts";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/listAccounts", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function registerDeposit(){
+		$this->data['subheading'] = "Register Deposit";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/registerDeposit", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfDeposits(){
+		$this->data['subheading'] = "List Deposits";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/listDeposits", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function registerWithdrawal(){
+		$this->data['subheading'] = "Register Withdrawal";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/registerWithdrawal", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfWithdrawal(){
+		$this->data['subheading'] = "List of Withdrawals";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/listWithdrawals", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function registerTransfer(){
+		$this->data['subheading'] = "Register Transfer";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/registerTransfer", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfTransfers(){
+		$this->data['subheading'] = "List of Transfers";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/listTransfers", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function searchForReceipts(){
+		$this->data['subheading'] = "Search For Receipts(";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/searchForReceipts", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function savingsLedger(){
+		$this->data['subheading'] = "Savings Ledger";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("savings/savingsLedger", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+  } 
+?>

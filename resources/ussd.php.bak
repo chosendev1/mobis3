@@ -1,0 +1,106 @@
+<?php
+
+ini_set('error_log', 'ussd-app-error.log');
+error_reporting(0);
+require 'includes/ussdapi/libs/MoUssdReceiver.php';
+require 'includes/ussdapi/libs/MtUssdSender.php';
+require 'includes/ussdapi/class/operationsClass.php';
+require 'includes/ussdapi/libs/Log.php';
+require 'includes/ussdapi/db.php';
+require_once 'ussdOperations.php';
+
+$production=false;
+
+	if($production==false){
+		$ussdserverurl ='http://localhost:7000/ussd/send';
+	}
+	else{
+		$ussdserverurl= 'https://api.dialog.lk/ussd/send';
+	}
+
+
+$receiver 	= new UssdReceiver();
+$sender 	= new UssdSender($ussdserverurl,'APP_000001','password');
+$operations = new Operations();
+
+$receiverSessionId = $receiver->getSessionId();
+$content 			= 	$receiver->getMessage(); // get the message content
+$address 			= 	$receiver->getAddress(); // get the sender's address
+$requestId 			= 	$receiver->getRequestID(); // get the request ID
+$applicationId 		= 	$receiver->getApplicationId(); // get application ID
+$encoding 			=	$receiver->getEncoding(); // get the encoding value
+$version 			= 	$receiver->getVersion(); // get the version
+$sessionId 			= 	$receiver->getSessionId(); // get the session ID;
+$ussdOperation 		= 	$receiver->getUssdOperation(); // get the ussd operation
+
+
+
+$arrayMenu = array("main" => "Welcome to your E-wallet Please Enter your Pin number:");
+$responseMsg = $arrayMenu;
+
+if ($ussdOperation  == "mo-init") { 
+   
+	try {
+		
+		$sessionArrary=array( "sessionid"=>$sessionId,"tel"=>$address,"menu"=>"main","pg"=>"","others"=>"");
+
+  		$operations->setSessions($sessionArrary);
+
+		$sender->ussd($sessionId, $responseMsg["main"],$address );
+
+	} catch (Exception $e) {
+			$sender->ussd($sessionId, 'Sorry error occured try again',$address );
+	}
+	
+}else {
+
+	$flag=0;
+	
+  	$sessiondetails =  $operations->getSession($sessionId);
+  	$cuch_menu=$sessiondetails['menu'];
+  	$operations->session_id=$sessiondetails['sessionsid'];
+		if($cush_menu == "main"){
+			$responseMsg  =  ussdOperations::mainMenu();
+			$operations->session_others = $receiver->getMessage();
+			$operations->session_menu = "Check Balance";
+			$operations->saveSesssion();
+			$sender->ussd($sessionId,$operations->session_others.$responseMsg['main'],$address );
+		}
+		
+		switch($cuch_menu ){
+		
+			case "main": 	// Following is the main menu
+					$responseMsg  =  ussdOperations::mainMenu();
+					$operations->session_others = $receiver->getMessage();
+					$operations->session_menu="Check Balance";
+					$operations->saveSesssion();
+					$sender->ussd($sessionId,$operations->session_others.$responseMsg['main'],$address );
+						
+					break;
+			case "Check Balance":
+				$operations->session_menu="Account Balance";
+				$operations->session_others=$receiver->getMessage();
+				$operations->saveSesssion();
+				$sender->ussd($sessionId,'Enter Account No ',$address );
+				break;
+			case "Deposit":
+				$sender->ussd($sessionId,'You Purchased a medium T-Shirt Your ID '.$receiver->getMessage(),$address ,'mt-fin');
+				break;
+			case "Withdraw":
+				$sender->ussd($sessionId,'You Purchased a large T-Shirt Your ID '.$receiver->getMessage(),$address ,'mt-fin');
+				break;
+				
+			case "Account Balance";
+				$operations->session_menu="Balance";
+				$operations->session_others=$receiver->getMessage();
+				$operations->saveSesssion();
+				$sender->ussd($sessionId, 'Your account Balance is '.ussdOperations::checkBalance($operations->session_others), $address, 'mt-fin' );
+				break;
+			default:
+				$operations->session_menu="main";
+				$operations->saveSesssion();
+				$sender->ussd($sessionId,'Incorrect Option'.$cuch_menu,$address );
+				break;
+		}
+	
+}

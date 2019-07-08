@@ -1,0 +1,738 @@
+<?php
+//require 'includes/ussdapi/db.php';
+//error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE);
+require 'includes/Date/Calc.php';
+require 'includes/libinc.php';
+require 'db.php';
+require_once("includes/common.php");
+if(!defined("OPERATOR_HEADING"))
+ 	define("OPERATOR_HEADING", "Mobis Mobile wallet");
+class ussdOperations{
+	private $pin;
+	private $accountNo;
+	private $address;
+	private $postRqst = "https://paymentsapi2.yo.co.ug/ybs/task.php";
+	private $uname = "100918011710";
+	private $pwd = "88ut-BHED-3uve-Befr-Tbs2-NLQa-NAVb-M2XB";
+	
+	public function __construct(){
+	
+	}
+	
+	public function evaluatePin($pin=0, $accountNo=""){
+		$this->pin = $pin <> 0 ? $pin : $this->pin;
+		$this->accountNo = $accountNo <> "" ? $accountNo : $this->accountNo;
+ 		$q = mysql_query("SELECT * from member where  pin='".$this->pin."' AND mem_no='".$this->accountNo."'");
+ 		if( mysql_num_rows($q) > 0) 
+ 		{
+ 			//$res = mysql_fetch_array($q);
+ 			//return $res['first_name']." ".$res['last_name'];
+			return true;
+ 		}
+ 		return false;
+	}
+	
+	public function get_record ($table, $col, $conditions) {
+		$data = '';
+		$start = mysql_query("select ".$col." from `".$table."` ".$conditions);
+		if($start) {
+		if(mysql_num_rows($start) > 0) {
+			$end = mysql_fetch_assoc($start); //or die(mysql_error());
+			$data = $end[mysql_field_name($start,0)];
+			mysql_free_result($start);
+			return $data;
+		} else return '';
+		} else return mysql_error();
+	}
+	
+	public function member_name($accountNo="")
+	{
+		$this->accountNo = $accountNo <> "" ? $accountNo : $this->accountNo;
+ 		$q = mysql_query("SELECT * from member where mem_no='".$this->accountNo."'");
+ 		if( mysql_num_rows($q) > 0) 
+ 		{
+ 			$res = mysql_fetch_array($q);
+ 			return $res['first_name']." ".$res['last_name'];
+ 		}
+ 		return "";
+	}
+	
+	function deposit_request_exists($dp)
+	{
+		$y = mysql_query("select count(*) from deposit_request where id = '".mysql_real_escape_string($dp)."' and `status` = 'pending'");
+		return mysql_num_rows($y);
+	}
+	
+	public function checkPin($pin=0, $accountNo=""){
+ 		return "SELECT * from member where pin='".$this->pin."' AND mem_no='".$this->accountNo."'";
+	}
+	public function isValidAccount($accountNo){
+		$q = mysql_query("SELECT * FROM member WHERE mem_no='".$accountNo."'");
+		
+		return mysql_num_rows($q) > 0 ? 1 : 0;
+	}
+	
+	public function getSACCO($id=0){
+		//return "SELECT * from company where companyId=".intval($id);
+		$q = mysql_query("SELECT * from company where companyId='".intval($id)."'");
+		return mysql_num_rows($q) > 0 ? mysql_fetch_array($q) : 0;
+			
+	}
+	
+	public function connectNewDB($id){
+		//$sacco = $this->getSACCO($id);
+		$sacco  = getItemById("craneapp_mobis.company",$id,"companyId","companyName").$id;
+		//select companyName from craneapp_mobis.company where companyId = 25
+		require_once("clientDatabase.php");
+ 		$cnx = new clientDatabase();
+ 		$cnx->connect();
+ 		
+ 		$name = explode(' ',$sacco);
+ 		$dbName  = strtolower($name[0]);
+ 		//return $dbName;
+ 		return $cnx->connectToClientDB($dbName);
+ 		
+	}
+	private function generateReceipt($length=6){
+		
+	   	$randstr = "";
+	   	do {
+	      		$randstr = "";
+	      		for($i=0; $i<$length; $i++){
+		 		$randnum = mt_rand(0,9);
+		 		$randstr .=$randnum;
+	      		}
+	      		if($this->codeExists($randstr)==0)
+	      			break;
+	      	}
+	      	while(codeExists($randstr)==1);
+	      	
+	      return $randstr;
+   
+	}
+	
+	private function post($xml) {
+				$options = array  
+				( 
+					CURLOPT_URL            => $this->postRqst,
+					CURLOPT_HTTPHEADER => array("Content-Type: text/xml"),
+					CURLOPT_POST           => 1, 
+					CURLOPT_POSTFIELDS     => $xml,
+					CURLOPT_SSL_VERIFYPEER => false, 
+					CURLOPT_RETURNTRANSFER => 1 
+				); 
+				
+				$curl = curl_init(); 
+				curl_setopt_array($curl, $options); 
+				$response = curl_exec($curl);
+				 if(!$response) { $response = curl_error($curl); }
+				curl_close($curl); 
+				return $response;
+	   }
+	
+	private function yo_deposit($amount,$phoneNumber,$transactionID) {
+		$xml = '<?xml version="1.0" encoding="UTF-8"?>
+					<AutoCreate>
+					<Request>
+					<APIUsername>'.$this->uname.'</APIUsername>
+					<APIPassword>'.$this->pwd.'</APIPassword>
+					<Method>acdepositfunds</Method>
+					<NonBlocking>TRUE</NonBlocking>
+					<Amount>'.$amount.'</Amount>
+					<Account>'.$phoneNumber.'</Account>
+					<AccountProviderCode>MTN_UGANDA</AccountProviderCode>
+					<Narrative>'.$transactionID.'</Narrative>
+					<ExternalReference>'.$transactionID.'</ExternalReference>
+					</Request>
+				</AutoCreate>';
+				$sendToYo = $this->post($xml);
+				$sxml = simplexml_load_string($sendToYo);
+				$first = json_encode($sxml);
+				$values = json_decode($first,true);
+				return $values['Response']['TransactionReference'];  
+	   }
+	
+	private function generateReceiptWithdraw($length=12){
+		
+	   	$randstr = "nothing";
+	   	//return $randstr;
+	   	do {
+	      		$randstr = "";
+	      		for($i=0; $i<$length; $i++){
+		 		$randnum = mt_rand(0,9);
+		 		$randstr .=$randnum;
+	      		}
+	      		if($this->codeExistsWithdraw($randstr)==0)
+	      			break;
+	      	}
+	      	while(codeExists($randstr)==1);
+	      	
+	      return $randstr;
+   
+	}
+	private function codeExists($code){
+	   	$q = "select * from deposit where receipt_no='".$code."'";
+		$sql = mysql_query($q);
+		return mysql_num_rows($sql) > 0 ? 1 : 0;
+   	}
+   	private function codeExistsWithdraw($code){
+   		$q = "select * from withdrawal where voucher_no='".$code."'";
+		$sql = mysql_query($q);
+		return mysql_num_rows($sql) > 0 ? 1 : 0;
+   	}
+	public function getSACCOCodeMenu(){
+		
+		$arrayMenu = array("main" => "Welcome to your ".OPERATOR_HEADING."!
+Enter SACCO Code");
+		return $arrayMenu['main'];
+	}
+	
+	public function SACCOCodeExists($id){
+		return $this->getSACCO($id) == 0 ? false : true;
+	}
+	
+	
+	public function mainMenu($id=0){
+		$companyName = "MOBIS";
+		if($this->SACCOCodeExists($id)){
+			$sacco = $this->getSACCO($id);
+			$companyName = $sacco['companyName'];
+		}
+ 		$arrayMenu = array("main" => "Welcome to ".$companyName."
+ 1. Check Balance
+ 2. Transfer
+ 3. Withdraw
+ 4. Deposit Savings
+ 5. Loan Request
+ 6. Exit");
+ 		return $arrayMenu;
+ 	}
+ 	
+ 	public function checkBalanceFirstMessage(){
+ 		return "Enter Account Number:";
+ 	}
+ 	/*
+ 	 *check balance
+ 	 *
+ 	 */
+ 	public function checkBalance($mem_no){
+ 		
+ 		$sth = mysql_query("select * from member where mem_no='".$mem_no."'");
+		
+		$row = mysql_fetch_array($sth);
+		$acct_res = mysql_query("select mem.id as id from mem_accounts mem join savings_product s on mem.saveproduct_id=s.id where mem.mem_id='".$row['id']."' and s.type='free'");
+		
+			$acct = mysql_fetch_array($acct_res);
+			$save_acct = $acct['id'];
+			$mem_id = $row['id'];
+		
+	
+ // if($to_date == ''){
+    $today = date("Y-m-d h:i:s",time());
+$start_date = "0000-00-00 00:00:00";
+  $end_date = $today;
+ 
+	$total_saved = 0; $total_with = 0; $total_int = 0; $total_fees = 0;
+	$cumm_save = 0;
+	
+	$drow1 = @mysql_fetch_array(@mysql_query("select sum(amount - flat_value - percent_value) as tot_savings from deposit where bank_account != 0 and memaccount_id = $save_acct "));
+	$wrow1 = @mysql_fetch_array(@mysql_query("select sum(amount + flat_value + percent_value) as tot_with from withdrawal where memaccount_id = $save_acct "));
+	$mrow1 = @mysql_fetch_array(@mysql_query("select sum(amount) as tot_fees from monthly_charge where memaccount_id = $save_acct "));
+	$irow1 = @mysql_fetch_array(@mysql_query("select sum(amount) as tot_int from save_interest where memaccount_id = $save_acct "));
+	$prow1 = @mysql_fetch_array(@mysql_query("select sum(princ_amt + int_amt) as tot_int from payment where mode = '$save_acct' "));
+	$incow1 = @mysql_fetch_array(@mysql_query("select sum(amount) as tot_inc from other_income where mode = '$save_acct' "));
+	
+	$shares = @mysql_fetch_array(@mysql_query("select sum(value) as tot_val from shares where mode = '$save_acct'"));
+	$total_shares = isset($shares['tot_val'])? $shares['tot_val'] : 0 ;
+
+        $total_saved = isset($drow1['tot_savings'])? intval($drow1['tot_savings']) : 0 ;
+        $total_fees = isset($mrow1['tot_fees'])? intval($mrow1['tot_fees']) : 0 ;
+        $total_with = isset($wrow1['tot_with'])? intval($wrow1['tot_with']) : 0 ;
+        $total_int = isset($irow1['tot_int'])? intval($irow1['tot_int']) : 0 ;
+		$total_pay = isset($prow1['tot_int'])? intval($prow1['tot_int']) : 0 ;
+		$total_inc = isset($incow1['tot_inc'])? intval($incow1['tot_inc']) : 0 ;
+        $net_save = ($total_saved + $total_int) - ($total_fees + $total_with + $total_pay + $total_inc + $total_shares);
+	$cumm_save += $net_save;
+	$mem_row = @mysql_fetch_array(@mysql_query("select first_name, last_name, mem_no, sign_name, photo_name from member where id = $mem_id"));
+	$branch = mysql_fetch_array(mysql_query("select * from branch"));
+	
+
+  //get deposit balance
+
+  $acc_res_bal = mysql_query("select id, date, amount, transaction, depositor as depositor from deposit where bank_account != 0 and memaccount_id = $save_acct UNION select id, date, amount, transaction, '--' as depositor from withdrawal where memaccount_id = $save_acct  UNION select id, date, amount, transaction, '--' as depositor  from monthly_charge where memaccount_id = $save_acct UNION select id, date, amount, transaction, '--' as depositor  from save_interest where memaccount_id = $save_acct  UNION select id, date, princ_amt + int_amt as amount, transaction, '--' as depositor  from payment where mode= '".$save_acct."' and UNION select id, date, amount, transaction, '--' as depositor  from other_income where mode = '".$save_acct."' UNION select id, date, value as amount, transaction, '--' as depositor  from shares where mode = '".$save_acct."'");
+  $x = 0;
+  while ($acc_row = mysql_fetch_array($acc_res_bal))
+  {
+    
+    //$_SESSION["cumulateive_savings"]=$cumm_save;
+
+    $charge_amt = 0;
+    $tot_shares = strtolower($acc_row['transaction']) == 'shares' ? intval($acc_row['amount']) : 0 ;
+    $tot_savings = strtolower($acc_row['transaction']) == 'deposit' ? intval($acc_row['amount']) : 0 ;
+    $tot_fees = strtolower($acc_row['transaction']) == 'monthly_charge' ? intval($acc_row['amount']) : 0 ;
+    $tot_with = strtolower($acc_row['transaction']) == 'withdrawal' ? intval($acc_row['amount']) : 0 ;
+    $tot_int = strtolower($acc_row['transaction']) == 'save_interest' ? intval($acc_row['amount']) : 0 ;
+    $tot_pay = strtolower($acc_row['transaction']) == 'payment' ? intval($acc_row['amount']) : 0 ;
+    $tot_inc = strtolower($acc_row['transaction']) == 'other_income' ? intval($acc_row['amount']) : 0 ;
+
+    if(strtolower($acc_row['transaction']) == 'deposit'){
+      $charge = mysql_fetch_array(mysql_query("select receipt_no, cheque_no, (flat_value + percent_value) as amount from deposit where id='".$acc_row['id']."'"));
+      $charge_amt = ($charge['amount'] != NULL) ? $charge['amount'] : 0;
+      $descr="Deposit - RCPT: ".$charge['receipt_no'];
+      $descr = ($charge['cheque_no'] <>"") ? $descr." - CHEQ: ".$charge['cheque_no'] : $descr;
+    }
+    if(strtolower($acc_row['transaction']) == 'withdrawal'){
+      $charge = mysql_fetch_array(mysql_query("select voucher_no, cheque_no, flat_value + percent_value as amount from withdrawal where id='".$acc_row['id']."'"));
+      $charge_amt = ($charge['amount'] != NULL) ? $charge['amount'] : 0;
+      $descr="Withdrawal
+      - PV: ".$charge['voucher_no'];
+      $descr = ($charge['cheque_no'] <>"") ? $descr."
+      - CHEQ: ".$charge['cheque_no'] : $descr;
+    }
+    if(strtolower($acc_row['transaction']) == 'payment'){
+  
+      $pay = mysql_fetch_array(mysql_query("select receipt_no,  princ_amt + int_amt as amount from payment where id='".$acc_row['id']."'"));
+      $pay_amt = ($pay['amount'] != NULL) ? $pay['amount'] : 0;
+      $descr="Loan Repayment
+      - PV: ".$pay['receipt_no'];
+      //$resp->alert($tot_pay);
+    }
+
+    if(strtolower($acc_row['transaction']) == 'other_income'){
+  
+      $inc = mysql_fetch_array(mysql_query("select i.receipt_no, i.cheque_no, i.amount, a.name from other_income i join accounts a on a.id = i.account_id where i.id='".$acc_row['id']."'"));
+      $inc_amt = ($inc['amount'] != NULL) ? $inc['amount'] : 0;
+      $descr="DEDUCTION ($inc[name])
+      - PV / CHEQ: ".$inc['receipt_no']. " ".$inc['cheque_no'];
+      //$resp->alert($tot_pay);
+    }
+    if(strtolower($acc_row['transaction']) == 'shares'){
+  
+      $share = mysql_fetch_array(mysql_query("select s.receipt_no, s.value as amount from shares s where s.id='".$acc_row['id']."'"));
+      $share_amt = ($share['amount'] != NULL) ? $share['amount'] : 0;
+      $descr="TRANSFER TO SHARES 
+      - PV / CHEQ: ".$share['receipt_no'];
+      //$resp->alert($tot_pay);
+    }
+    //$tot_fees = $tot_fees + $charge_amt;
+    //$net_save = ($tot_savings + $tot_int) - ($tot_fees + $charge_amt + $tot_with);
+    //$cumm_save += $net_save;
+    if($tot_savings != 0){
+      $cumm_save_deposit_remain += $tot_savings;
+      $x++;
+      //$color = ($x%2 == 0) ? "white" : "lightgrey";
+ 
+    }
+    if($tot_int !=0){
+      $cumm_save_deposit_remain += $tot_int;
+      $x++;
+      //$color = ($x%2 == 0) ? "white" : "lightgrey";
+  
+    }
+    if($tot_shares !=0){
+      $cumm_save_deposit_remain -= $tot_shares;
+      $x++;
+      //$color = ($x%2 == 0) ? "white" : "lightgrey";
+     
+    }
+    if($tot_with !=0){
+      $cumm_save_deposit_remain -= $tot_with;
+      $x++;
+      //$color = ($x%2 == 0) ? "white" : "lightgrey";
+    
+    }
+    if($tot_pay >0 || $tot_pay <0){
+      $cumm_save_deposit_remain -= $tot_pay;
+      $x++;
+      
+      //$color = ($x%2 == 0) ? "white" : "lightgrey";
+     
+    }
+    if($charge_amt !=0){
+      $x++;
+      $cumm_save_deposit_remain -= $charge_amt;
+      //$color = ($x%2 == 0) ? "white" : "lightgrey";
+   
+    }
+    if($tot_inc !=0){
+      $cumm_save_deposit_remain -= $tot_inc;
+      $x++;
+    
+    }
+    if($tot_fees !=0){
+      $x++;
+      $cumm_save_deposit_remain -= $tot_fees;
+    
+    }
+
+  }
+		echo $cumm_save_deposit_remain;
+	}
+	
+	
+	public function doTransfer($memaccount, $transaccount, $amount, $phone=""){
+		$debug = "Debug".chr(13);
+		$date = date('Y-m-d');
+		$voucher_no = $this->generateReceiptWithdraw(12);//generateRandStr(9);//auto_generate
+		//return $voucher_no;
+		$cheque_no = $voucher_no;
+		$memaccount_id = getMemAccountId($memaccount);
+		$trans_to = getMemAccountId($transaccount);
+		
+		$mem_id = getItemById("member","'".$memaccount."'","mem_no","id");
+		$trans_to_phone = getItemById("member","'".$transaccount."'","mem_no","tel_no");
+		
+		$branch_id = getItemById("member",$mem_id,"id","branch_id");
+		$bank_account = getItemById("bank_account","'MTN MOBILE MONEY'","bank","id");
+		//return $memaccount_id;
+		//return $mem_id;
+		list($year,$month,$mday) = explode('-', $date);
+		
+		$debug .= $memaccount_id;
+		//return $debug;
+		$calc = new Date_Calc();
+		$sth = mysql_query("select open_date, date_format(open_date, '%Y') as open_year, date_format(open_date, '%m') as open_month, date_format(open_date, '%d') as open_mday  from mem_accounts where id='".$memaccount_id."'");
+		$row = mysql_fetch_array($sth);
+		//$date = sprintf("%d-%02d-%02d", $date);
+		$date = $date." ".date('H:i:s');
+		$charge_res = mysql_query("select s.min_bal as min_bal, s.withdrawal_perc as withdrawal_perc, s.withdrawal_flat as withdrawal_flat, s.grace_period as grace_period from mem_accounts mem join savings_product s on mem.saveproduct_id=s.id where mem.id='".$memaccount_id."'");
+		$charge = mysql_fetch_array($charge_res);
+		if($voucher_no == ""){
+			$resp = "could not generate transaction mumber";
+			return $resp;
+		}
+		if( $amount==''){
+			$resp = "amount should not be blank or zero";
+			return $resp;
+		}		
+		elseif($date < $row['open_date']){  //No withdrawal before the account was opened
+			$resp = "Tranfer halted unsuccessfully! Date entered, is earlier than the when the account was opened";
+			return $resp;
+		}
+		else{
+			//CHECK THAT THE BANK ACCOUNT WOULD NOT GO BELOW MINIMUM
+			$sth = mysql_query("select * from bank_account where id='".$bank_account."'");
+			$row = mysql_fetch_array($sth);
+		
+			$pledged_res = mysql_query("select sum(amount) as amount from deposit d join mem_accounts mem on d.memaccount_id=mem.id join savings_product s on mem.saveproduct_id=s.id where mem.mem_id='".$mem_id."' and s.type='pledged'");
+			$pledged = mysql_fetch_array($pledged_res);
+
+			$dfree_res = mysql_query("select sum(d.amount - d.percent_value - d.flat_value)-".$amount." as amount from deposit d join mem_accounts mem on d.memaccount_id=mem.id join savings_product s on mem.saveproduct_id=s.id where mem.mem_id='".$mem_id."' and s.type='free'");
+			$dfree = mysql_fetch_array($dfree_res);
+			$dfree_amt = $dfree['amount'];
+
+			$wfree_res = mysql_query("select sum(w.amount + w.percent_value + w.flat_value) as amount from withdrawal w join mem_accounts mem on w.memaccount_id=mem.id join savings_product s on mem.saveproduct_id=s.id where mem.mem_id='".$mem_id."' and s.type='free'");
+			$wfree = mysql_fetch_array($wfree_res);
+			$wfree_amt = $wfree['amount'];
+		
+			//MONTHLY CHARGES 
+			$charge_res = mysql_query("select sum(c.amount) as amount from monthly_charge c join mem_accounts mem on c.memaccount_id=mem.id where mem.mem_id='".$mem_id."'");
+			$mcharge = mysql_fetch_array($charge_res);
+			$charge_amt = ($mcharge['amount'] != NULL) ? $mcharge['amount'] : 0;
+			//INTEREST AWARDED
+			$int = mysql_fetch_array(mysql_query("select sum(i.amount) as amount from save_interest i join mem_accounts mem on i.memaccount_id=mem.id where mem.mem_id='".$mem_id."'"));
+			$int_amt = ($int['amount'] != NULL) ? $int['amount'] : 0;
+			//LOAN REPAYMENTS
+			$pay_res = mysql_query("select sum(p.princ_amt + p.int_amt) as amount from payment p join mem_accounts mem on p.mode=mem.id where mem.mem_id='".$mem_id."'");
+			$pay = mysql_fetch_array($pay_res);
+			$pay_amt = ($pay['amount'] != NULL) ? $pay['amount'] : 0;
+			//INCOME DEDUCTIONS
+			$inc_res = mysql_query("select sum(i.amount) as amount from other_income i join mem_accounts mem on i.mode=mem.id where mem.mem_id='".$mem_id."'");
+			$inc = mysql_fetch_array($inc_res);
+			$inc_amt = ($inc['amount'] != NULL) ? $inc['amount'] : 0;
+
+
+
+			$pledged_amt = $pledged['amount'];
+			$free_amt = $dfree_amt - $wfree_amt - $charge_amt + $int_amt - $pay_amt - $inc_amt;
+			$vouc_res = mysql_query("select voucher_no from withdrawal where voucher_no='".$voucher_no."' union (select voucher_no from expense where voucher_no ='".$voucher_no."')");
+			if(@ mysql_numrows($vouc_res) >0){
+				$resp = "Withdrawal not registered, voucher already exists";
+				return $resp;
+			}
+			elseif($free_amt < $pledged_amt){
+				$resp = "Cannot withdraw this amount! It is part of the compulsory savings.
+				 First delete some of this member's loans, deposit=".$dfree_amt.", w=".$wfree_amt;
+				 return $resp;
+			}
+			elseif($free_amt < $charge['min_bal']){
+				$resp = "Cannot withdraw this amount!
+					 Member hasnt sufficient savings";
+				return $resp;
+			}
+			else{
+				$prod_res = mysql_query("select s.withdrawal_perc as withdrawal_perc, s.withdrawal_flat as withdrawal_flat from mem_accounts mem join savings_product s on mem.saveproduct_id=s.id where mem.id='".$memaccount_id."'");
+			
+				//return $resp;
+				$prod = mysql_fetch_array($prod_res);
+				$percent_value = ($amount *$prod['withdrawal_perc']) /100;
+				$flat_value= $prod['withdrawal_flat'];
+				$tag = ($trans_to == 0)? "": "/Trans";
+				start_trans();
+				if($trans_to >0){
+					$percent_value = 0;
+					$flat_value= 0;
+				}else{
+					$percent_value = ($amount *$prod['withdrawal_perc']) /100;
+					$flat_value= $prod['withdrawal_flat'];
+				}
+				
+				mysql_query("insert into withdrawal set memaccount_id='".$memaccount_id."', voucher_no='".$voucher_no.$tag."', trans_date = (select now()), cheque_no='".$cheque_no."', amount='".$amount."', percent_value='".$percent_value."', transfer=".$trans_to.", flat_value='".$flat_value."', date='".$date."', branch_id=".$branch_id);	
+				///////////////
+				$accno =mysql_fetch_assoc(mysql_query("select m.first_name,m.last_name,m.mem_no from member m join mem_accounts ma on m.id=ma.mem_id where ma.id=".$memaccount_id));
+				$action = "insert into withdrawal set memaccount_id='".$memaccount_id."', voucher_no='".$voucher_no.$tag."', trans_date = (select now()), cheque_no='".$cheque_no."', amount='".$amount."', percent_value='".$percent_value."', transfer=".$trans_to.", flat_value='".$flat_value."', date='".$date."'";
+				$msg = "Registered a withdrawal worth:".$amount." to member: ".$accno['first_name']." ".$accno['last_name']." - ".$accno['mem_no'];
+				$sender_name = $accno['first_name']." ".$accno['last_name'];
+				log_action($_SESSION['user_id'],$action,$msg);
+				if ($trans_to <> 0)
+				{
+					if(!mysql_query("insert into deposit set memaccount_id='".$trans_to."', amount='".$amount."', trans_date = (select now()), receipt_no='Transfer', cheque_no='', transfer=".$memaccount_id.", date='".$date."',  branch_id=".$branch_id))
+						return mysql_error();
+					
+					$action = "insert into deposit set memaccount_id='".$trans_to."', amount='".$amount."', trans_date = (select now()), receipt_no='Transfer', cheque_no='', transfer=".$memaccount_id.", date='".$date."',  branch_id=".$branch_id;
+					$accno =mysql_fetch_assoc(mysql_query("select m.first_name,m.last_name,m.mem_no from member m join mem_accounts ma on m.id=ma.mem_id where ma.id=".$trans_to));
+					$msg = "Registered a deposit (transfer) worth:".$amount." to member: ".$accno['first_name']." ".$accno['last_name']." - ".$accno['mem_no'];
+					log_action($_SESSION['user_id'],$action,$msg);
+				}
+				//////////////////
+				commit();
+				//$debug .= mysql_affected_rows()."rows ".chr(13);
+				//return $debug;
+				
+				//Recipient
+				$this->send_sms($_SESSION['user_id'],"MOBIS","Dear ".$accno['first_name'].", you have received ".number_format($amount)." from ".$sender_name, $trans_to_phone);
+				
+				$resp = "Transfer of ".$amount." Successful. Your transaction code is ".$voucher_no;
+			}
+		}
+		
+		if(trim($phone) != "")
+		{
+			$this->send_sms($_SESSION['user_id'],"MOBIS",$resp, $phone);
+		}
+		
+		return $resp;
+	}
+	
+	public function deposit($memaccount, $amount, $depositor){
+		$fp = fopen("_ussd_test.txt", "a");
+		fwrite($fp, "Member A/c: ".$memaccount."\r\n");
+		fclose($fp);
+		
+		$date = date('Y-m-d');
+		//receipt, auto generate
+		//depositor, mobile number
+		//bank account, mobile teller
+		//date, today
+		//branch_id, sacco default branch_id
+		$receipt_no = $this->generateReceipt();
+		$cheque_no = $receipt_no;
+		
+		$mem_id = getItemById("member","'".$memaccount."'","mem_no","id");
+		//echo $mem_id; exit;
+		$branch_id = getItemById("member",$mem_id,"id","branch_id");
+		//echo $branch_id; exit;
+		$bank_account = getItemById("bank_account","'MOBILE MONEY'","bank","id");
+		//echo $bank_account."--".$mem_id."--".$branch_id; exit;
+		list($year,$month,$mday) = explode('-', $date);
+		$calc = new Date_Calc();
+		$memaccount_id = getMemAccountId($memaccount);
+		//echo $memaccount_id; exit;
+		$mem_id = getItemById("mem_accounts","'".$memaccount."'","id","mem_id");
+		$sth = mysql_query("select s.deposit_flat as deposit_flat, s.deposit_perc as deposit_perc from mem_accounts m join savings_product s on m.saveproduct_id=s.id where m.id='".$memaccount_id."'");
+		$row = mysql_fetch_array($sth);
+		$percent_value = ($row['deposit_perc']/100) * $amount;
+		$deposit_flat = $row['deposit_flat'];
+		$charge = $row['deposit_flat'] - $percent_value;
+		$actual = $amount - $charge;
+		//$date = sprintf("%d-%02d-%02d", $date);
+		$date = $date." ".date('H:i:s');
+		if($actual <= 0){
+			//echo 'Issue with actual'; exit;
+			$user_feedback = "Deposit not registered. The deposit must be greater than ".$charge." which is the charge";
+		}
+		else{
+			start_trans();
+			mysql_query("insert into deposit set memaccount_id='".$memaccount_id."', amount='".$amount."', trans_date = (select now()), receipt_no='".$receipt_no."', cheque_no='".$cheque_no."', depositor='".$depositor."', flat_value='".$deposit_flat."', percent_value='".$percent_value."', date='".$date."', bank_account='".$bank_account."', branch_id='".$branch_id."'");
+				
+			if(! mysql_query("update bank_account set account_balance = account_balance +".$amount." where id='".$bank_account."'")){
+						//echo mysql_error().' '.mysql_affected_rows(); exit;
+						rollback();
+						$user_feedback = "Deposit rejected! \n Could not update bank account";
+			} else {
+				///////////////
+				//echo mysql_affected_rows(); exit;				
+				$action = "insert into deposit set memaccount_id='".$memaccount_id."', amount='".$amount."', trans_date = (select now()), receipt_no='".$receipt_no."', cheque_no='".$cheque_no."', flat_value='".$deposit_flat."', percent_value='".$percent_value."', date='".$date."', bank_account='".$bank_account."'";
+				$fp = fopen("_ussd_test.txt", "a");
+				fwrite($fp, $action."\r\n");
+				fclose($fp);
+				
+				$accno =mysql_fetch_assoc(mysql_query("select m.first_name,m.last_name,m.mem_no from member m join mem_accounts ma on m.id=ma.mem_id where ma.id=".$memaccount_id));
+				$sacco_name = mysql_fetch_assoc(mysql_query("select companyName from company order by companyId asc limit 1"));
+				
+				$msg = "Registered deposit request of:".$amount." from member: ".$accno['first_name']." ".$accno['last_name']." - ".$accno['mem_no'];
+				log_action($_SESSION['user_id'],$action,$msg);
+				//////////////////
+				commit();
+				//echo mysql_affected_rows(); exit;
+				$user_feedback = "Dear ".ucfirst(strtolower($accno['first_name']))." ".ucfirst(strtolower($accno['last_name'])).", your deposit of ".number_format($amount)." from 0".substr($depositor,3)." was successfull!".chr(13)."Account Number: ".$memaccount.chr(13)."Sacco: ".$sacco_name['companyName'];
+			
+			}
+		//$user_feedback = "general failure";
+		}
+		
+		//Notify User
+		$sms_state = $this->send_sms(1,'MOBIS',$user_feedback,$depositor) ? 'sent' : 'failed';
+		
+		$fp = fopen("_ussd_test.txt", "a");
+        fwrite($fp, $user_feedback." - ".$sms_state."\r\n");
+        fclose($fp);
+		
+		
+}
+	
+	public function withdraw($memaccount, $amount, $number){
+		$date = date('Y-m-d');
+		list($year,$month,$mday) = explode('-', $date);
+		$receipt_no = $this->generateReceiptWithdraw();
+		$cheque_no = $receipt_no;
+		$voucher_no = $receipt_no;
+		$memaccount_id = getMemAccountId($memaccount);
+		
+		$bank_account = getItemById("bank_account","'MTN MOBILE MONEY'","bank","id");
+		
+		$mem_id = getItemById("member","'".$memaccount."'","mem_no","id");
+		$branch_id = getItemById("member",$mem_id,"id","branch_id");
+		$calc = new Date_Calc();
+		//return $bank_account."--".$mem_id."--".$branch_id;
+		$sth = mysql_query("select open_date, date_format(open_date, '%Y') as open_year, date_format(open_date, '%m') as open_month, date_format(open_date, '%d') as open_mday  from mem_accounts where id='".$memaccount_id."'");
+		$row = mysql_fetch_array($sth);
+		$date = sprintf("%d-%02d-%02d", $year, $month, $mday);
+		$date = $date." ".date('H:i:s');
+		$charge_res = mysql_query("select s.min_bal as min_bal, s.withdrawal_perc as withdrawal_perc, s.withdrawal_flat as withdrawal_flat, s.grace_period as grace_period from mem_accounts mem join savings_product s on mem.saveproduct_id=s.id where mem.id='".$memaccount_id."'");
+		$charge = mysql_fetch_array($charge_res);
+		
+		if($amount=='')
+			return "You need to enter the amount please!";
+		
+		
+		
+		elseif($calc->dateDiff($mday, $month, $year, $row['open_mday'], $row['open_month'], $row['open_year']) < $charge['open_period'])
+			return "Withdrawal not entered! The date is in a period when withdrawal from this account is not acceptable";		
+		elseif($date < $row['open_date'])  //No withdrawal before the account was opened
+			return "Withdrawal not entered! Date entered, is earlier than the when the account was opened";
+		else{
+			//CHECK THAT THE BANK ACCOUNT WOULD NOT GO BELOW MINIMUM
+			$sth = mysql_query("select * from bank_account where id='".$bank_account."'");
+			$row = mysql_fetch_array($sth);
+			
+			$pledged_res = mysql_query("select sum(amount) as amount from deposit d join mem_accounts mem on d.memaccount_id=mem.id join savings_product s on mem.saveproduct_id=s.id where mem.mem_id='".$mem_id."' and s.type='pledged'");
+			$pledged = mysql_fetch_array($pledged_res);
+
+			$dfree_res = mysql_query("select sum(d.amount - d.percent_value - d.flat_value)-".$amount." as amount from deposit d join mem_accounts mem on d.memaccount_id=mem.id join savings_product s on mem.saveproduct_id=s.id where mem.mem_id='".$mem_id."' and s.type='free'");
+			$dfree = mysql_fetch_array($dfree_res);
+			$dfree_amt = $dfree['amount'];
+
+			$wfree_res = mysql_query("select sum(w.amount + w.percent_value + w.flat_value) as amount from withdrawal w join mem_accounts mem on w.memaccount_id=mem.id join savings_product s on mem.saveproduct_id=s.id where mem.mem_id='".$mem_id."' and s.type='free'");
+			$wfree = mysql_fetch_array($wfree_res);
+			$wfree_amt = $wfree['amount'];
+		
+			//MONTHLY CHARGES 
+			$charge_res = mysql_query("select sum(c.amount) as amount from monthly_charge c join mem_accounts mem on c.memaccount_id=mem.id where mem.mem_id='".$mem_id."'");
+			$charge = mysql_fetch_array($charge_res);
+			$charge_amt = ($charge['amount'] != NULL) ? $charge['amount'] : 0;
+			//INTEREST AWARDED
+			$int = mysql_fetch_array(mysql_query("select sum(i.amount) as amount from save_interest i join mem_accounts mem on i.memaccount_id=mem.id where mem.mem_id='".$mem_id."'"));
+			$int_amt = ($int['amount'] != NULL) ? $int['amount'] : 0;
+			//LOAN REPAYMENTS
+			$pay_res = mysql_query("select sum(p.princ_amt + p.int_amt) as amount from payment p join mem_accounts mem on p.mode=mem.id where mem.mem_id='".$mem_id."'");
+			$pay = mysql_fetch_array($pay_res);
+			$pay_amt = ($pay['amount'] != NULL) ? $pay['amount'] : 0;
+			//INCOME DEDUCTIONS
+			$inc_res = mysql_query("select sum(i.amount) as amount from other_income i join mem_accounts mem on i.mode=mem.id where mem.mem_id='".$mem_id."'");
+			$inc = mysql_fetch_array($inc_res);
+			$inc_amt = ($inc['amount'] != NULL) ? $inc['amount'] : 0;
+
+					//$balance = $dep_amt + $int_amt  - $with_amt - $charge_amt - $pay_amt - $inc_amt;
+
+
+			$pledged_amt = $pledged['amount'];
+			$free_amt = $dfree_amt - $wfree_amt - $charge_amt + $int_amt - $pay_amt - $inc_amt;
+			$vouc_res = mysql_query("select voucher_no from withdrawal where voucher_no='".$voucher_no."' union (select voucher_no from expense where voucher_no ='".$voucher_no."')");
+			
+			if($free_amt < $pledged_amt)
+				return "Cannot withdraw this amount! It is part of the compulsory savings. \n First delete some of this member's loans, deposit=".$dfree_amt.", w=".$wfree_amt;
+			elseif($free_amt < $charge['min_bal'])
+				return "Cannot withdraw this amount! \n Member hasnt sufficient savings";
+			else{
+				$prod_res = mysql_query("select s.withdrawal_perc as withdrawal_perc, s.withdrawal_flat as withdrawal_flat from mem_accounts mem join savings_product s on mem.saveproduct_id=s.id where mem.id='".$memaccount_id."'");
+				//$resp->assign("status", "innerHTML", "select s.withdrawal_perc as withdrawal_perc, s.withdrawal_flat as withdrawal_flat from mem_accounts mem join savings_product on mem.saveproduct_id=s.id where mem.id='".$memaccount_id."'");
+				//return $resp;
+				$prod = mysql_fetch_array($prod_res);
+				$percent_value = ($amount *$prod['withdrawal_perc']) /100;
+				$flat_value= $prod['withdrawal_flat'];
+				$tag = ($trans_to == 0)? "": "/Trans";
+				
+				start_trans();
+				if($trans_to >0){
+					$percent_value = 0;
+					$flat_value= 0;
+				}else{
+					$percent_value = ($amount *$prod['withdrawal_perc']) /100;
+					$flat_value= $prod['withdrawal_flat'];
+				}
+				
+				mysql_query("insert into withdrawal set memaccount_id='".$memaccount_id."', voucher_no='".$voucher_no.$tag."', trans_date = (select now()), cheque_no='".$cheque_no."', amount='".$amount."', percent_value='".$percent_value."', transfer=".$trans_to.", flat_value='".$flat_value."', bank_account='".$bank_account."', date='".$date."', branch_id=".$branch_id);
+		
+			
+			
+				//UPDATE THE DISBURSEMENT BANK ACCOUNT
+				if(! mysql_query("update bank_account set account_balance=account_balance-".$amount." where id=".$bank_account."")){
+					rollback();
+					$resp = "Withdrawal not registered \n Could not update bank account";
+					return $resp;
+				}
+				///////////////
+				$accno =mysql_fetch_assoc(mysql_query("select m.first_name,m.last_name,m.mem_no from member m join mem_accounts ma on m.id=ma.mem_id where ma.id=".$memaccount_id));
+				$action = "insert into withdrawal set memaccount_id='".$memaccount_id."', voucher_no='".$voucher_no.$tag."', trans_date = (select now()), cheque_no='".$cheque_no."', amount='".$amount."', percent_value='".$percent_value."', transfer='".$trans_to."', flat_value='".$flat_value."', bank_account='".$bank_account."', date='".$date."'";
+				$msg = "Registered a withdrawal worth:".$amount." to member: ".$accno['first_name']." ".$accno['last_name']." - ".$accno['mem_no'];
+				log_action($_SESSION['user_id'],$action,$msg);
+				
+				//////////////////
+				commit();
+				$resp = "Withdrawal of ".$amount." successfull! transaction code is:".$receipt_no;
+			}
+		}
+		return $resp;
+	}
+	
+	public function sendRequest($query) {
+			 $curl = curl_init();		
+			 # Create Curl Object
+			 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER,0);	
+			 # Allow self-signed certs
+			 curl_setopt($curl, CURLOPT_SSL_VERIFYHOST,0); 	
+			 # Allow certs that do not match the hostname
+			 curl_setopt($curl, CURLOPT_HEADER,0);			
+			 # Do not include header in output
+			 curl_setopt($curl, CURLOPT_RETURNTRANSFER,1);	
+			# set the username and password
+			curl_setopt($curl, CURLOPT_URL, $query);			
+			# execute the query
+			$result = curl_exec($curl);
+			if ($result == false) {
+			  error_log("curl_exec threw error \"" . curl_error($curl) . "\" for $query");	
+			  #log error if curl exec fails
+			}
+			curl_close($curl);
+			return $result;
+	   }
+	
+	public function send_sms($user, $sender_id, $msg, $recipient)
+	{
+			$url = 'http://smgw1.yo.co.ug:9100/sendsms?ybsacctno=1000501075&password=URUTEyMm&origin='.urlencode($sender_id).'&sms_content='.urlencode($msg).'&destinations='.$recipient.'&nostore=0';
+			$m = mysql_query("insert into mm_sms (`user`, sender, message, recipient, when_sent, feedback) values ('".mysql_real_escape_string($user)."', '".mysql_real_escape_string($sender_id)."', '".mysql_real_escape_string($msg)."', '".mysql_real_escape_string($recipient)."', '".date("Y-m-d H:i:s")."', '".mysql_real_escape_string($this->sendRequest($url))."')");
+			return $m ? true : false;
+	}
+}
+?>

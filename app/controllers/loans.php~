@@ -1,0 +1,145 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Loans extends CI_Controller {
+	public $data;
+    function __construct() {
+        parent::__construct();
+        $this->load->model('users_model');
+                
+        /**** Generate pagination ****/
+        //$this->load->library('pagination');
+       // $this->load->library('table');
+        $this->data['lang'] = strings();
+		$this->data['xajaxOn'] = true;
+		$this->data['heading'] = "Loans";
+		$this->data['xjf'] = array("resources/xajax/loans.php");
+		/*$this->data['js'] = array("resources/themes/admire/plugins/sparkline/js/jquery.sparkline.min.js",
+					"resources/themes/admire/plugins/sparkline/js/jquery.sparkline.min.js",
+					"resources/themes/admire/javascript/app.min.js",
+					"resources/themes/admire/plugins/inputmask/js/inputmask.min.js",
+					"resources/themes/admire/plugins/selectize/js/selectize.min.js",
+					"resources/themes/admire/plugins/jqueryui/js/jquery-ui.min.js",
+					"resources/themes/admire/plugins/jqueryui/js/jquery-ui-timepicker.min.js",
+					"resources/themes/admire/plugins/jqueryui/js/jquery-ui-touch.min.js",
+					"resources/themes/admire/javascript/forms/element.js",
+					"resources/js/employeeprofiles.js"
+					);*/
+		$this->data['css'] = array("resources/themes/admire/plugins/jqueryui/css/jquery-ui-timepicker.min.css","resources/themes/admire/plugins/jqueryui/css/jquery-ui.min.css");
+		$this->load->helper('URL');
+		$uid = CAP_Session::get('userId');
+		if(!isset($uid))
+			redirect(base_url()."serviceAuth");
+    }
+    
+    public function index(){
+    	echo ("Direct Access prohibited");
+    }
+    
+     public function createProduct(){
+		$this->data['subheading'] = "Create Loan Product";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("loans/createProduct",  $this->data);
+    	$this->load->view("includes/footer",  $this->data);
+    }
+    
+    public function listOfProducts(){		
+		$this->data['subheading'] = "Create Loan Product";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/listProducts",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+    
+    public function listOfApplicants(){		
+        $this->data['subheading'] = "List Of Applicants";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/listApplicants",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function apply(){		
+        $this->data['subheading'] = "Apply";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/apply",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function pendingApproval(){		
+        $this->data['subheading'] = "Pending Approval";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/pendingApproval",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function disbursement(){		
+        $this->data['subheading'] = "Pending Disbursement";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/pendingDisbursement",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function disbursed(){		
+        $this->data['subheading'] = "Disbursed ";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/disbursed",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function arrears(){		
+        $this->data['subheading'] = "Arrears";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/arrears",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function outstanding(){		
+        $this->data['subheading'] = "Outstanding";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/outstanding",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function duePayments(){		
+        $this->data['subheading'] = "Due Payments";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/duePayment",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function writtenOff(){		
+        $this->data['subheading'] = "Written Off";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/writtenOff",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function cleared(){		
+        $this->data['subheading'] = "Cleared";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/cleared",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function automaticLoss(){		
+        $this->data['subheading'] = "Automatic Loan Loss Provisions";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/automaticLoss",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function manualLoss(){		
+        $this->data['subheading'] = "Automatic Loan Loss Provisions";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/addManualLoss",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+	
+	public function listOfManualLoss(){		
+        $this->data['subheading'] = "Automatic Loan Loss Provisions";
+		$this->load->view("includes/headerForm",$this->data);
+		$this->load->view("loans/listManualLoss",$this->data);
+		$this->load->view("includes/footer",$this->data);
+	}
+    
+    
+  } 
+?>

@@ -1,0 +1,18 @@
+<?php
+class sms_Model extends CI_Model {
+ 	
+ 	public function __construct(){
+ 		parent::__construct();
+ 	} 
+ 	public function getSMPPSettings(){
+ 		$q = $this->db->query("SELECT * FROM smppsettings");
+ 		return $q;
+ 		
+ 	}
+ 	
+ 	public function getOutbox(){
+ 		$q = $this->db->query("SELECT * FROM outbox");
+ 		return $q;
+ 	}
+}
+?>

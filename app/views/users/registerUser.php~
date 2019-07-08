@@ -1,0 +1,144 @@
+ <div class="row">
+                <div class="col-md-6 col-lg-4">
+                           <!-- INPUT FIELDS -->
+                    <div class="panel panel-default panel-block">
+                    <form id="addUserForm" method="POST" action="user/addUser" data-parsley-namespace="data-parsley-" data-parsley-validate>
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <h4 class="section-title"><?=$lang["addUser"]?></h4>
+
+                                <div class="form-group">
+                                    <label for="basic-input"><?=$lang["userName"]?><span class="text-danger">*</span></label>
+                                    <input id="basic-input" name="username" class="form-control" placeholder="Username" data-parsley-required="true">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-counter"><?=$lang["password"]?><span class="text-danger">*</span></label>
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" data-parsley-required="true">
+                                </div>
+                                
+                                 <div class="form-group">
+                                    <label for="input-counter"><?=$lang["confirmPassword"]?><span class="text-danger">*</span></label>
+                                    <input type="password" name="confirmPassword" class="form-control" placeholder="Password" data-parsley-equalto="#password" data-parsley-required="true">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label><?=$lang["userGroup"]?><span class="text-danger">*</span></label>
+                                    <select class="form-control" id="parent" name="groupId">
+                                        <optgroup label="<?=$lang['userGroupSelect']?>">
+                                            <?=$userGroups?>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                               
+                                <div class="form-group">
+                                    <label for="input-counter"><?=$lang["status"]?><span class="text-danger">*</span></label>
+                                     <select class="form-control" id="parent" name="status">
+                                        <optgroup label="<?=$lang['select status']?>">
+                                            <option value="active"><?=$lang["active"]?></option>
+                                             <option value="inactive"><?=$lang["inactive"]?></option>
+                                              <option value="suspended"><?=$lang["suspended"]?></option>
+                                               <option value="pending"><?=$lang["pending"]?></option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="panel-footer text-right">
+                                  <button type="submit" class="btn btn-success"><?=$lang["submit"]?></button>
+                                </footer>
+                         </form>
+                    </div>
+                   </div> <!-- row colum -->
+                   <!-- column 4 -->
+                    <div class="col-md-6 col-lg-8">
+                     <div class="panel panel-primary">
+                            <!-- panel heading/header -->
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="panel-icon mr5"><i class="ico-table22"></i></span><?=$lang["menus"]?></h3>
+                                <!-- panel toolbar -->
+                                <div class="panel-toolbar text-right">
+                                    <!-- option -->
+                                    <div class="option">
+                                        <button class="btn up" data-toggle="panelcollapse"><i class="arrow"></i></button>
+                                       
+                                    </div>
+                                    <!--/ option -->
+                                </div>
+                                <!--/ panel toolbar -->
+                            </div>
+                            <!--/ panel heading/header -->
+                            <!-- panel toolbar wrapper -->
+                            <div class="panel-toolbar-wrapper pl0 pt5 pb5">
+                                <div class="panel-toolbar pl10">
+                                    <div class="checkbox custom-checkbox pull-left">  
+                                        <input type="checkbox" id="customcheckbox-one0" value="1" data-toggle="checkall" data-target="#table1">  
+                                        <label for="customcheckbox-one0">&nbsp;&nbsp;Select All</label>  
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <!--/ panel toolbar wrapper -->
+
+                            <!-- panel body with collapse capabale -->
+                            <div class="table-responsive panel-collapse pull out">
+
+	                     <table class="table table-bordered table-hover" id="table1">
+                                    <thead>
+	                            <tr>
+	                             <th class="text-center" colspan=3><i class="ico-long-arrow-down"></i>Permissions</th>
+	                              
+	                            	<th>#<?=$lang["id"]?></th>
+	                                <th><?=$lang["menu"]?></th>
+	                                <th><?=$lang["parent"]?></th>
+	                                <th><?=$lang["link"]?></th>
+	                                
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                        <?php
+	                        	$i = 0;
+	                        	
+	                        	//print_r($allMenus->result());
+	                        foreach($allMenus->result() as $m){
+	                        	$j=$i+1;
+	                          ?>  <tr>
+	                          <td>
+	                           <div class="checkbox custom-checkbox nm">  
+                                                    <input type="checkbox" id="customcheckbox-one<?=$j?>"  name="readP[]" value="1" data-toggle="selectrow" data-target="tr" data-contextual="success">  
+                                                    
+                                                    <label for="customcheckbox-one<?=$j?>">R</label>   
+                                   </div>
+                                   </td>
+                                   <td>
+                                   <div class="checkbox custom-checkbox nm">  
+                                                    <input type="checkbox" id="customcheckbox-two<?=$j?>" name="writeP[]" value="1" data-toggle="selectrow" data-target="tr" data-contextual="success">  
+                                                    <label for="customcheckbox-two<?=$j?>">W</label>   
+                                   </div>
+                                    </td>
+                                     <td>
+                                   <div class="checkbox custom-checkbox nm">  
+                                                    <input type="checkbox" id="customcheckbox-three<?=$j?>" name="deleteP[]" value="1" data-toggle="selectrow" data-target="tr" data-contextual="success">  
+                                                    <label for="customcheckbox-three<?=$j?>">D</label>   
+                                   </div>
+                                    </td>
+	                          	<td><?=$m->menuId?></td>
+	                                <td><?=$m->menuName?></td>
+	                                <td><?=$m->parentId?></td>
+	                                <td><?=$m->link?></td>
+	                                
+	                               
+	                            </tr>
+	                          <?php ++$i; } ?> 
+	                        </tbody>
+	                    </table>
+	                    
+		            </div>
+                    </div>
+                   </div>
+                   </div>
+                   <!-- /end colum 4-->
+                   
+                   </div> <!-- row -->
+

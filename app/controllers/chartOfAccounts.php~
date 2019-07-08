@@ -1,0 +1,227 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class ChartsOfAccounts extends CI_Controller {
+
+    function __construct() {
+        parent::__construct();
+       // $this->load->model('chartofaccounts_model');
+                
+       $this->data['lang'] = strings();
+		$this->data['xajaxOn'] = true;
+		$this->data['heading'] = "Chart of Accounts";
+		$this->data['xjf'] = array("resources/xajax/chartOfAccounts.php","resources/xajax/income.php",);
+		$this->data['js'] = array("resources/themes/admire/plugins/sparkline/js/jquery.sparkline.min.js",
+					"resources/themes/admire/plugins/sparkline/js/jquery.sparkline.min.js",
+					"resources/themes/admire/javascript/app.min.js",
+					"resources/themes/admire/plugins/inputmask/js/inputmask.min.js",
+					"resources/themes/admire/plugins/selectize/js/selectize.min.js",
+					"resources/themes/admire/plugins/jqueryui/js/jquery-ui.min.js",
+					"resources/themes/admire/plugins/jqueryui/js/jquery-ui-timepicker.min.js",
+					"resources/themes/admire/plugins/jqueryui/js/jquery-ui-touch.min.js",
+					"resources/themes/admire/javascript/forms/element.js",
+					"resources/js/employeeprofiles.js"
+					);
+		$this->data['css'] = array("resources/themes/admire/plugins/jqueryui/css/jquery-ui-timepicker.min.css","resources/themes/admire/plugins/jqueryui/css/jquery-ui.min.css");
+		$this->load->helper('URL');
+		$uid = CAP_Session::get('userId');
+		if(!isset($uid))
+			redirect(base_url()."serviceAuth");
+    }
+    
+    public function index(){
+    	echo ("Direct Access prohibited");
+    }
+    
+    public function accountsAssets(){
+		$this->data['subheading'] = "Assets";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/chartOfAccountsAssets", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function accountsLiabilities(){
+		$this->data['subheading'] = "Liabilities";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/chartOfAccountsLiabilities", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function accountsCapital(){
+		$this->data['subheading'] = "Capital";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/chartOfAccountsCapital", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function accountsIncome(){
+		$this->data['subheading'] = "Income";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/chartOfAccountsIncome", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function accountsExpenses(){
+		$this->data['subheading'] = "Chart of Accounts Expenses";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/chartOfAccountsExpenses", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+     public function registerIncome(){
+		$this->data['subheading'] = "Register Income";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/income/registerIncome", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfIncome(){
+		$this->data['subheading'] = "List Income";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/income/listIncome", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function registerReceivable(){
+		$this->data['subheading'] = "Register Receivable";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/receivables/registerReceivable", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfReceivables(){
+		$this->data['subheading'] = "List of Receivables";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/receivables/listReceivables", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+     public function pendingReceivables(){
+		$this->data['subheading'] = "pending Receivables";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/receivables/pendingReceivables", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function clearedReceivables(){
+		$this->data['subheading'] = "Cleared Receivables";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/receivables/clearedReceivables", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+     public function registerFixedAsset(){
+		$this->data['subheading'] = "Register Fixed Asset";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/fixedAssets/registerFixedAsset", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfFixedAssets(){
+		$this->data['subheading'] = "List of Fixed Assets";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/fixedAssets/listFixedAssets", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function sellFixedAsset(){
+		$this->data['subheading'] = "Sell Fixed Asset";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/fixedAssets/sellFixedAsset", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfSoldAssets(){
+		$this->data['subheading'] = "List of Sold Assets";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/fixedAssets/listSoldAssets", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    
+    public function registerInvestment(){
+		$this->data['subheading'] = "Register Investment";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/investments/registerInvestment", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfInvestments(){
+		$this->data['subheading'] = "List of Investments";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/investments/listInvestments", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function sellInvestment(){
+		$this->data['subheading'] = "Sell Investment";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/investments/sellInvestment", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfSoldInvestments(){
+		$this->data['subheading'] = "List of Sold Investments";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/investments/listSoldInvestments", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+     public function registerExpenses(){
+		$this->data['subheading'] = "Register Expenses";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/expenses/registerExpenses", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listExpenses(){
+		$this->data['subheading'] = "List Expenses";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/expenses/listExpenses", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function registerPayable(){
+		$this->data['subheading'] = "Register Payable";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/payables/registerPayable", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listOfPayables(){
+		$this->data['subheading'] = "List of Payables";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/payables/listPayables", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function pendingPayables(){
+		$this->data['subheading'] = "Pending Payables";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/payables/pendingPayables", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function clearedPayables(){
+		$this->data['subheading'] = "Cleared Payables";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/payables/clearedPayables", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function registerFund(){
+		$this->data['subheading'] = "Register Fund";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/capitalFund/registerFund", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+    public function listCapitalFund(){
+		$this->data['subheading'] = "List Capital Fund";
+    	$this->load->view("includes/headerForm", $this->data);
+    	$this->load->view("chartofaccounts/capitalFund/listCapitalFund", $this->data);
+    	$this->load->view("includes/footer", $this->data);
+    }
+    
+}
+    
+?>

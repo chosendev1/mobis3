@@ -1,0 +1,42 @@
+<?php
+require_once 'ussdOperations.php';     
+ $ussdReq = file_get_contents("php://input");
+ /*$ussdReq = '<?xml version="1.0"?>
+					<USSDRequest>
+						<TransactionId>212298</TransactionId>
+						<TransactionTime>2015-02-22 07:43:00</TransactionTime>
+						<MSISDN>256782247657</MSISDN>
+						<USSDServiceCode>288</USSDServiceCode>
+						<USSDRequestString>continue</USSDRequestString>
+						<response>false</response>
+					</USSDRequest>';*/
+ $fp = fopen("ussdfile".date('Y-m-d His').".txt", "w");
+ $buff = $ussdReq;
+ $xml = new SimpleXMLElement($ussdReq);
+ $transactionId = "129992310440";
+ $transactionTime = "";
+ $MSISDN = "";
+ $USSDServiceCode = "";
+ $USSDRequestString = "";
+ foreach($xml->USSDRequest as $value){
+ 	$transactionId = $value->TransactionId;
+ 	$transactionTime = $value->TransactionTime;
+ 	$MSISDN = $value->MSISDN;
+ 	$USSDRequestString = $value->USSDRequestString;
+ 	$USSDServiceCode = $value->USSDServiceCode;
+ 	$buff .= "transactionId: ".$transactionId."\n";
+ 	$buff .= "transactionTime: ".$transactionTime."\n";
+ 	$buff .= "MSISDN: ".$MSISDN."\n";
+ 	$buff .= "USSDRequestString: ".$USSDRequestString."\n";
+ }
+ fwrite($fp, $buff);
+ fclose($fp);
+$ussdOps = new ussdOperations();
+$resp = $ussdOps->mainMenu(); 	
+$data['TransactionId'] = $transactionId;
+$data['TransactionTime'] = date('YmdTH:i:s');
+$data['USSDResponseString'] = $resp['main'];
+$data['USSDAction'] = "request";
+$data['USSDResponse'] = $data;
+echo(json_encode($data));
+?>

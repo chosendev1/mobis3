@@ -1,0 +1,45 @@
+<?php
+class ServiceAuth extends CI_Controller{
+	public function __construct(){
+		parent::__construct();
+		$data['js'] = array("serviceAuth/js/default.js");
+		$this->load->model("users_model");
+	}
+	
+	public function index(){
+		$data['lang'] = strings();
+		$uid = CAP_session::get('username');
+		isset($uid) ? header("location:dashboard") : $this->load->view("serviceAuth/index",$data);
+	}
+	
+	public function login(){
+		$data = array();
+		$data['status'] = "failed";
+		$data['link'] = base_url()."dashboard";
+		$user = $this->users_model->userData($_POST['username'],$_POST['password']);
+		$data['failredirect'] = "serviceAuth?fail=1";
+		if($user){
+			if($user->status == "Inactive"){
+				$data['failredirect'] = "serviceAuth?fail=2";
+			}
+			else{
+				$data['status'] = "success";
+				CAP_session::init();
+				CAP_session::set("username",$user->userName);
+				CAP_session::set("password",$user->password);
+				CAP_session::set("userId",$user->userId);
+				CAP_session::set("groupId",$user->userGroupId);
+				CAP_session::set("employeeId",$user->employeeId);
+			}
+		}
+		echo(json_encode($data));
+		//header("location:".URL);
+	}
+	
+	public function logout(){
+		CAP_session::init();
+		CAP_session::destroy();
+		header("location:".base_url()."serviceAuth");
+	}
+}
+?>

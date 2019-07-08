@@ -1,0 +1,81 @@
+<?php
+
+	$length = strlen($hwpr) - 1;
+	$seq = "";
+	for ($i = 0; $i < $length; $i++)
+	{
+		$str1 = substr($hwpr, $i, 1);
+		$str2 = substr($hwpr, ($i + 1), 1);
+		$char = (intval($str1) > intval($str2))? 0 : 1 ;
+		$seq .= $char;
+	
+	}
+	$seq .= "1";
+	$client_id = "";
+
+	for ($j = 0; $j < $length; $j+=4)
+	{
+		$client_id .= base_convert(substr($seq, $j, 4), 2, 16);
+	}
+	$client_id = strtoupper($client_id);
+	$row = mysql_fetch_array(mysql_query("select * from flt_key order by id desc limit 1"));
+	$sub_license = strtoupper($row['license_key']);
+	//$sub_license = strtoupper($key1) . strtoupper($key2) . strtoupper($key3) . strtoupper($key4);
+	$date = $sub_license{2} . $sub_license{5} . $sub_license{8} . $sub_license{11} . $sub_license{14} . $sub_license{15};
+	$text = $client_id . $date;
+
+	$n = 57264617;
+	$e = 7603;
+	$keys = array($n, $e);
+	$b32->setCharset($b->csSafe);
+	$encoded = $rsa->rsa_encrypt($text, $keys[1], $keys[0]);
+	$key = $b32->fromString($encoded);
+	$keysum = sha1($key);
+	$keylen = strlen($keysum);
+	$seq2 = "";
+
+	for ($i = 0; $i < $keylen; $i++)
+	{
+        $str1 = substr($keysum, $i, 1);
+        $str2 = substr($keysum, ($i + 1), 1);
+        $char = (intval($str1) > intval($str2))? 0 : 1 ;
+        $seq2 .= $char;
+
+	}
+	$seq2 .= "1";
+	for ($j = 0; $j < $keylen; $j+=4)
+	{
+        $rkey .= base_convert(substr($seq2, $j, 4), 2, 16);
+	}
+	$ack1 = substr($rkey, 0, 2);
+	$ack2 = substr($rkey, 2, 2);
+	$ack3 = substr($rkey, 4, 2);
+	$ack4 = substr($rkey, 6, 2);
+	$ack5 = substr($rkey, 8);
+	//$ack5 = $rkey{9};
+	$date1 = $date{0};
+	$date2 = $date{1};
+	$date3 = $date{2};
+	$date4 = $date{3};
+	$date5 = substr($date, 4);
+	$actual_key = $ack1 . $date1.$ack2.$date2.$ack3.$date3.$ack4.$date4.$ack5.$date5;
+	$fkey .= substr($sub_license, 0, 4) . "-" . substr($sub_license, 4, 4) . "-" . substr($sub_license, 8, 4) . "-" . substr($sub_license, 12);
+	if ((strtoupper($sub_license) != strtoupper($actual_key)) || (date('ymd') >= $date))
+	{
+		header("Location: home2.php");
+		exit();
+	}
+}
+//evalKey();
+if($_SESSION['user_id'] ==0 || !isset($_SESSION['user_id']))
+		header("Location: index.php");
+echo("<head>
+	<title>SAVINGS PLUS v 2.0 : PERFOMANCE INDICATORS > GRAPH OF COVERAGE RISK RATIO AGAINST TIME</title>
+		<style>
+.headings{ color:#ffffff; background-color:#00008b;}
+	</style>
+	</head><body>");
+reports_header();
+echo("<img src=\"coverage.jpg?dummy=".rand()."\" width=800 height=450>");
+reports_footer();
+?>

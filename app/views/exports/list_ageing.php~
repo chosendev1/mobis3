@@ -1,0 +1,165 @@
+<?php
+
+if(!isset($_GET['format']))
+echo("<head>
+	<title>AGEING REPORT</title>
+		<style>
+.headings{ color:#ffffff; background-color:#00008b;}
+	</style>
+	</head><body>");
+//AGEING REPORT
+function ageing($cust_name, $cust_no, $account_name, $loan_officer, $from_year, $from_month, $from_mday, $to_year, $to_month, $to_mday, $format,$branch_id){
+	$branch_res = mysql_query("select * from branch");
+	$branch = mysql_fetch_array($branch_res);
+	$branch_ = ($branch_id=='all'||$branch_id=='')?NULL:"and d.branch_id=".$branch_id;
+	$content .= "<center><p><font color=#00008b size=4pt><b>".$branch['branch_name']."</b></font></p></center>";
+	$content .= "<center><font color=#00008b size=3pt><b>AGEING REPORT</b></font></center><table height=100 border='1' cellpadding='0' cellspacing='0' style='border-collapse: collapse' bordercolor='#111111' width='100%' id='AutoNumber2' align=center><tr><td>
+		<table height=100 border='1' cellpadding='0' cellspacing='1' style='border-collapse: collapse' bordercolor='#111111' width='100%' id='AutoNumber2' align=center>";
+	if($from_year==''){
+		$content .= "<tr><td><center><font color=red>Please select the disbursed loans you would like to list!</font></center></td></tr></table></td></tr></table>";
+	}
+	$name = ($cust_name == 'All') ? "" : $cust_name;
+	$mem_no = ($cust_no == 'All') ? "" : $cust_no;
+	$from_date = sprintf("%d-%02d-%02d 00:00:00", $from_year, $from_month, $from_mday);
+	$to_date = sprintf("%d-%02d-%02d 23:59:59", $to_year, $to_month, $to_mday);
+	if($loan_officer >0)
+		$officer = "o.id='".$loan_officer."'";
+	else
+		$officer = "o.id > 0";
+	
+	$sth = mysql_query("select d.id as id, applic.id as applic_id, m.first_name as first_name, m.last_name as last_name, m.mem_no as mem_no, o.first_name as of_first_name, o.last_name as of_last_name, a.account_no as account_no, a.name as account_name, d.id as id, d.amount as amount, d.date as date, d.balance as balance, d.period as loan_period, d.int_rate as int_rate, d.int_method as int_method, d.grace_period as grace_period, d.writeoff_period as writeoff_period, d.arrears_period as arrears_period, d.written_off as written_off, d.bank_account as bank_account from disbursed d join loan_applic applic on d.applic_id=applic.id join member m on applic.mem_id=m.id join loan_product p on applic.product_id=p.id join accounts a on p.account_id= a.id join officer o on applic.officer_id=o.id where (m.first_name like '%".$name."%' or m.last_name like '%".$name."%') and m.mem_no like '%".$mem_no."%' and a.name like '%".$account_name."%' and ".$officer." and d.date >= '".$from_date."' and d.date <='".$to_date."' and d.written_off='0' ".$branch_." order by o.first_name, o.last_name, m.first_name, m.last_name");
+	
+	if(@ mysql_numrows($sth) == 0){
+		$content .= "<tr><td><center><font color=red>No disbursed loans in your search options</font></center></td></tr></table></td></tr></table>";
+	}
+	
+	$former_officer ="";
+	$i=$stat+1;
+	while($row = mysql_fetch_array($sth)){
+		$officer = $row['of_first_name']." ".$row['of_last_name'];
+		if(strcmp($former_officer, $officer) != 0){
+			$content .="<tr class='headings'><td colspan=30><b>Loan Officer:  ".$officer."</b></td></tr> <tr class='headings'><td rowspan=2><b>No</b></td><td rowspan=2><b>Member Name</b></td><td rowspan=2><b>MemberNo</b></td><td rowspan=2><b>Date Awarded</b></td><td rowspan=2><b>Date Last Payment Due</b></td><td rowspan=2><b>Interest Paid Up To</b></td><td rowspan=2><b>No. of Annual Payments</b></td><td rowspan=2><b>Annual Int. Rate(%)</b></td><td rowspan=2><b>Amount Awarded</b></td><td rowspan=2><b> Outstanding Balance</b></td><td rowspan=2><b>Deliq. Payments</b></td><td rowspan=2><b>Non Deliquent</b></td><td colspan=6><b>AA Deliquent Ranges</b></td></tr>
+			<tr class='headings'><td><b>A 1 Day - 1 Month</b></td><td><b>B 2-3 Months</b></td><td><b>C 4-6 Months</b></td><td><b>D 7-9 Months</b></td><td><b>E 10-12 Months</b></td><td><b>F >12 Months</b></td></tr>";
+			$former_officer = $officer;
+		}
+		if($row['balance'] != $row['amount'] && $row['written_off']==0)
+			$edit = "Payment Started";
+		elseif($row['written_off'] == '1')
+			$edit = "Written Off";
+		else
+			$edit = "<a href=# onclick=\"xajax_edit_disbursed('".$row['id']."', '".$row['applic_id']."');\">Edit</a>";
+		$bank_res = mysql_query("select a.name as account_name, a.account_no as account_no from bank_account b join accounts a on b.account_id=a.id where b.id='".$row['bank_account']."'");
+		$bank = mysql_fetch_array($bank_res);
+		$last_res = mysql_query("select date as last_date from schedule where loan_id='".$row['id']."' order by date desc limit 1");
+		$last = mysql_fetch_array($last_res);
+		$paid_res = mysql_query("select sum(int_amt) as int_amt from payment where loan_id='".$row['id']."'");
+		$paid = mysql_fetch_array($paid_res);
+		$int_paid = ($paid['int_amt'] == NULL) ? "--" : $paid['int_amt'];
+		$annual_payments = ($row['loan_period']/30 <12) ? $row['loan_period']/30 : 12;
+
+		//DELIQUENT PAYMENTS
+		$deliquent = 0;
+		$non_deliquent=0;
+		$paid_res = mysql_query("select p.date as date, p.princ_amt as princ_amt from payment p join disbursed d on p.loan_id=d.id where p.loan_id='".$row['id']."' order by p.date asc");
+		while($paid = mysql_fetch_array($paid_res)){
+			$sched_res = mysql_query("select sum(princ_amt) as princ_amt from schedule where loan_id='".$row['id']."' and date < '".$paid['date']."'");
+			$sched = mysql_fetch_array($sched_res);
+			$sched_amt = ($sched['princ_amt'] == NULL) ? 0 : $sched['princ_amt'];
+			$tot_res = mysql_query("select sum(princ_amt) as princ_amt from payment where loan_id='".$row['id']."' and date < '".$paid['date']."'");
+			$tot = mysql_fetch_array($tot_res);
+			$tot_amt = ($tot['princ_amt'] == NULL) ? 0 : $tot['princ_amt'];
+			$arrears_amt = $sched_amt - $tot_amt;
+			if($arrears_amt > 0){
+				if($arrears_amt > $paid['princ_amt'])
+					$portion = $paid['princ_amt'];
+				else{
+					$portion = $arrears_amt;
+					$non_deliquent = $non_deliquent + $paid['princ_amt'] - $arrears_amt;	
+				}
+				$deliquent = $deliquent + $portion;
+			}else
+				$non_deliquent = $non_deliquent + $paid['princ_amt'];
+		}
+		//DELIQUENT RANGES
+		$paid_amt = $row['amount'] - $row['balance'];
+		$sched_res = mysql_query("select sum(princ_amt) as princ_amt from schedule where loan_id='".$row['id']."' and date <= CURDATE()");
+		$sched = mysql_fetch_array($sched_res);
+		$sched_amt = ($sched['princ_amt'] != NULL) ? $sched['princ_amt'] : 0;
+		$arrears_amt = $sched_amt - $paid_amt; 
+		
+		$range1 = 0;
+		$range2 = 0;
+		$range3 = 0;  
+		$range4 = 0;
+		$range5 = 0;
+		$range6 = 0;
+		//OFFSET MONTHS
+		$offset_res = mysql_query("select (DATEDIFF(CURDATE(), date) / 30) as months_off from schedule where loan_id=".$row['id']."  order by date desc limit 1");
+		$offset = mysql_fetch_array($offset_res);
+		$offset = floor($offset['months_off']);
+		if($arrears_amt >0){
+			$instalment = ceil($row['amount'] / ($row['loan_period']/ 30));
+			$no = ceil($arrears_amt / $instalment);
+			//$no += $offset;
+			//$remainder = $arrears_amt % $instalment;
+			if($offset >= 12){
+				$range6 = $arrears_amt;
+			}else{
+				if($no >= 13)
+					$range6 = $arrears_amt - (12 * $instalment);
+				if($no >= 10)
+					$range5 = $arrears_amt - $range6 - (9 * $instalment);
+				if($no >= 7)
+					$range4 =$arrears_amt - $range6 -$range5 - (6 * $instalment);
+				if($no >= 4)
+					$range3 = $arrears_amt - $range6 - $range5 - $range4 - (3 * $instalment);
+				if($no >=2)
+					$range2 = $arrears_amt - $range6 - $range5 - $range4 - $range3 - 1* $instalment;
+				if($no >= 1){
+					$range1 = ($instalment > $arrears_amt) ? $arrears_amt : $instalment;
+				}
+				if($offset >=1 && $offset <= 3){
+					$range6 += $range5;
+					$range5 = $range4;
+					$range4 = $range3;
+					$range3 = $range2;
+					$range2 = $range1;
+					$range1 = 0;
+				}
+				if($offset >=4 && $offset <= 5){
+					$range6 = $range6 + $range5 + $range4;
+					$range5 = $range3;
+					$range4 = $range2;
+					$range3 = $range1;
+					$range2 = 0;
+					$range1 = 0;
+				}
+				if($offset >=6 && $offset <= 8){
+					$range6 = $range6 + $range5 + $range4 + $range3;
+					$range5 = $range2;
+					$range4 = $range1;
+					$range3 = 0;
+					$range2 = 0;
+					$range1 = 0;
+				}
+				if($offset >=9 && $offset <= 11){
+					$range6 = $range6 + $range5 + $range4 + $range3 + $range2;
+					$range5 = $range1;
+					$range4 = 0;
+					$range3 = 0;
+					$range2 = 0;
+					$range1 = 0;
+				}
+			}
+		}
+		$color = ($i%2 == 0) ? "lightgrey" : "white";
+		$content .= "<tr bgcolor=$color><td>".$i."</td><td>".$row['first_name']." ".$row['last_name']."</td><td>".$row['mem_no']."</td><td>".$row['date']."</td><td>".$last['last_date']."</td><td>".number_format($int_paid, 2)."</td><td>".$annual_payments."</td><td>".$row['int_rate']."</td><td>".number_format($row['amount'], 2)."</td><td>".number_format($row['balance'], 2)."</td><td>".number_format($deliquent, 2)."</td><td>".number_format(($row['balance'] - $deliquent), 2)."</td><td>".number_format($range1, 2)."</td><td>".number_format($range2, 2)."</td><td>".number_format($range3, 2)."</td><td>".number_format($range4, 2)."</td><td>".number_format($range5, 2)."</td><td>".number_format($range6, 2)."</td></tr>";
+		$i++;
+	}
+	$content .="</table></td></tr></table>";
+	export($format, $content);
+}
+//reports_header();
+ageing($_GET['cust_name'], $_GET['cust_no'], $_GET['account_name'], $_GET['loan_officer'], $_GET['from_year'], $_GET['from_month'], $_GET['from_mday'], $_GET['to_year'], $_GET['to_month'], $_GET['to_mday'], $_GET['format'],$_GET['branch_id']);
+//reports_footer();
+?>

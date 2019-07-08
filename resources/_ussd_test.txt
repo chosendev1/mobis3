@@ -1,0 +1,494 @@
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-07-15 16:47:41', '803130943861', '803130943861', '256782157074', '', '0', '2015-07-15 16:47:41', '0', '1')insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '50', '2015-07-15 17:27:03', '927118609019', '927118609019', '256782157074', '', '0', '2015-07-15 17:27:03', '0', '0')insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '100', '2015-07-15 20:50:33', '213962', '213962', '256755062197', '', '0', '2015-07-15 20:50:33', '0', '0')insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-07-15 20:56:01', '650185', '650185', '256755062197', '', '0', '2015-07-15 20:56:01', '0', '1')insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-07-15 21:00:49', '241921', '241921', '256755062197', '', '0', '2015-07-15 21:00:49', '0', '0')insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '2550', '2015-07-15 21:03:41', '221671', '221671', '256755062197', '', '0', '2015-07-15 21:03:41', '0', '1')insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '10000', '2015-07-16 19:30:44', '073981', '073981', '256772346324', '', '0', '2015-07-16 19:30:44', '0', '0')insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '10000', '2015-07-18 11:20:30', '398754', '398754', '256772346324', '', '0', '2015-07-18 11:20:30', '0', '0')insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '200', '2015-07-18 14:58:22', '862648', '862648', '256782157074', '', '0', '2015-07-18 14:58:22', '0', '0')insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '200', '2015-07-18 15:10:50', '489969', '489969', '256782157074', '', '0', '2015-07-18 15:10:50', '0', '1')Member A/c: AD1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '200', '2015-07-18 17:07:44', '536256', '536256', '256782157074', '', '0', '2015-07-18 17:07:44', '0', '1')
+Member A/c: Ad1014
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '10000', '2015-07-18 22:02:29', '355348', '355348', '256772346324', '', '0', '2015-07-18 22:02:29', '0', '1')
+Member A/c: Ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '10000', '2015-07-18 22:12:08', '108286', '108286', '256772346324', '', '0', '2015-07-18 22:12:08', '0', '1')
+Member A/c: Ad1026
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '5000', '2015-07-19 17:43:13', '969356', '969356', '256772346324', '', '0', '2015-07-19 17:43:13', '0', '1')
+Member A/c: Ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '10000', '2015-07-20 09:47:35', '943532', '943532', '256772346324', '', '0', '2015-07-20 09:47:35', '0', '1')
+Member A/c: Ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '10000', '2015-07-21 19:45:59', '133037', '133037', '256701067454', '', '0', '2015-07-21 19:45:59', '0', '1')
+Member A/c: AD1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-07-22 10:49:18', '668797', '668797', '256782157074', '', '0', '2015-07-22 10:49:18', '0', '1')
+Member A/c: AD1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-07-22 11:09:36', '163036', '163036', '256701067454', '', '0', '2015-07-22 11:09:36', '0', '1')
+Member A/c: AD1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-07-22 11:19:57', '782795', '782795', '256782157074', '', '0', '2015-07-22 11:19:57', '0', '1')
+Member A/c: AD1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '3000', '2015-07-22 11:46:04', '586349', '586349', '256701067454', '', '0', '2015-07-22 11:46:04', '0', '1')
+Member A/c: ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '400', '2015-07-22 11:51:56', '513078', '513078', '256701067454', '', '0', '2015-07-22 11:51:56', '0', '1')
+Member A/c: ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '300', '2015-07-22 11:55:51', '020505', '020505', '256704447714', '', '0', '2015-07-22 11:55:51', '0', '1')
+Member A/c: ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '5000', '2015-07-22 12:08:36', '330975', '330975', '256704447714', '', '0', '2015-07-22 12:08:36', '0', '1')
+Member A/c: ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-07-22 12:08:48', '196424', '196424', '256701067454', '', '0', '2015-07-22 12:08:48', '0', '1')
+Member A/c: ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-07-22 12:19:15', '498089', '498089', '256774395976', '', '0', '2015-07-22 12:19:15', '0', '1')
+Member A/c: AD1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '2000', '2015-07-22 15:35:07', '008922', '008922', '256782157074', '', '0', '2015-07-22 15:35:07', '0', '1')
+Member A/c: AD1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('1', '500', '2015-07-22 16:07:22', '510297', '510297', '256782157074', '0.000', '0', '2015-07-22 16:07:22', '0', '1')
+Member A/c: AD1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('1', '10000', '2015-07-23 08:17:52', '668222', '668222', '256701067454', '0.000', '0', '2015-07-23 08:17:52', '0', '1')
+Member A/c: Ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('1', '2000', '2015-07-23 13:54:00', '053006', '053006', '256772346324', '0.000', '0', '2015-07-23 13:54:00', '0', '1')
+Member A/c: Ad1041
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('43', '10000', '2015-07-25 19:14:23', '695281', '695281', '256772346324', '0.000', '0', '2015-07-25 19:14:23', '0', '1')
+Member A/c: 
+Member A/c: ag40000001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-09-26 13:43:56', '230347', '230347', '', '', '0', '2015-09-26 13:43:56', '0', '4')
+Member A/c: ag40000001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-09-26 14:01:23', '096642', '096642', '256757934070', '', '0', '2015-09-26 14:01:23', '0', '4')
+Member A/c: ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-09-26 23:31:41', '073294', '073294', '256755062197', '', '0', '2015-09-26 23:31:41', '0', '1')
+Member A/c: ad1001
+insert into mm_transaction (memaccount_id, amount, trans_date, receipt_no, cheque_no, depositor, flat_value, percent_value, date, bank_account, branch_id) values ('', '500', '2015-09-27 00:02:00', '051888', '051888', '256782157074', '', '0', '2015-09-27 00:02:00', '0', '1')
+Member A/c: ad1001
+Member A/c: ad1001
+Member A/c: ad1001
+Member A/c: ad1001
+Member A/c: ad1001
+Member A/c: ad1001
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='072823', cheque_no='072823', flat_value='', percent_value='0', date='2015-09-27 00:31:34', bank_account='0'
+Member A/c: ad1001
+Member A/c: ad1001
+Member A/c: ad1001
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='398160', cheque_no='398160', flat_value='', percent_value='0', date='2015-09-27 00:39:46', bank_account='0'
+Member A/c: ad1001
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='253277', cheque_no='253277', flat_value='', percent_value='0', date='2015-09-27 00:42:21', bank_account='0'
+Member A/c: ad1001
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='165493', cheque_no='165493', flat_value='', percent_value='0', date='2015-09-27 00:48:01', bank_account='0'
+Member A/c: ad1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='427627', cheque_no='427627', flat_value='0.000', percent_value='0', date='2015-09-27 00:51:48', bank_account='0'
+Member A/c: ad1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='039599', cheque_no='039599', flat_value='0.000', percent_value='0', date='2015-09-27 00:57:51', bank_account='0'
+Member A/c: ad1001
+Member A/c: ad1001
+Member A/c: ad1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='807332', cheque_no='807332', flat_value='0.000', percent_value='0', date='2015-09-27 01:06:21', bank_account='0'
+Member A/c: ad1001
+Member A/c: ad1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='049718', cheque_no='049718', flat_value='0.000', percent_value='0', date='2015-09-27 01:12:32', bank_account='0'
+Member A/c: AG40000001
+insert into deposit set memaccount_id='802', amount='500', trans_date = (select now()), receipt_no='723262', cheque_no='723262', flat_value='0.000', percent_value='0', date='2015-09-27 12:31:34', bank_account='0'
+Member A/c: AG40000001
+insert into deposit set memaccount_id='802', amount='500', trans_date = (select now()), receipt_no='100871', cheque_no='100871', flat_value='0.000', percent_value='0', date='2015-09-27 12:40:50', bank_account='0'
+Member A/c: AG40000001
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='463467', cheque_no='463467', flat_value='0.000', percent_value='0', date='2015-09-27 13:06:41', bank_account='2'
+Member A/c: AD1001
+Member A/c: AD1001
+Member A/c: AD1001
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='378117', cheque_no='378117', flat_value='0.000', percent_value='0', date='2015-09-27 14:29:32', bank_account='2'
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='627348', cheque_no='627348', flat_value='0.000', percent_value='0', date='2015-09-27 15:20:07', bank_account='2'
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='161770', cheque_no='161770', flat_value='0.000', percent_value='0', date='2015-09-28 12:57:56', bank_account='2'
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='433611', cheque_no='433611', flat_value='0.000', percent_value='0', date='2015-09-29 10:24:02', bank_account='2'
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='1000', trans_date = (select now()), receipt_no='678129', cheque_no='678129', flat_value='0.000', percent_value='0', date='2015-09-29 12:30:20', bank_account='2'
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='1000', trans_date = (select now()), receipt_no='041277', cheque_no='041277', flat_value='0.000', percent_value='0', date='2015-09-29 12:36:22', bank_account='2'
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='3000', trans_date = (select now()), receipt_no='750134', cheque_no='750134', flat_value='0.000', percent_value='0', date='2015-09-29 12:40:32', bank_account='2'
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='2000', trans_date = (select now()), receipt_no='681713', cheque_no='681713', flat_value='0.000', percent_value='0', date='2015-09-29 19:36:58', bank_account='2'
+Member A/c: ad1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='511021', cheque_no='511021', flat_value='0.000', percent_value='0', date='2015-10-01 19:08:14', bank_account='2'
+Dear FRED, your deposit of 500 from 0782157074 was successfull!Member A/c: ad1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='962355', cheque_no='962355', flat_value='0.000', percent_value='0', date='2015-10-01 19:13:33', bank_account='2'
+Member A/c: ad1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='364306', cheque_no='364306', flat_value='0.000', percent_value='0', date='2015-10-01 19:22:58', bank_account='2'
+Member A/c: ad1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='495790', cheque_no='495790', flat_value='0.000', percent_value='0', date='2015-10-01 19:34:32', bank_account='2'
+Dear FRED, your deposit of 500 from 0782157074 was successfull! - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='291746', cheque_no='291746', flat_value='0.000', percent_value='0', date='2015-10-01 19:37:45', bank_account='2'
+Dear FRED, your deposit of 500 from 0754378090 was successfull! - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='833399', cheque_no='833399', flat_value='0.000', percent_value='0', date='2015-10-01 19:47:10', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0754378090 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='477162', cheque_no='477162', flat_value='0.000', percent_value='0', date='2015-10-01 19:47:52', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0782157074 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='849465', cheque_no='849465', flat_value='0.000', percent_value='0', date='2015-10-01 20:13:59', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0782157074 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='1000', trans_date = (select now()), receipt_no='904147', cheque_no='904147', flat_value='0.000', percent_value='0', date='2015-10-01 20:28:09', bank_account='2'
+Dear Fred Okumu, your deposit of 1,000 from 0750539564 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: KF100001
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='923127', cheque_no='923127', flat_value='', percent_value='0', date='2015-10-01 20:32:21', bank_account='0'
+Dear  , your deposit of 500 from 0750539564 was successfull!Account Number: KF100001Sacco: KAFUNDA WEKEMBE GROUP - failed
+Member A/c: OA0000116
+insert into deposit set memaccount_id='1185', amount='1000', trans_date = (select now()), receipt_no='936310', cheque_no='936310', flat_value='0.000', percent_value='0', date='2015-10-01 21:13:12', bank_account='0'
+Dear Abalo santina Oa108, your deposit of 1,000 from 0750539564 was successfull!Account Number: OA0000116Sacco: KITGUM COOPERATIVE LTD - failed
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='1000', trans_date = (select now()), receipt_no='351323', cheque_no='351323', flat_value='0.000', percent_value='0', date='2015-10-05 17:25:12', bank_account='2'
+Dear Fred Okumu, your deposit of 1,000 from 0750539564 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='1500', trans_date = (select now()), receipt_no='781878', cheque_no='781878', flat_value='0.000', percent_value='0', date='2015-10-06 11:38:19', bank_account='2'
+Dear Fred Okumu, your deposit of 1,500 from 0750539564 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1106
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='785278', cheque_no='785278', flat_value='', percent_value='0', date='2015-10-06 13:33:53', bank_account='2'
+Dear  , your deposit of 500 from 0750539564 was successfull!Account Number: AD1106Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='097284', cheque_no='097284', flat_value='0.000', percent_value='0', date='2015-10-06 15:20:45', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0750539564 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='525', trans_date = (select now()), receipt_no='211211', cheque_no='211211', flat_value='0.000', percent_value='0', date='2015-10-08 19:04:51', bank_account='2'
+Dear Fred Okumu, your deposit of 525 from 0782207010 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='530', trans_date = (select now()), receipt_no='606842', cheque_no='606842', flat_value='0.000', percent_value='0', date='2015-10-08 19:17:06', bank_account='2'
+Dear Fred Okumu, your deposit of 530 from 0782207010 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='997463', cheque_no='997463', flat_value='0.000', percent_value='0', date='2015-10-08 19:24:27', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0782157074 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='525', trans_date = (select now()), receipt_no='823008', cheque_no='823008', flat_value='0.000', percent_value='0', date='2015-10-08 20:31:20', bank_account='2'
+Dear Fred Okumu, your deposit of 525 from 0782207010 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='534', trans_date = (select now()), receipt_no='189290', cheque_no='189290', flat_value='0.000', percent_value='0', date='2015-10-08 20:40:10', bank_account='2'
+Dear Fred Okumu, your deposit of 534 from 0782207010 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='555', trans_date = (select now()), receipt_no='534875', cheque_no='534875', flat_value='0.000', percent_value='0', date='2015-10-08 21:00:35', bank_account='2'
+Dear Fred Okumu, your deposit of 555 from 0782207010 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='580', trans_date = (select now()), receipt_no='697087', cheque_no='697087', flat_value='0.000', percent_value='0', date='2015-10-08 21:31:43', bank_account='2'
+Dear Fred Okumu, your deposit of 580 from 0782207010 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='971899', cheque_no='971899', flat_value='0.000', percent_value='0', date='2015-10-10 15:21:35', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0782157074 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='804285', cheque_no='804285', flat_value='0.000', percent_value='0', date='2015-10-11 14:37:32', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0750539564 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='034797', cheque_no='034797', flat_value='0.000', percent_value='0', date='2015-10-11 14:44:42', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0782157074 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='1000', trans_date = (select now()), receipt_no='172448', cheque_no='172448', flat_value='0.000', percent_value='0', date='2015-10-11 14:44:51', bank_account='2'
+Dear Fred Okumu, your deposit of 1,000 from 0750539564 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1096
+insert into deposit set memaccount_id='101', amount='500', trans_date = (select now()), receipt_no='125886', cheque_no='125886', flat_value='0.000', percent_value='0', date='2015-10-11 15:12:07', bank_account='2'
+Dear Adikini Norah, your deposit of 500 from 0782157074 was successfull!Account Number: AD1096Sacco: ADHOLA SACCO - sent
+Member A/c: AD1048
+insert into deposit set memaccount_id='52', amount='500', trans_date = (select now()), receipt_no='485066', cheque_no='485066', flat_value='0.000', percent_value='0', date='2015-10-11 15:21:04', bank_account='2'
+Dear Abbo  Debora, your deposit of 500 from 0782157074 was successfull!Account Number: AD1048Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='947083', cheque_no='947083', flat_value='0.000', percent_value='0', date='2015-10-14 12:28:08', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0750539564 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: 2001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='549505', cheque_no='549505', flat_value='1.000', percent_value='5', date='2015-10-14 15:41:58', bank_account='0'
+Dear Opio David, your deposit of 500 from 0704447714 was successfull!Account Number: 2001Sacco: centenary Bank SACCO - failed
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='1000', trans_date = (select now()), receipt_no='235533', cheque_no='235533', flat_value='0.000', percent_value='0', date='2015-10-14 16:11:34', bank_account='2'
+Dear Fred Okumu, your deposit of 1,000 from 0772672463 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='231016', cheque_no='231016', flat_value='0.000', percent_value='0', date='2015-10-14 16:11:40', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0750539564 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='263679', cheque_no='263679', flat_value='0.000', percent_value='0', date='2015-10-15 13:46:04', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0750539564 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: 2001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='958683', cheque_no='958683', flat_value='1.000', percent_value='5', date='2015-10-16 13:06:58', bank_account='0'
+Dear Opio David, your deposit of 500 from 0750539564 was successfull!Account Number: 2001Sacco: centenary Bank SACCO - failed
+Member A/c: 2001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='608687', cheque_no='608687', flat_value='1.000', percent_value='5', date='2015-10-16 13:54:00', bank_account='0'
+Dear Opio David, your deposit of 500 from 0750539564 was successfull!Account Number: 2001Sacco: centenary Bank SACCO - failed
+Member A/c: 2001
+insert into deposit set memaccount_id='1', amount='1000', trans_date = (select now()), receipt_no='019115', cheque_no='019115', flat_value='1.000', percent_value='10', date='2015-10-16 14:20:50', bank_account='0'
+Dear Opio David, your deposit of 1,000 from 0779860073 was successfull!Account Number: 2001Sacco: centenary Bank SACCO - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='681146', cheque_no='681146', flat_value='1.000', percent_value='5', date='2015-10-16 18:50:49', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0750539564 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='247362', cheque_no='247362', flat_value='1.000', percent_value='5', date='2015-10-16 20:51:38', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0773762186 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: GL2001
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='791941', cheque_no='791941', flat_value='', percent_value='0', date='2015-10-17 09:31:15', bank_account='0'
+Dear  , your deposit of 500 from 0750539564 was successfull!Account Number: GL2001Sacco: Acholi SACCO Society - failed
+Member A/c: Gl2001
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='484295', cheque_no='484295', flat_value='', percent_value='0', date='2015-10-17 09:31:58', bank_account='0'
+Dear  , your deposit of 500 from 0704454017 was successfull!Account Number: Gl2001Sacco: Acholi SACCO Society - failed
+Member A/c: AC002
+insert into deposit set memaccount_id='3', amount='500', trans_date = (select now()), receipt_no='796449', cheque_no='796449', flat_value='1.000', percent_value='5', date='2015-10-17 10:00:54', bank_account='0'
+Dear Aketch Babra, your deposit of 500 from 0750539564 was successfull!Account Number: AC002Sacco: Acholi SACCO Society - failed
+Member A/c: GL2001
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='492191', cheque_no='492191', flat_value='', percent_value='0', date='2015-10-17 10:18:16', bank_account='0'
+Dear  , your deposit of 500 from 0750539564 was successfull!Account Number: GL2001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac001
+insert into deposit set memaccount_id='2', amount='1000', trans_date = (select now()), receipt_no='326078', cheque_no='326078', flat_value='1.000', percent_value='10', date='2015-10-17 13:59:40', bank_account='0'
+Dear Acom Mary, your deposit of 1,000 from 0704454017 was successfull!Account Number: Ac001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac002
+insert into deposit set memaccount_id='3', amount='1000', trans_date = (select now()), receipt_no='296674', cheque_no='296674', flat_value='1.000', percent_value='10', date='2015-10-17 14:01:18', bank_account='0'
+Dear Aketch Babra, your deposit of 1,000 from 0704454124 was successfull!Account Number: Ac002Sacco: Acholi SACCO Society - failed
+Member A/c: Ac007
+insert into deposit set memaccount_id='9', amount='1000', trans_date = (select now()), receipt_no='120388', cheque_no='120388', flat_value='1.000', percent_value='10', date='2015-10-17 17:32:10', bank_account='0'
+Dear Apio Claire, your deposit of 1,000 from 0704454006 was successfull!Account Number: Ac007Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='1000', trans_date = (select now()), receipt_no='967923', cheque_no='967923', flat_value='1.000', percent_value='10', date='2015-10-17 17:32:46', bank_account='0'
+Dear Acom Mary, your deposit of 1,000 from 0704285495 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac004
+insert into deposit set memaccount_id='5', amount='1000', trans_date = (select now()), receipt_no='181466', cheque_no='181466', flat_value='1.000', percent_value='10', date='2015-10-17 17:33:05', bank_account='0'
+Dear Laker Rachael, your deposit of 1,000 from 0704454124 was successfull!Account Number: Ac004Sacco: Acholi SACCO Society - failed
+Member A/c: ad1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='726921', cheque_no='726921', flat_value='0.000', percent_value='0', date='2015-10-17 20:06:40', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0782157074 was successfull!Account Number: ad1001Sacco: ADHOLA SACCO - sent
+Member A/c: Ac002
+insert into deposit set memaccount_id='3', amount='1000', trans_date = (select now()), receipt_no='520809', cheque_no='520809', flat_value='1.000', percent_value='10', date='2015-10-18 09:00:41', bank_account='0'
+Dear Aketch Babra, your deposit of 1,000 from 0704454017 was successfull!Account Number: Ac002Sacco: Acholi SACCO Society - failed
+Member A/c: AC005
+insert into deposit set memaccount_id='6', amount='1500', trans_date = (select now()), receipt_no='870386', cheque_no='870386', flat_value='1.000', percent_value='15', date='2015-10-18 09:44:16', bank_account='0'
+Dear Ruth Aber, your deposit of 1,500 from 0704454006 was successfull!Account Number: AC005Sacco: Acholi SACCO Society - failed
+Member A/c: AC004
+insert into deposit set memaccount_id='5', amount='1000', trans_date = (select now()), receipt_no='020174', cheque_no='020174', flat_value='1.000', percent_value='10', date='2015-10-18 10:26:45', bank_account='0'
+Dear Laker Rachael, your deposit of 1,000 from 0704285735 was successfull!Account Number: AC004Sacco: Acholi SACCO Society - failed
+Member A/c: AC006
+insert into deposit set memaccount_id='8', amount='500', trans_date = (select now()), receipt_no='476130', cheque_no='476130', flat_value='1.000', percent_value='5', date='2015-10-18 10:37:30', bank_account='0'
+Dear Atim Ritta, your deposit of 500 from 0704454006 was successfull!Account Number: AC006Sacco: Acholi SACCO Society - failed
+Member A/c: AC002
+insert into deposit set memaccount_id='3', amount='500', trans_date = (select now()), receipt_no='242168', cheque_no='242168', flat_value='1.000', percent_value='5', date='2015-10-18 10:46:49', bank_account='0'
+Dear Aketch Babra, your deposit of 500 from 0755062197 was successfull!Account Number: AC002Sacco: Acholi SACCO Society - failed
+Member A/c: AC006
+insert into deposit set memaccount_id='8', amount='500', trans_date = (select now()), receipt_no='578383', cheque_no='578383', flat_value='1.000', percent_value='5', date='2015-10-18 11:48:06', bank_account='0'
+Dear Atim Ritta, your deposit of 500 from 0704285735 was successfull!Account Number: AC006Sacco: Acholi SACCO Society - failed
+Member A/c: AC002
+insert into deposit set memaccount_id='3', amount='500', trans_date = (select now()), receipt_no='061828', cheque_no='061828', flat_value='1.000', percent_value='5', date='2015-10-18 11:55:55', bank_account='0'
+Dear Aketch Babra, your deposit of 500 from 0750539564 was successfull!Account Number: AC002Sacco: Acholi SACCO Society - failed
+Member A/c: AC003
+insert into deposit set memaccount_id='4', amount='1000', trans_date = (select now()), receipt_no='640958', cheque_no='640958', flat_value='1.000', percent_value='10', date='2015-10-18 12:21:03', bank_account='0'
+Dear Akello Patricia, your deposit of 1,000 from 0704454124 was successfull!Account Number: AC003Sacco: Acholi SACCO Society - failed
+Member A/c: AC007
+insert into deposit set memaccount_id='9', amount='1500', trans_date = (select now()), receipt_no='376828', cheque_no='376828', flat_value='1.000', percent_value='15', date='2015-10-18 12:24:52', bank_account='0'
+Dear Apio Claire, your deposit of 1,500 from 0704454006 was successfull!Account Number: AC007Sacco: Acholi SACCO Society - failed
+Member A/c: AC005
+insert into deposit set memaccount_id='6', amount='1000', trans_date = (select now()), receipt_no='076052', cheque_no='076052', flat_value='1.000', percent_value='10', date='2015-10-18 12:26:04', bank_account='0'
+Dear Ruth Aber, your deposit of 1,000 from 0704285735 was successfull!Account Number: AC005Sacco: Acholi SACCO Society - failed
+Member A/c: Ac004
+insert into deposit set memaccount_id='5', amount='2000', trans_date = (select now()), receipt_no='888082', cheque_no='888082', flat_value='1.000', percent_value='20', date='2015-10-18 12:27:26', bank_account='0'
+Dear Laker Rachael, your deposit of 2,000 from 0704454017 was successfull!Account Number: Ac004Sacco: Acholi SACCO Society - failed
+Member A/c: AC003
+insert into deposit set memaccount_id='4', amount='785', trans_date = (select now()), receipt_no='702680', cheque_no='702680', flat_value='1.000', percent_value='7.85', date='2015-10-18 12:44:58', bank_account='0'
+Dear Akello Patricia, your deposit of 785 from 0704454124 was successfull!Account Number: AC003Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='341732', cheque_no='341732', flat_value='1.000', percent_value='5', date='2015-10-18 13:59:16', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0754378090 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='125731', cheque_no='125731', flat_value='0.000', percent_value='0', date='2015-10-18 15:38:59', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0754378090 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AC003
+insert into deposit set memaccount_id='4', amount='1000', trans_date = (select now()), receipt_no='824484', cheque_no='824484', flat_value='1.000', percent_value='10', date='2015-10-18 18:10:38', bank_account='0'
+Dear Akello Patricia, your deposit of 1,000 from 0772945849 was successfull!Account Number: AC003Sacco: Acholi SACCO Society - failed
+Member A/c: ad1001
+insert into deposit set memaccount_id='1', amount='500', trans_date = (select now()), receipt_no='690872', cheque_no='690872', flat_value='0.000', percent_value='0', date='2015-11-07 10:34:22', bank_account='2'
+Dear Fred Okumu, your deposit of 500 from 0750539564 was successfull!Account Number: ad1001Sacco: ADHOLA SACCO - sent
+Member A/c: Ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='630203', cheque_no='630203', flat_value='1.000', percent_value='5', date='2015-11-07 10:40:48', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0776367086 was successfull!Account Number: Ac001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='615069', cheque_no='615069', flat_value='1.000', percent_value='5', date='2015-11-07 11:13:10', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0776367086 was successfull!Account Number: Ac001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='575675', cheque_no='575675', flat_value='1.000', percent_value='5', date='2015-11-07 12:33:27', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0776367086 was successfull!Account Number: Ac001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='488824', cheque_no='488824', flat_value='1.000', percent_value='5', date='2015-11-07 13:19:56', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0776367086 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='608392', cheque_no='608392', flat_value='1.000', percent_value='5', date='2015-11-08 15:14:49', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0774555185 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='224760', cheque_no='224760', flat_value='1.000', percent_value='5', date='2015-11-08 15:16:47', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0750539564 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: KY0000649
+insert into deposit set memaccount_id='8183', amount='1000', trans_date = (select now()), receipt_no='402151', cheque_no='402151', flat_value='0.000', percent_value='0', date='2015-11-10 13:45:43', bank_account='0'
+Dear Buyego fredrick 648, your deposit of 1,000 from 0701471525 was successfull!Account Number: KY0000649Sacco: KYEBANDO  SAVINGS & CREDIT COOPERATIVE SOCIETY - failed
+Member A/c: Ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='219897', cheque_no='219897', flat_value='1.000', percent_value='5', date='2015-11-12 13:02:41', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0774395976 was successfull!Account Number: Ac001Sacco: Acholi SACCO Society - failed
+Member A/c: KY000082
+insert into deposit set memaccount_id='7612', amount='500', trans_date = (select now()), receipt_no='172044', cheque_no='172044', flat_value='0.000', percent_value='0', date='2015-11-12 13:22:21', bank_account='0'
+Dear Guster kayinja kiwanuka 81, your deposit of 500 from 0704799631 was successfull!Account Number: KY000082Sacco: KYEBANDO  SAVINGS & CREDIT COOPERATIVE SOCIETY - failed
+Member A/c: ky000083
+insert into deposit set memaccount_id='7613', amount='1000', trans_date = (select now()), receipt_no='307827', cheque_no='307827', flat_value='0.000', percent_value='0', date='2015-11-12 13:39:09', bank_account='0'
+Dear Muhumuza deziderius 82, your deposit of 1,000 from 0774395976 was successfull!Account Number: ky000083Sacco: KYEBANDO  SAVINGS & CREDIT COOPERATIVE SOCIETY - failed
+Member A/c: C1230000056
+insert into deposit set memaccount_id='63', amount='500', trans_date = (select now()), receipt_no='842030', cheque_no='842030', flat_value='0.000', percent_value='0', date='2015-11-16 16:01:27', bank_account='0'
+Dear Eddie  Sam kumakech, your deposit of 500 from 0702020680 was successfull!Account Number: C1230000056Sacco: UGANDA COODEPT - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='044665', cheque_no='044665', flat_value='1.000', percent_value='5', date='2015-11-29 12:16:20', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0752171999 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='363336', cheque_no='363336', flat_value='1.000', percent_value='5', date='2015-11-29 14:11:32', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0752171999 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='335728', cheque_no='335728', flat_value='1.000', percent_value='5', date='2015-11-29 14:22:34', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0752171999 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='680201', cheque_no='680201', flat_value='1.000', percent_value='5', date='2015-11-30 15:53:00', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0752171999 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='500092', cheque_no='500092', flat_value='1.000', percent_value='5', date='2015-12-02 12:32:56', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0700127063 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='600', trans_date = (select now()), receipt_no='643150', cheque_no='643150', flat_value='1.000', percent_value='6', date='2015-12-02 12:35:27', bank_account='0'
+Dear Acom Mary, your deposit of 600 from 0772633275 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='672576', cheque_no='672576', flat_value='1.000', percent_value='5', date='2015-12-02 12:40:39', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0773878594 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AD1001
+insert into deposit set memaccount_id='1', amount='2000', trans_date = (select now()), receipt_no='102203', cheque_no='102203', flat_value='0.000', percent_value='0', date='2015-12-09 22:44:15', bank_account='2'
+Dear Fred Okumu, your deposit of 2,000 from 0702417768 was successfull!Account Number: AD1001Sacco: ADHOLA SACCO - sent
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='458495', cheque_no='458495', flat_value='1.000', percent_value='5', date='2015-12-10 14:52:10', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0776367086 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='602618', cheque_no='602618', flat_value='1.000', percent_value='5', date='2015-12-10 16:54:56', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0776367086 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='834392', cheque_no='834392', flat_value='1.000', percent_value='5', date='2015-12-11 14:59:58', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0782123113 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='344579', cheque_no='344579', flat_value='1.000', percent_value='5', date='2015-12-11 15:16:57', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0774395976 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='967512', cheque_no='967512', flat_value='1.000', percent_value='5', date='2016-01-05 09:52:16', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0752171999 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: KY00009246
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='572621', cheque_no='572621', flat_value='', percent_value='0', date='2016-01-07 11:13:20', bank_account='0'
+Dear  , your deposit of 500 from 0704367086 was successfull!Account Number: KY00009246Sacco: KYEBANDO  SAVINGS & CREDIT COOPERATIVE SOCIETY - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='682666', cheque_no='682666', flat_value='1.000', percent_value='5', date='2016-01-11 14:52:32', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0774395976 was successfull!Account Number: ac001Sacco: Mobis SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='702641', cheque_no='702641', flat_value='1.000', percent_value='5', date='2016-01-11 14:57:26', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0774395976 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: 1
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='861162', cheque_no='861162', flat_value='', percent_value='0', date='2016-01-11 15:15:15', bank_account='0'
+Dear  , your deposit of 500 from 0774395976 was successfull!Account Number: 1Sacco: Kakuuto Sacco Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='899330', cheque_no='899330', flat_value='1.000', percent_value='5', date='2016-01-12 11:23:28', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0750539564 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='907489', cheque_no='907489', flat_value='1.000', percent_value='5', date='2016-01-19 15:26:52', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0702020680 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='513320', cheque_no='513320', flat_value='1.000', percent_value='5', date='2016-01-22 10:47:26', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0752171999 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='050906', cheque_no='050906', flat_value='1.000', percent_value='5', date='2016-01-27 17:47:24', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0774523181 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='243367', cheque_no='243367', flat_value='1.000', percent_value='5', date='2016-01-27 19:14:09', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0702020680 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='1000', trans_date = (select now()), receipt_no='261560', cheque_no='261560', flat_value='1.000', percent_value='10', date='2016-01-28 13:19:41', bank_account='0'
+Dear Acom Mary, your deposit of 1,000 from 0754378090 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='546386', cheque_no='546386', flat_value='1.000', percent_value='5', date='2016-01-28 13:48:20', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0704367086 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='1000', trans_date = (select now()), receipt_no='015951', cheque_no='015951', flat_value='1.000', percent_value='10', date='2016-01-28 17:42:14', bank_account='0'
+Dear Acom Mary, your deposit of 1,000 from 0752996379 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC003
+insert into deposit set memaccount_id='', amount='1000', trans_date = (select now()), receipt_no='869075', cheque_no='869075', flat_value='', percent_value='0', date='2016-01-28 17:48:05', bank_account='0'
+Dear  , your deposit of 1,000 from 0773381183 was successfull!Account Number: AC003Sacco: Acholi SACCO Society - failed
+Member A/c: ac003
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='440677', cheque_no='440677', flat_value='', percent_value='0', date='2016-02-04 14:24:05', bank_account='0'
+Member A/c: AC004
+insert into deposit set memaccount_id='5', amount='500', trans_date = (select now()), receipt_no='764666', cheque_no='764666', flat_value='1.000', percent_value='5', date='2016-02-04 14:24:07', bank_account='0'
+Dear Laker Rachael, your deposit of 500 from 0753395503 was successfull!Account Number: AC004Sacco: Acholi SACCO Society - failed
+Dear  , your deposit of 500 from 0751898210 was successfull!Account Number: ac003Sacco: Acholi SACCO Society - failed
+Member A/c: Ac002
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='817225', cheque_no='817225', flat_value='', percent_value='0', date='2016-02-04 14:27:05', bank_account='0'
+Dear  , your deposit of 500 from 0751898210 was successfull!Account Number: Ac002Sacco: Acholi SACCO Society - failed
+Member A/c: Ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='916406', cheque_no='916406', flat_value='1.000', percent_value='5', date='2016-02-04 14:28:39', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0774496756 was successfull!Account Number: Ac001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='2000', trans_date = (select now()), receipt_no='917137', cheque_no='917137', flat_value='1.000', percent_value='20', date='2016-02-05 07:37:13', bank_account='0'
+Dear Acom Mary, your deposit of 2,000 from 0754378090 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='250043', cheque_no='250043', flat_value='1.000', percent_value='5', date='2016-02-05 08:46:21', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0776367086 was successfull!Account Number: Ac001Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='109478', cheque_no='109478', flat_value='1.000', percent_value='5', date='2016-02-05 08:49:55', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0704367086 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: ac002
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='297201', cheque_no='297201', flat_value='', percent_value='0', date='2016-02-05 10:20:55', bank_account='0'
+Dear  , your deposit of 500 from 0704367086 was successfull!Account Number: ac002Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='1000', trans_date = (select now()), receipt_no='163214', cheque_no='163214', flat_value='1.000', percent_value='10', date='2016-02-06 07:55:02', bank_account='0'
+Dear Acom Mary, your deposit of 1,000 from 0754378090 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='741133', cheque_no='741133', flat_value='1.000', percent_value='5', date='2016-02-08 13:30:48', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0704367086 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='491127', cheque_no='491127', flat_value='1.000', percent_value='5', date='2016-02-08 15:15:05', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0704367086 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='894963', cheque_no='894963', flat_value='1.000', percent_value='5', date='2016-02-09 11:41:37', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0702020680 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='121342', cheque_no='121342', flat_value='1.000', percent_value='5', date='2016-02-10 11:18:58', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0704367086 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='1000', trans_date = (select now()), receipt_no='417198', cheque_no='417198', flat_value='1.000', percent_value='10', date='2016-02-10 11:19:21', bank_account='0'
+Dear Acom Mary, your deposit of 1,000 from 0702020680 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac002
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='951650', cheque_no='951650', flat_value='', percent_value='0', date='2016-02-11 14:56:40', bank_account='0'
+Dear  , your deposit of 500 from 0752138568 was successfull!Account Number: Ac002Sacco: Acholi SACCO Society - failed
+Member A/c: AC003
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='910841', cheque_no='910841', flat_value='', percent_value='0', date='2016-02-11 14:57:23', bank_account='0'
+Dear  , your deposit of 500 from 0756430287 was successfull!Account Number: AC003Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='311576', cheque_no='311576', flat_value='1.000', percent_value='5', date='2016-02-11 15:03:32', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0782585329 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='499264', cheque_no='499264', flat_value='1.000', percent_value='5', date='2016-02-12 12:19:14', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0702020680 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='460321', cheque_no='460321', flat_value='1.000', percent_value='5', date='2016-02-22 13:20:22', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0776367086 was successfull!Account Number: Ac001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='997494', cheque_no='997494', flat_value='1.000', percent_value='5', date='2016-03-02 15:01:35', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0704367086 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='311053', cheque_no='311053', flat_value='1.000', percent_value='5', date='2016-03-02 15:07:27', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0776367086 was successfull!Account Number: Ac001Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='683020', cheque_no='683020', flat_value='1.000', percent_value='5', date='2016-03-03 12:20:38', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0705489841 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac002
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='473805', cheque_no='473805', flat_value='', percent_value='0', date='2016-03-03 12:24:15', bank_account='0'
+Dear  , your deposit of 500 from 0701759637 was successfull!Account Number: Ac002Sacco: Acholi SACCO Society - failed
+Member A/c: Ac003
+insert into deposit set memaccount_id='', amount='500', trans_date = (select now()), receipt_no='830077', cheque_no='830077', flat_value='', percent_value='0', date='2016-03-03 12:26:59', bank_account='0'
+Dear  , your deposit of 500 from 0776367086 was successfull!Account Number: Ac003Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='431709', cheque_no='431709', flat_value='1.000', percent_value='5', date='2016-03-03 13:59:26', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0704367086 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='989270', cheque_no='989270', flat_value='1.000', percent_value='5', date='2016-03-04 11:37:10', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0704367086 was successfull!Account Number: ac001Sacco: Acholi SACCO Society - failed
+Member A/c: Ac001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='807329', cheque_no='807329', flat_value='1.000', percent_value='5', date='2016-03-10 13:34:31', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0776367086 was successfull!Account Number: Ac001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='10000', trans_date = (select now()), receipt_no='545681', cheque_no='545681', flat_value='1.000', percent_value='100', date='2016-03-14 10:44:58', bank_account='0'
+Dear Acom Mary, your deposit of 10,000 from 0754378090 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='255156', cheque_no='255156', flat_value='1.000', percent_value='5', date='2016-03-31 14:11:41', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0702020680 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed
+Member A/c: C1230000056
+insert into deposit set memaccount_id='63', amount='500', trans_date = (select now()), receipt_no='560873', cheque_no='560873', flat_value='0.000', percent_value='0', date='2016-04-04 16:09:07', bank_account='0'
+Dear Eddie  Sam kumakech, your deposit of 500 from 0754378090 was successfull!Account Number: C1230000056Sacco: UGANDA COODEPT - failed
+Member A/c: AC001
+insert into deposit set memaccount_id='2', amount='500', trans_date = (select now()), receipt_no='482539', cheque_no='482539', flat_value='1.000', percent_value='5', date='2016-04-05 10:35:34', bank_account='0'
+Dear Acom Mary, your deposit of 500 from 0754378090 was successfull!Account Number: AC001Sacco: Acholi SACCO Society - failed

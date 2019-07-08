@@ -1,0 +1,469 @@
+[Sun Aug 07 18:11:58.513211 2016] [:error] [pid 32168] [client 197.239.32.35:40500] PHP Fatal error:  Call to undefined function base_url() in /var/www/html/mobis3/test.php on line 2
+[Sun Aug 07 18:12:49.668036 2016] [:error] [pid 32167] [client 197.239.32.35:40506] PHP Fatal error:  Call to undefined function base_url() in /var/www/html/mobis3/test.php on line 2
+[Tue Dec 20 19:05:37.700650 2016] [ssl:error] [pid 9690] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Tue Dec 27 13:25:31.307039 2016] [ssl:error] [pid 22311] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Thu Dec 29 08:36:18.115448 2016] [:error] [pid 20792] [client 197.237.50.145:20870] PHP Warning:  Unknown: POST Content-Length of 2147483647 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[Thu Dec 29 16:25:22.651777 2016] [ssl:error] [pid 26893] [client 208.93.152.14:44767] AH02042: rejecting client initiated renegotiation
+[Thu Jan 05 05:21:50.526560 2017] [ssl:error] [pid 10501] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Fri Jan 06 20:44:25.619344 2017] [ssl:error] [pid 32046] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Tue Jan 10 09:34:46.814457 2017] [ssl:error] [pid 12376] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Thu Jan 12 17:57:05.291699 2017] [ssl:error] [pid 702] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Thu Jan 12 22:22:22.370710 2017] [ssl:error] [pid 3497] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 14 23:18:03.922418 2017] [ssl:error] [pid 13756] [client 208.93.152.14:41831] AH02042: rejecting client initiated renegotiation
+[Tue Jan 17 22:02:28.258328 2017] [ssl:error] [pid 17942] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Fri Jan 20 02:02:19.757828 2017] [ssl:error] [pid 31364] [client 208.93.152.13:48920] AH02042: rejecting client initiated renegotiation
+[Tue Jan 24 19:39:14.699016 2017] [ssl:error] [pid 12335] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Fri Jan 27 05:19:55.239047 2017] [ssl:error] [pid 29410] [client 198.7.63.206:43887] AH02042: rejecting client initiated renegotiation
+[Mon Jan 30 21:27:51.711530 2017] [ssl:error] [pid 26073] [client 207.244.96.223:56237] AH02042: rejecting client initiated renegotiation
+[Tue Jan 31 12:41:20.662339 2017] [ssl:error] [pid 8097] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Thu Feb 09 02:02:15.364112 2017] [ssl:error] [pid 26114] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Tue Feb 14 18:36:46.810024 2017] [ssl:error] [pid 29547] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Sat Feb 18 19:48:19.049295 2017] [ssl:error] [pid 17771] [client 208.93.152.86:59636] AH02042: rejecting client initiated renegotiation
+[Tue Feb 21 17:23:34.229174 2017] [ssl:error] [pid 22032] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Wed Feb 22 21:27:02.897425 2017] [ssl:error] [pid 16177] [client 208.93.152.78:44992] AH02042: rejecting client initiated renegotiation
+[Tue Feb 28 16:23:49.767961 2017] [ssl:error] [pid 15198] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Wed Mar 01 00:12:49.957385 2017] [ssl:error] [pid 19323] [client 208.93.152.79:58988] AH02042: rejecting client initiated renegotiation
+[Mon Mar 06 09:28:23.136176 2017] [ssl:error] [pid 15909] [client 208.93.152.74:35684] AH02042: rejecting client initiated renegotiation
+[Tue Mar 07 18:47:38.241776 2017] [ssl:error] [pid 17501] [client 208.93.152.71:43482] AH02042: rejecting client initiated renegotiation
+[Thu Mar 09 05:46:39.038353 2017] [ssl:error] [pid 4188] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Thu Mar 09 06:33:13.467580 2017] [ssl:error] [pid 4196] [client 208.93.152.71:38000] AH02042: rejecting client initiated renegotiation
+[Thu Mar 09 11:07:36.476840 2017] [ssl:error] [pid 20318] [client 208.93.152.76:54328] AH02042: rejecting client initiated renegotiation
+[Sat Mar 11 00:30:43.889362 2017] [ssl:error] [pid 25312] [client 208.93.152.93:33456] AH02042: rejecting client initiated renegotiation
+[Sun Mar 12 10:51:01.846954 2017] [ssl:error] [pid 23797] [client 208.93.152.81:48840] AH02042: rejecting client initiated renegotiation
+[Fri Mar 17 14:54:28.177951 2017] [ssl:error] [pid 14220] AH02032: Hostname 197.221.128.82 provided via SNI and hostname mobisapp.net provided via HTTP are different
+[Sat Mar 18 05:01:10.309844 2017] [ssl:error] [pid 19253] [client 208.93.152.80:42796] AH02042: rejecting client initiated renegotiation
+[Wed Mar 22 06:04:50.171914 2017] [ssl:error] [pid 15020] [client 208.93.152.122:46794] AH02042: rejecting client initiated renegotiation
+[Fri Mar 31 20:29:12.598378 2017] [ssl:error] [pid 24258] [client 208.93.152.137:58956] AH02042: rejecting client initiated renegotiation
+[Wed Apr 12 22:26:26.134000 2017] [ssl:error] [pid 31373] [client 208.93.152.68:44682] AH02042: rejecting client initiated renegotiation
+[Wed Apr 19 01:08:36.984077 2017] [ssl:error] [pid 1849] [client 208.93.152.71:44266] AH02042: rejecting client initiated renegotiation
+[Fri Apr 28 12:58:31.479136 2017] [core:error] [pid 30899] [client 196.207.173.223:10088] AH00126: Invalid URI in request GET /help/../../etc/shadow HTTP/1.1
+[Fri Apr 28 12:58:31.738252 2017] [core:error] [pid 30934] [client 196.207.173.223:10102] AH00126: Invalid URI in request GET @localhost HTTP/1.1
+[Fri Apr 28 12:58:33.241496 2017] [core:error] [pid 30956] [client 196.207.173.223:10161] AH00126: Invalid URI in request GET @localhost HTTP/1.1
+[Fri Apr 28 12:58:35.343641 2017] [core:error] [pid 30876] [client 196.207.173.223:10251] AH00126: Invalid URI in request GET %2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5Cboot%2Eini HTTP/1.1
+[Fri Apr 28 12:58:36.464532 2017] [core:error] [pid 30595] [client 196.207.173.223:10301] AH00126: Invalid URI in request GET %2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5Cetc%5Cpasswd HTTP/1.1
+[Fri Apr 28 12:58:36.683478 2017] [core:error] [pid 30877] [client 196.207.173.223:10307] AH00126: Invalid URI in request GET ..\\\\..\\\\..\\..\\\\..\\..\\\\..\\..\\\\\\boot.ini HTTP/1.1
+[Fri Apr 28 12:58:37.188447 2017] [core:error] [pid 30876] [client 196.207.173.223:10311] AH00126: Invalid URI in request GET %c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./boot.ini HTTP/1.1
+[Fri Apr 28 12:58:38.161619 2017] [core:error] [pid 30956] [client 196.207.173.223:10324] AH00126: Invalid URI in request GET %c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/boot.ini HTTP/1.1
+[Fri Apr 28 12:58:38.913314 2017] [core:error] [pid 30818] [client 196.207.173.223:10358] AH00126: Invalid URI in request GET index.html?../../../../../boot.ini HTTP/1.1
+[Fri Apr 28 12:58:39.209567 2017] [core:error] [pid 30869] [client 196.207.173.223:153] AH00126: Invalid URI in request GET index.html?..\\..\\..\\..\\..\\boot.ini HTTP/1.1
+[Fri Apr 28 12:59:19.233154 2017] [core:error] [pid 31135] [client 196.207.173.223:10517] AH00126: Invalid URI in request GET %2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5Cboot%2Eini HTTP/1.1
+[Fri Apr 28 12:59:19.419020 2017] [core:error] [pid 31147] [client 196.207.173.223:10512] AH00126: Invalid URI in request GET /../../../../../../../etc/passwd HTTP/1.1
+[Fri Apr 28 12:59:21.169185 2017] [core:error] [pid 31135] [client 196.207.173.223:10547] AH00126: Invalid URI in request GET %2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5Cetc%5Cpasswd HTTP/1.1
+[Fri Apr 28 12:59:21.327579 2017] [core:error] [pid 31132] [client 196.207.173.223:10549] AH00126: Invalid URI in request GET ..\\\\..\\\\..\\..\\\\..\\..\\\\..\\..\\\\\\boot.ini HTTP/1.1
+[Fri Apr 28 12:59:21.501189 2017] [core:error] [pid 31153] [client 196.207.173.223:10552] AH00126: Invalid URI in request GET %c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./boot.ini HTTP/1.1
+[Fri Apr 28 12:59:21.655071 2017] [core:error] [pid 31127] [client 196.207.173.223:10554] AH00126: Invalid URI in request GET %c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/boot.ini HTTP/1.1
+[Fri Apr 28 12:59:23.153808 2017] [core:error] [pid 31153] [client 196.207.173.223:10563] AH00126: Invalid URI in request GET index.html?..\\..\\..\\..\\..\\boot.ini HTTP/1.1
+[Fri Apr 28 12:59:24.656288 2017] [core:error] [pid 31131] [client 196.207.173.223:10577] AH00126: Invalid URI in request GET /../../../../../../../etc/passwd HTTP/1.1
+[Mon May 01 19:33:18.848742 2017] [access_compat:error] [pid 15161] [client 27.154.247.3:57137] AH01797: client denied by server configuration: /var/www/mobisapp/system/fckeditor
+[Mon May 01 19:33:18.988269 2017] [access_compat:error] [pid 3833] [client 27.154.247.3:57095] AH01797: client denied by server configuration: /var/www/mobisapp/system/fckeditor
+[Wed May 03 21:39:17.843390 2017] [ssl:error] [pid 2784] [client 208.93.152.117:57358] AH02042: rejecting client initiated renegotiation
+[Wed May 10 06:00:31.392225 2017] [ssl:error] [pid 31188] [client 149.202.181.8:37024] AH02042: rejecting client initiated renegotiation
+[Sun Jun 25 21:54:51.920499 2017] [:error] [pid 15007] [client 41.210.155.203:31400] PHP Warning:  Unknown: POST Content-Length of 2147483647 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[Mon Jun 26 14:07:26.970208 2017] [:error] [pid 10060] [client 41.210.155.52:5273] PHP Warning:  Unknown: POST Content-Length of 2147483647 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[Mon Jul 17 22:40:37.447935 2017] [ssl:error] [pid 31323] [client 217.182.141.188:49161] AH02042: rejecting client initiated renegotiation
+[Tue Jul 18 14:35:07.111458 2017] [ssl:error] [pid 6960] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Wed Jul 26 20:24:24.947535 2017] [ssl:error] [pid 17965] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname www.ict4agventures.net provided via HTTP are different
+[Wed Jul 26 20:24:52.203330 2017] [ssl:error] [pid 19422] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname www.mobisapp.net provided via HTTP are different
+[Fri Jul 28 11:23:07.434936 2017] [ssl:error] [pid 12653] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Thu Dec 07 11:13:03.032447 2017] [ssl:warn] [pid 2044] AH01909: RSA certificate configured for 197.221.128.82:443 does NOT include an ID which matches the server name
+[Tue Dec 26 22:31:55.928597 2017] [ssl:error] [pid 14146] [client 139.162.207.173:48190] AH02042: rejecting client initiated renegotiation
+[Sat Dec 30 17:42:38.554454 2017] [:error] [pid 24970] [client 197.239.36.253:6948] PHP Warning:  Unknown: POST Content-Length of 2147483647 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[Sun Jan 07 04:05:34.496848 2018] [ssl:error] [pid 4941] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Wed Feb 07 23:11:38.181568 2018] [ssl:error] [pid 25380] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Thu Feb 08 14:00:14.433966 2018] [ssl:error] [pid 5249] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Fri Feb 09 21:42:37.549106 2018] [ssl:error] [pid 28497] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Feb 10 08:04:21.140664 2018] [ssl:error] [pid 19780] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Feb 17 05:34:07.286689 2018] [ssl:error] [pid 23150] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Thu Mar 01 12:48:24.682270 2018] [ssl:error] [pid 18359] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Thu Mar 08 03:19:41.551527 2018] [ssl:error] [pid 31569] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Thu Mar 08 14:24:24.564687 2018] [cgi:error] [pid 29685] [client 168.235.89.144:43463] script not found or unable to stat: /usr/lib/cgi-bin/php
+[Thu Mar 08 14:24:25.514201 2018] [cgi:error] [pid 28349] [client 168.235.89.144:43502] script not found or unable to stat: /usr/lib/cgi-bin/php5
+[Thu Mar 08 14:24:26.473887 2018] [cgi:error] [pid 31004] [client 168.235.89.144:43554] script not found or unable to stat: /usr/lib/cgi-bin/php-cgi
+[Thu Mar 08 14:24:27.423742 2018] [cgi:error] [pid 31342] [client 168.235.89.144:43595] script not found or unable to stat: /usr/lib/cgi-bin/php.cgi
+[Thu Mar 08 14:24:29.209501 2018] [cgi:error] [pid 28355] [client 168.235.89.144:43687] script not found or unable to stat: /usr/lib/cgi-bin/php4
+[Fri Mar 16 16:33:19.367692 2018] [cgi:error] [pid 15448] [client 109.108.146.157:49219] script not found or unable to stat: /usr/lib/cgi-bin/php
+[Fri Mar 16 16:33:20.190355 2018] [cgi:error] [pid 15588] [client 109.108.146.157:49331] script not found or unable to stat: /usr/lib/cgi-bin/php5
+[Fri Mar 16 16:33:21.691507 2018] [cgi:error] [pid 15580] [client 109.108.146.157:49428] script not found or unable to stat: /usr/lib/cgi-bin/php-cgi
+[Fri Mar 16 16:33:22.625265 2018] [cgi:error] [pid 15579] [client 109.108.146.157:49574] script not found or unable to stat: /usr/lib/cgi-bin/php.cgi
+[Fri Mar 16 16:33:23.481691 2018] [cgi:error] [pid 15261] [client 109.108.146.157:49641] script not found or unable to stat: /usr/lib/cgi-bin/php4
+[Sat Mar 24 08:59:23.082289 2018] [ssl:error] [pid 9866] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname m3.mobisapp.net provided via HTTP are different
+[Tue Apr 03 20:23:17.630369 2018] [ssl:error] [pid 15357] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Tue Apr 10 14:12:09.494733 2018] [ssl:error] [pid 24443] [client 139.162.184.185:55470] AH02042: rejecting client initiated renegotiation
+[Sat Apr 21 06:58:12.889841 2018] [core:error] [pid 3443] [client 183.136.202.244:51888] AH00126: Invalid URI in request t3 12.2.1
+[Thu May 24 05:10:01.649741 2018] [ssl:error] [pid 1261] [client 178.79.164.44:37062] AH02042: rejecting client initiated renegotiation
+[Thu May 24 08:25:49.673512 2018] [ssl:error] [pid 8498] AH02032: Hostname 197.221.128.82 provided via SNI and hostname group-ib.ru provided via HTTP are different
+[Sun Jun 17 05:43:26.255749 2018] [ssl:error] [pid 28245] [client 139.162.184.185:51262] AH02042: rejecting client initiated renegotiation
+[Mon Jul 09 23:51:54.429811 2018] [core:error] [pid 11266] [client 41.90.255.80:27462] AH00126: Invalid URI in request GET /help/../../etc/shadow HTTP/1.1
+[Mon Jul 09 23:51:54.618489 2018] [cgi:error] [pid 4354] [client 41.90.255.80:3163] script not found or unable to stat: /usr/lib/cgi-bin/mj_wwwusr
+[Mon Jul 09 23:51:56.078969 2018] [core:error] [pid 4354] [client 41.90.255.80:27536] AH00126: Invalid URI in request GET @localhost HTTP/1.1
+[Mon Jul 09 23:52:55.717381 2018] [core:error] [pid 19290] [client 41.90.255.80:3593] AH00126: Invalid URI in request GET %2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5Cboot%2Eini HTTP/1.1
+[Mon Jul 09 23:52:57.289180 2018] [core:error] [pid 19290] [client 41.90.255.80:3617] AH00126: Invalid URI in request GET %2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5C%2E%2E%5Cetc%5Cpasswd HTTP/1.1
+[Mon Jul 09 23:52:57.811989 2018] [core:error] [pid 19289] [client 41.90.255.80:3621] AH00126: Invalid URI in request GET ..\\\\..\\\\..\\..\\\\..\\..\\\\..\\..\\\\\\boot.ini HTTP/1.1
+[Mon Jul 09 23:52:58.365162 2018] [core:error] [pid 19240] [client 41.90.255.80:27950] AH00126: Invalid URI in request GET %c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./boot.ini HTTP/1.1
+[Mon Jul 09 23:52:58.755520 2018] [core:error] [pid 19291] [client 41.90.255.80:3637] AH00126: Invalid URI in request GET %c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/boot.ini HTTP/1.1
+[Mon Jul 09 23:52:59.757404 2018] [core:error] [pid 5771] [client 41.90.255.80:27970] AH00126: Invalid URI in request GET index.html?../../../../../boot.ini HTTP/1.1
+[Mon Jul 09 23:53:00.219052 2018] [core:error] [pid 19291] [client 41.90.255.80:27976] AH00126: Invalid URI in request GET index.html?..\\..\\..\\..\\..\\boot.ini HTTP/1.1
+[Mon Jul 09 23:53:04.721820 2018] [core:error] [pid 19290] [client 41.90.255.80:28010] AH00126: Invalid URI in request GET /../../../../../../../etc/passwd HTTP/1.1
+[Tue Jul 10 00:05:24.135778 2018] [autoindex:error] [pid 19240] [client 41.90.255.80:1600] AH01276: Cannot serve directory /var/www/mobisapp/.git/: No matching DirectoryIndex (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by Options directive
+[Fri Jul 13 19:00:28.282006 2018] [ssl:error] [pid 23304] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Wed Jul 18 08:57:23.391123 2018] [core:error] [pid 18543] [client 197.251.191.247:38028] AH00126: Invalid URI in request t3s 12.2.1
+[Wed Jul 18 09:04:28.539788 2018] [cgi:error] [pid 19165] [client 197.251.191.247:41232] attempt to invoke directory as script: /usr/lib/cgi-bin/
+[Wed Jul 18 09:04:30.180215 2018] [cgi:error] [pid 19169] [client 197.251.191.247:41592] script not found or unable to stat: /usr/lib/cgi-bin/NonExistent.html
+[Wed Jul 18 09:04:50.068596 2018] [autoindex:error] [pid 19165] [client 197.251.191.247:41232] AH01276: Cannot serve directory /var/www/mobisapp/db/: No matching DirectoryIndex (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by Options directive
+[Wed Jul 18 09:05:07.965858 2018] [autoindex:error] [pid 19189] [client 197.251.191.247:41820] AH01276: Cannot serve directory /var/www/mobisapp/includes/: No matching DirectoryIndex (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by Options directive
+[Wed Jul 18 09:05:12.004348 2018] [autoindex:error] [pid 19189] [client 197.251.191.247:41820] AH01276: Cannot serve directory /var/www/mobisapp/logs/: No matching DirectoryIndex (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by Options directive
+[Wed Jul 18 09:06:43.209509 2018] [access_compat:error] [pid 19306] [client 197.251.191.247:42464] AH01797: client denied by server configuration: /var/www/mobisapp/app/
+[Wed Jul 18 09:06:44.636045 2018] [access_compat:error] [pid 19295] [client 197.251.191.247:42502] AH01797: client denied by server configuration: /var/www/mobisapp/app/NonExistent.html
+[Wed Jul 18 09:13:56.316630 2018] [autoindex:error] [pid 19482] [client 197.251.191.247:45742] AH01276: Cannot serve directory /var/www/mobisapp/logs/: No matching DirectoryIndex (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by Options directive, referer: https://197.221.128.82/logs
+[Wed Jul 18 09:13:56.643288 2018] [autoindex:error] [pid 19482] [client 197.251.191.247:45742] AH01276: Cannot serve directory /var/www/mobisapp/includes/: No matching DirectoryIndex (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by Options directive, referer: https://197.221.128.82/includes
+[Wed Jul 18 09:13:57.026051 2018] [autoindex:error] [pid 19482] [client 197.251.191.247:45742] AH01276: Cannot serve directory /var/www/mobisapp/db/: No matching DirectoryIndex (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by Options directive, referer: https://197.221.128.82/db
+[Wed Jul 18 09:14:16.248922 2018] [cgi:error] [pid 19625] [client 197.251.191.247:46016] attempt to invoke directory as script: /usr/lib/cgi-bin/
+[Wed Jul 18 09:14:47.738339 2018] [:error] [pid 19700] [client 197.251.191.247:46400] script '/usr/lib/cgi-bin/about.php' not found or unable to stat
+[Wed Jul 18 09:14:51.256562 2018] [:error] [pid 19725] [client 197.251.191.247:46450] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 09:15:09.964427 2018] [cgi:error] [pid 19725] [client 197.251.191.247:46696] script not found or unable to stat: /usr/lib/cgi-bin/guestbook
+[Wed Jul 18 09:15:11.387597 2018] [:error] [pid 19725] [client 197.251.191.247:46724] script '/usr/lib/cgi-bin/view.php' not found or unable to stat
+[Wed Jul 18 09:15:14.409061 2018] [cgi:error] [pid 19618] [client 197.251.191.247:46758] script not found or unable to stat: /usr/lib/cgi-bin/htsearch
+[Wed Jul 18 09:15:38.230155 2018] [cgi:error] [pid 19725] [client 197.251.191.247:47062] script not found or unable to stat: /usr/lib/cgi-bin/auktion.cgi
+[Wed Jul 18 09:16:20.250055 2018] [cgi:error] [pid 19863] [client 197.251.191.247:47366] script not found or unable to stat: /usr/lib/cgi-bin/album.pl
+[Wed Jul 18 10:28:38.687464 2018] [cgi:error] [pid 23290] [client 41.189.182.218:41506] script not found or unable to stat: /usr/lib/cgi-bin/album.pl
+[Wed Jul 18 10:28:40.789421 2018] [:error] [pid 23261] [client 41.189.182.218:62610] script '/usr/lib/cgi-bin/p-news.php' not found or unable to stat
+[Wed Jul 18 10:28:45.206152 2018] [cgi:error] [pid 23261] [client 41.189.182.218:41644] script not found or unable to stat: /usr/lib/cgi-bin/Web_Store
+[Wed Jul 18 10:28:51.150278 2018] [:error] [pid 23306] [client 41.189.182.218:41728] script '/usr/lib/cgi-bin/login.php' not found or unable to stat
+[Wed Jul 18 10:28:56.362077 2018] [cgi:error] [pid 23302] [client 41.189.182.218:41810] script not found or unable to stat: /usr/lib/cgi-bin/lsg2.cgi
+[Wed Jul 18 10:29:04.038323 2018] [cgi:error] [pid 23265] [client 41.189.182.218:41950] script not found or unable to stat: /usr/lib/cgi-bin/YaBB.pl
+[Wed Jul 18 10:29:06.163582 2018] [:error] [pid 23270] [client 41.189.182.218:41988] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:29:09.477820 2018] [:error] [pid 23307] [client 41.189.182.218:42034] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:29:17.565373 2018] [cgi:error] [pid 23290] [client 41.189.182.218:42194] script not found or unable to stat: /usr/lib/cgi-bin/a1disp3.cgi
+[Wed Jul 18 10:29:18.789264 2018] [:error] [pid 23265] [client 41.189.182.218:42218] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:29:18.796361 2018] [cgi:error] [pid 23324] [client 41.189.182.218:42224] script not found or unable to stat: /usr/lib/cgi-bin/a1stats
+[Wed Jul 18 10:29:24.377391 2018] [cgi:error] [pid 23261] [client 41.189.182.218:42292] script not found or unable to stat: /usr/lib/cgi-bin/about
+[Wed Jul 18 10:29:32.094017 2018] [authz_core:error] [pid 23326] [client 41.189.182.218:42442] AH01630: client denied by server configuration: /var/www/mobisapp/server-status
+[Wed Jul 18 10:29:33.592393 2018] [authz_core:error] [pid 23326] [client 41.189.182.218:42472] AH01630: client denied by server configuration: /var/www/mobisapp/.htaccess
+[Wed Jul 18 10:29:33.936308 2018] [authz_core:error] [pid 23326] [client 41.189.182.218:42472] AH01630: client denied by server configuration: /var/www/mobisapp/.htpasswd
+[Wed Jul 18 10:29:37.739610 2018] [cgi:error] [pid 23251] [client 41.189.182.218:42514] script not found or unable to stat: /usr/lib/cgi-bin/anacondaclip.pl
+[Wed Jul 18 10:29:40.762268 2018] [:error] [pid 23322] [client 41.189.182.218:42550] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:29:50.603494 2018] [:error] [pid 23324] [client 41.189.182.218:42718] script '/usr/lib/cgi-bin/login.php' not found or unable to stat
+[Wed Jul 18 10:29:51.821260 2018] [cgi:error] [pid 23270] [client 41.189.182.218:42744] script not found or unable to stat: /usr/lib/cgi-bin/admin
+[Wed Jul 18 10:29:52.471412 2018] [:error] [pid 23265] [client 41.189.182.218:42752] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:29:53.709592 2018] [cgi:error] [pid 23260] [client 41.189.182.218:42768] script not found or unable to stat: /usr/lib/cgi-bin/index.do
+[Wed Jul 18 10:30:00.384100 2018] [cgi:error] [pid 23302] [client 41.189.182.218:42868] attempt to invoke directory as script: /usr/lib/cgi-bin/
+[Wed Jul 18 10:32:12.733037 2018] [cgi:error] [pid 23499] [client 41.189.182.218:43076] script not found or unable to stat: /usr/lib/cgi-bin/php
+[Wed Jul 18 10:32:14.363543 2018] [cgi:error] [pid 23501] [client 41.189.182.218:43078] script not found or unable to stat: /usr/lib/cgi-bin/php-cgi
+[Wed Jul 18 10:32:15.700839 2018] [cgi:error] [pid 23500] [client 41.189.182.218:43080] script not found or unable to stat: /usr/lib/cgi-bin/php5
+[Wed Jul 18 10:32:17.421059 2018] [cgi:error] [pid 23451] [client 41.189.182.218:43084] script not found or unable to stat: /usr/lib/cgi-bin/php.cgi
+[Wed Jul 18 10:32:19.074644 2018] [cgi:error] [pid 23489] [client 41.189.182.218:43092] script not found or unable to stat: /usr/lib/cgi-bin/php4
+[Wed Jul 18 10:32:33.826856 2018] [:error] [pid 23485] [client 41.189.182.218:43142] script '/usr/lib/cgi-bin/nquser.php' not found or unable to stat
+[Wed Jul 18 10:32:47.336078 2018] [:error] [pid 23503] [client 41.189.182.218:43172] script '/usr/lib/cgi-bin/nquser.php' not found or unable to stat
+[Wed Jul 18 10:33:32.701902 2018] [cgi:error] [pid 23545] [client 41.189.182.218:55969] script not found or unable to stat: /usr/lib/cgi-bin/apps
+[Wed Jul 18 10:33:34.336417 2018] [cgi:error] [pid 23535] [client 41.189.182.218:43298] script not found or unable to stat: /usr/lib/cgi-bin/apps
+[Wed Jul 18 10:33:59.781562 2018] [cgi:error] [pid 23546] [client 41.189.182.218:43364] script not found or unable to stat: /usr/lib/cgi-bin/file.cgi
+[Wed Jul 18 10:34:13.027929 2018] [cgi:error] [pid 23554] [client 41.189.182.218:43412] script not found or unable to stat: /usr/lib/cgi-bin/search=<script>alert('XSS')<
+[Wed Jul 18 10:34:24.601867 2018] [:error] [pid 23532] [client 41.189.182.218:43438] script '/usr/lib/cgi-bin/addentry.php' not found or unable to stat
+[Wed Jul 18 10:34:37.108796 2018] [:error] [pid 23524] [client 41.189.182.218:43474] script '/usr/lib/cgi-bin/check_user_id.php' not found or unable to stat
+[Wed Jul 18 10:35:37.119469 2018] [:error] [pid 23326] [client 41.189.182.218:43598] script '/usr/lib/cgi-bin/error.php' not found or unable to stat, referer: <script>alert(document.cookie);</script>
+[Wed Jul 18 10:35:49.911084 2018] [cgi:error] [pid 23545] [client 41.189.182.218:43620] script not found or unable to stat: /usr/lib/cgi-bin/add.cgi
+[Wed Jul 18 10:36:17.748621 2018] [:error] [pid 23726] [client 41.189.182.218:43664] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:36:39.072221 2018] [cgi:error] [pid 23720] [client 41.189.182.218:43716] script not found or unable to stat: /usr/lib/cgi-bin/user.cgi
+[Wed Jul 18 10:36:56.990508 2018] [:error] [pid 23545] [client 41.189.182.218:43764] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:37:06.507043 2018] [cgi:error] [pid 23736] [client 41.189.182.218:43786] script not found or unable to stat: /usr/lib/cgi-bin/htsearch
+[Wed Jul 18 10:37:21.753157 2018] [cgi:error] [pid 23749] [client 41.189.182.218:43824] script not found or unable to stat: /usr/lib/cgi-bin/activatemember
+[Wed Jul 18 10:37:34.874925 2018] [:error] [pid 23756] [client 41.189.182.218:43858] script '/usr/lib/cgi-bin/review.php' not found or unable to stat
+[Wed Jul 18 10:37:59.553574 2018] [cgi:error] [pid 23756] [client 41.189.182.218:43910] script not found or unable to stat: /usr/lib/cgi-bin/item.fts
+[Wed Jul 18 10:38:23.350296 2018] [:error] [pid 23756] [client 41.189.182.218:45348] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:38:50.740324 2018] [:error] [pid 23779] [client 41.189.182.218:44020] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:39:46.455374 2018] [:error] [pid 23905] [client 41.189.182.218:44134] script '/usr/lib/cgi-bin/printfaq.php' not found or unable to stat
+[Wed Jul 18 10:39:58.849514 2018] [:error] [pid 23903] [client 41.189.182.218:44158] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:40:29.054803 2018] [cgi:error] [pid 23738] [client 41.189.182.218:44224] attempt to invoke directory as script: /usr/lib/cgi-bin/
+[Wed Jul 18 10:40:53.007170 2018] [:error] [pid 23906] [client 41.189.182.218:44276] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:41:25.884616 2018] [cgi:error] [pid 24070] [client 41.189.182.218:44330] script not found or unable to stat: /usr/lib/cgi-bin/search.jsp
+[Wed Jul 18 10:41:41.130604 2018] [cgi:error] [pid 24070] [client 41.189.182.218:44366] script not found or unable to stat: /usr/lib/cgi-bin/include
+[Wed Jul 18 10:42:00.089407 2018] [:error] [pid 23909] [client 41.189.182.218:44414] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:42:00.455859 2018] [:error] [pid 23909] [client 41.189.182.218:44414] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:42:28.662779 2018] [:error] [pid 24086] [client 41.189.182.218:44446] script '/usr/lib/cgi-bin/login.php' not found or unable to stat
+[Wed Jul 18 10:42:45.439873 2018] [cgi:error] [pid 24113] [client 41.189.182.218:44488] script not found or unable to stat: /usr/lib/cgi-bin/smpwservicescgi.exe
+[Wed Jul 18 10:43:00.088537 2018] [:error] [pid 24105] [client 41.189.182.218:44522] script '/usr/lib/cgi-bin/login.php' not found or unable to stat
+[Wed Jul 18 10:43:15.348265 2018] [:error] [pid 24130] [client 41.189.182.218:44544] script '/usr/lib/cgi-bin/error.php' not found or unable to stat
+[Wed Jul 18 10:43:30.945878 2018] [cgi:error] [pid 24119] [client 41.189.182.218:44570] script not found or unable to stat: /usr/lib/cgi-bin/viewcvs.cgi
+[Wed Jul 18 10:43:44.844780 2018] [cgi:error] [pid 24140] [client 41.189.182.218:44598] script not found or unable to stat: /usr/lib/cgi-bin/bandwidth
+[Wed Jul 18 10:44:02.132983 2018] [cgi:error] [pid 24142] [client 41.189.182.218:44640] script not found or unable to stat: /usr/lib/cgi-bin/WorkArea
+[Wed Jul 18 10:44:24.471285 2018] [cgi:error] [pid 24070] [client 41.189.182.218:44688] script not found or unable to stat: /usr/lib/cgi-bin/session
+[Wed Jul 18 10:44:39.012235 2018] [cgi:error] [pid 24070] [client 41.189.182.218:44720] script not found or unable to stat: /usr/lib/cgi-bin/faq
+[Wed Jul 18 10:45:15.487529 2018] [:error] [pid 24135] [client 41.189.182.218:44782] script '/usr/lib/cgi-bin/adodb-perf-module.inc.php' not found or unable to stat
+[Wed Jul 18 10:45:17.309748 2018] [cgi:error] [pid 24070] [client 41.189.182.218:44784] script not found or unable to stat: /usr/lib/cgi-bin/lib
+[Wed Jul 18 10:45:38.079114 2018] [cgi:error] [pid 24291] [client 41.189.182.218:44826] script not found or unable to stat: /usr/lib/cgi-bin/display.cgi
+[Wed Jul 18 10:45:59.068913 2018] [:error] [pid 24294] [client 41.189.182.218:44860] script '/usr/lib/cgi-bin/browse.php' not found or unable to stat
+[Wed Jul 18 10:46:15.984045 2018] [:error] [pid 24145] [client 41.189.182.218:44896] script '/usr/lib/cgi-bin/user.php' not found or unable to stat
+[Wed Jul 18 10:46:29.407621 2018] [cgi:error] [pid 24151] [client 41.189.182.218:45012] attempt to invoke directory as script: /usr/lib/cgi-bin/
+[Wed Jul 18 10:46:44.042151 2018] [:error] [pid 24317] [client 41.189.182.218:45268] script '/usr/lib/cgi-bin/adlayer.php' not found or unable to stat
+[Wed Jul 18 10:47:03.191560 2018] [cgi:error] [pid 24197] [client 41.189.182.218:45462] script not found or unable to stat: /usr/lib/cgi-bin/lib
+[Wed Jul 18 10:49:21.736095 2018] [cgi:error] [pid 24145] [client 41.189.182.218:46070] script not found or unable to stat: /usr/lib/cgi-bin/contrib
+[Wed Jul 18 10:49:45.386742 2018] [:error] [pid 24330] [client 41.189.182.218:46372] script '/usr/lib/cgi-bin/livre_include.php' not found or unable to stat
+[Wed Jul 18 10:50:03.102270 2018] [cgi:error] [pid 24357] [client 41.189.182.218:46564] script not found or unable to stat: /usr/lib/cgi-bin/rot13sj.cgi
+[Wed Jul 18 10:50:27.779254 2018] [:error] [pid 24349] [client 41.189.182.218:46702] script '/usr/lib/cgi-bin/commsrss.php' not found or unable to stat
+[Wed Jul 18 10:51:02.516521 2018] [:error] [pid 24312] [client 41.189.182.218:46874] script '/usr/lib/cgi-bin/welcome.php' not found or unable to stat
+[Wed Jul 18 10:51:34.850971 2018] [:error] [pid 24527] [client 41.189.182.218:47014] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:51:51.610198 2018] [:error] [pid 24517] [client 41.189.182.218:47062] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:52:06.989469 2018] [cgi:error] [pid 24517] [client 41.189.182.218:47100] script not found or unable to stat: /usr/lib/cgi-bin/ideabox
+[Wed Jul 18 10:52:25.424658 2018] [cgi:error] [pid 24516] [client 41.189.182.218:47138] script not found or unable to stat: /usr/lib/cgi-bin/config
+[Wed Jul 18 10:52:41.037457 2018] [cgi:error] [pid 24552] [client 41.189.182.218:47172] script not found or unable to stat: /usr/lib/cgi-bin/common
+[Wed Jul 18 10:53:18.818503 2018] [:error] [pid 24548] [client 41.189.182.218:47206] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:53:22.148583 2018] [:error] [pid 24552] [client 41.189.182.218:47212] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 10:53:51.027583 2018] [cgi:error] [pid 24310] [client 41.189.182.218:47248] script not found or unable to stat: /usr/lib/cgi-bin/embed
+[Wed Jul 18 10:54:05.260085 2018] [cgi:error] [pid 24551] [client 41.189.182.218:31796] script not found or unable to stat: /usr/lib/cgi-bin/member
+[Wed Jul 18 10:54:19.104860 2018] [cgi:error] [pid 24574] [client 41.189.182.218:47328] attempt to invoke directory as script: /usr/lib/cgi-bin/
+[Wed Jul 18 10:54:37.941974 2018] [cgi:error] [pid 24548] [client 41.189.182.218:47360] script not found or unable to stat: /usr/lib/cgi-bin/includes
+[Wed Jul 18 10:54:55.347140 2018] [:error] [pid 24554] [client 41.189.182.218:47388] script '/usr/lib/cgi-bin/cal_week.php' not found or unable to stat
+[Wed Jul 18 10:55:08.157819 2018] [cgi:error] [pid 24551] [client 41.189.182.218:47408] script not found or unable to stat: /usr/lib/cgi-bin/server
+[Wed Jul 18 10:59:44.504918 2018] [cgi:error] [pid 24791] [client 41.189.182.218:50380] script not found or unable to stat: /usr/lib/cgi-bin/admin
+[Wed Jul 18 11:00:14.190754 2018] [cgi:error] [pid 24792] [client 41.189.182.218:50814] script not found or unable to stat: /usr/lib/cgi-bin/processSimple.do
+[Wed Jul 18 11:00:36.117901 2018] [cgi:error] [pid 24910] [client 41.189.182.218:50954] script not found or unable to stat: /usr/lib/cgi-bin/googlesearch
+[Wed Jul 18 11:00:51.837027 2018] [cgi:error] [pid 24960] [client 41.189.182.218:51040] script not found or unable to stat: /usr/lib/cgi-bin/configuration
+[Wed Jul 18 11:01:12.828567 2018] [:error] [pid 24972] [client 41.189.182.218:51222] script '/usr/lib/cgi-bin/login.php' not found or unable to stat
+[Wed Jul 18 11:01:55.087721 2018] [:error] [pid 24975] [client 41.189.182.218:51362] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:02:25.122628 2018] [:error] [pid 25000] [client 41.189.182.218:52038] script '/usr/lib/cgi-bin/admin.php' not found or unable to stat
+[Wed Jul 18 11:02:39.971873 2018] [cgi:error] [pid 24977] [client 41.189.182.218:52450] script not found or unable to stat: /usr/lib/cgi-bin/samples
+[Wed Jul 18 11:02:57.241640 2018] [cgi:error] [pid 24995] [client 41.189.182.218:52840] script not found or unable to stat: /usr/lib/cgi-bin/pajax
+[Wed Jul 18 11:03:52.803329 2018] [:error] [pid 25017] [client 41.189.182.218:54274] script '/usr/lib/cgi-bin/edit_image.php' not found or unable to stat
+[Wed Jul 18 11:04:27.465572 2018] [core:error] [pid 25028] [client 41.189.182.218:56004] AH00126: Invalid URI in request GET /.%252e/.%252e/.%252e/.%252e/windows/win.ini HTTP/1.1
+[Wed Jul 18 11:04:28.794174 2018] [core:error] [pid 25044] [client 41.189.182.218:56132] AH00126: Invalid URI in request GET /.%252e/.%252e/.%252e/.%252e/winnt/win.ini HTTP/1.1
+[Wed Jul 18 11:04:30.059559 2018] [core:error] [pid 25042] [client 41.189.182.218:56172] AH00126: Invalid URI in request GET /.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/etc/passwd HTTP/1.1
+[Wed Jul 18 11:04:43.262319 2018] [:error] [pid 25043] [client 41.189.182.218:56616] script '/usr/lib/cgi-bin/include.php' not found or unable to stat
+[Wed Jul 18 11:04:59.493995 2018] [:error] [pid 25053] [client 41.189.182.218:57070] script '/usr/lib/cgi-bin/admin.php' not found or unable to stat
+[Wed Jul 18 11:05:42.495115 2018] [:error] [pid 25028] [client 41.189.182.218:58506] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:05:44.854129 2018] [:error] [pid 25042] [client 41.189.182.218:58578] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:06:03.749110 2018] [cgi:error] [pid 25041] [client 41.189.182.218:59226] script not found or unable to stat: /usr/lib/cgi-bin/doc
+[Wed Jul 18 11:06:28.838810 2018] [cgi:error] [pid 25233] [client 41.189.182.218:32919] script not found or unable to stat: /usr/lib/cgi-bin/admin
+[Wed Jul 18 11:06:43.565954 2018] [:error] [pid 25180] [client 41.189.182.218:39237] script '/usr/lib/cgi-bin/menu_dx.php' not found or unable to stat
+[Wed Jul 18 11:06:53.517540 2018] [core:error] [pid 25166] [client 41.189.182.218:60838] AH00126: Invalid URI in request GET /././.. HTTP/1.1
+[Wed Jul 18 11:06:54.734251 2018] [core:error] [pid 25075] [client 41.189.182.218:60892] AH00126: Invalid URI in request GET ././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././../../../../../../../../ HTTP/1.1
+[Wed Jul 18 11:07:13.292003 2018] [cgi:error] [pid 25180] [client 41.189.182.218:33172] script not found or unable to stat: /usr/lib/cgi-bin/webcart.cgi
+[Wed Jul 18 11:07:29.499754 2018] [cgi:error] [pid 25075] [client 41.189.182.218:33750] script not found or unable to stat: /usr/lib/cgi-bin/go.cgi|id|
+[Wed Jul 18 11:07:50.491600 2018] [:error] [pid 25249] [client 41.189.182.218:34348] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:08:18.446847 2018] [:error] [pid 25217] [client 41.189.182.218:35224] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:08:52.105789 2018] [cgi:error] [pid 25227] [client 41.189.182.218:36222] script not found or unable to stat: /usr/lib/cgi-bin/index.html
+[Wed Jul 18 11:09:06.500723 2018] [:error] [pid 25288] [client 41.189.182.218:36730] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:09:27.286263 2018] [:error] [pid 25279] [client 41.189.182.218:37394] script '/usr/lib/cgi-bin/hw3.php' not found or unable to stat
+[Wed Jul 18 11:09:33.204916 2018] [cgi:error] [pid 25364] [client 41.189.182.218:37574] script not found or unable to stat: /usr/lib/cgi-bin/hw3.cgi
+[Wed Jul 18 11:09:57.075762 2018] [:error] [pid 25249] [client 41.189.182.218:38276] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:10:16.674385 2018] [cgi:error] [pid 25268] [client 41.189.182.218:38926] script not found or unable to stat: /usr/lib/cgi-bin/starnet
+[Wed Jul 18 11:10:39.261193 2018] [:error] [pid 25375] [client 41.189.182.218:39610] script '/usr/lib/cgi-bin/config.php' not found or unable to stat
+[Wed Jul 18 11:11:12.608816 2018] [cgi:error] [pid 25237] [client 41.189.182.218:40644] script not found or unable to stat: /usr/lib/cgi-bin/admin
+[Wed Jul 18 11:12:04.517951 2018] [:error] [pid 25249] [client 41.189.182.218:42160] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:12:32.247014 2018] [:error] [pid 25264] [client 41.189.182.218:43056] script '/usr/lib/cgi-bin/base_local_rules.php' not found or unable to stat
+[Wed Jul 18 11:12:51.016160 2018] [cgi:error] [pid 25519] [client 41.189.182.218:43608] script not found or unable to stat: /usr/lib/cgi-bin/hints.pl
+[Wed Jul 18 11:13:31.076912 2018] [:error] [pid 25227] [client 41.189.182.218:44836] script '/usr/lib/cgi-bin/protection.php' not found or unable to stat
+[Wed Jul 18 11:14:27.717379 2018] [cgi:error] [pid 25234] [client 41.189.182.218:46544] script not found or unable to stat: /usr/lib/cgi-bin/docman
+[Wed Jul 18 11:14:32.943973 2018] [cgi:error] [pid 25511] [client 41.189.182.218:46630] script not found or unable to stat: /usr/lib/cgi-bin/patch
+[Wed Jul 18 11:15:13.156526 2018] [cgi:error] [pid 25519] [client 41.189.182.218:47776] script not found or unable to stat: /usr/lib/cgi-bin/shop.plx
+[Wed Jul 18 11:16:20.436308 2018] [:error] [pid 25545] [client 41.189.182.218:2924] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:17:03.554259 2018] [:error] [pid 25512] [client 41.189.182.218:60753] script '/usr/lib/cgi-bin/lg.php' not found or unable to stat
+[Wed Jul 18 11:17:33.977400 2018] [cgi:error] [pid 25706] [client 41.189.182.218:51322] script not found or unable to stat: /usr/lib/cgi-bin/upload
+[Wed Jul 18 11:17:59.688906 2018] [:error] [pid 25720] [client 41.189.182.218:52030] script '/usr/lib/cgi-bin/modules.php' not found or unable to stat
+[Wed Jul 18 11:18:43.153295 2018] [cgi:error] [pid 25730] [client 41.189.182.218:53122] script not found or unable to stat: /usr/lib/cgi-bin/backend
+[Wed Jul 18 11:19:04.474558 2018] [cgi:error] [pid 25227] [client 41.189.182.218:53550] script not found or unable to stat: /usr/lib/cgi-bin/login.pl
+[Wed Jul 18 11:19:39.402929 2018] [cgi:error] [pid 25732] [client 41.189.182.218:54110] script not found or unable to stat: /usr/lib/cgi-bin/nph-mr.cgi
+[Wed Jul 18 11:20:17.745807 2018] [cgi:error] [pid 25731] [client 41.189.182.218:52037] script not found or unable to stat: /usr/lib/cgi-bin/gtcatalog
+[Wed Jul 18 11:20:20.788036 2018] [cgi:error] [pid 25553] [client 41.189.182.218:54568] script not found or unable to stat: /usr/lib/cgi-bin/GTcatalog
+[Wed Jul 18 11:21:01.848722 2018] [:error] [pid 25889] [client 41.189.182.218:59896] script '/usr/lib/cgi-bin/search.php' not found or unable to stat, referer: phpicalendar_getdate_file_include.nasl
+[Wed Jul 18 11:21:22.309235 2018] [:error] [pid 25738] [client 41.189.182.218:55196] script '/usr/lib/cgi-bin/cal_cat.php' not found or unable to stat
+[Wed Jul 18 11:21:47.317898 2018] [cgi:error] [pid 25512] [client 41.189.182.218:55466] script not found or unable to stat: /usr/lib/cgi-bin/lang
+[Wed Jul 18 11:22:01.752895 2018] [:error] [pid 25946] [client 41.189.182.218:55642] script '/usr/lib/cgi-bin/apa_phpinclude.inc.php' not found or unable to stat
+[Wed Jul 18 11:22:27.460935 2018] [:error] [pid 25941] [client 41.189.182.218:55946] script '/usr/lib/cgi-bin/pmwiki.php' not found or unable to stat
+[Wed Jul 18 11:23:09.776825 2018] [:error] [pid 25962] [client 41.189.182.218:56218] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:23:39.495762 2018] [cgi:error] [pid 25977] [client 41.189.182.218:56702] script not found or unable to stat: /usr/lib/cgi-bin/engine
+[Wed Jul 18 11:24:01.692228 2018] [:error] [pid 25942] [client 41.189.182.218:56878] script '/usr/lib/cgi-bin/new-visitor.inc.php' not found or unable to stat
+[Wed Jul 18 11:24:36.562260 2018] [:error] [pid 25967] [client 41.189.182.218:57164] script '/usr/lib/cgi-bin/base_maintenance.php' not found or unable to stat
+[Wed Jul 18 11:25:02.586272 2018] [cgi:error] [pid 25965] [client 41.189.182.218:57388] script not found or unable to stat: /usr/lib/cgi-bin/chat
+[Wed Jul 18 11:25:23.841175 2018] [:error] [pid 25990] [client 41.189.182.218:52415] script '/usr/lib/cgi-bin/store.php' not found or unable to stat
+[Wed Jul 18 11:25:55.685511 2018] [cgi:error] [pid 25992] [client 41.189.182.218:58242] script not found or unable to stat: /usr/lib/cgi-bin/kernel
+[Wed Jul 18 11:26:16.572002 2018] [:error] [pid 25965] [client 41.189.182.218:58448] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:26:52.021141 2018] [:error] [pid 26142] [client 41.189.182.218:58826] script '/usr/lib/cgi-bin/module.php' not found or unable to stat
+[Wed Jul 18 11:27:19.567407 2018] [:error] [pid 26118] [client 41.189.182.218:59116] script '/usr/lib/cgi-bin/rss.php' not found or unable to stat
+[Wed Jul 18 11:27:46.416364 2018] [:error] [pid 26119] [client 41.189.182.218:59350] script '/usr/lib/cgi-bin/setcookie.php' not found or unable to stat
+[Wed Jul 18 11:28:14.587984 2018] [:error] [pid 26183] [client 41.189.182.218:59584] script '/usr/lib/cgi-bin/wikka.php' not found or unable to stat
+[Wed Jul 18 11:28:43.155173 2018] [:error] [pid 26197] [client 41.189.182.218:59820] script '/usr/lib/cgi-bin/update.php' not found or unable to stat
+[Wed Jul 18 11:29:35.148781 2018] [cgi:error] [pid 26214] [client 41.189.182.218:60260] script not found or unable to stat: /usr/lib/cgi-bin/squirrelcart
+[Wed Jul 18 11:30:17.571468 2018] [cgi:error] [pid 26216] [client 41.189.182.218:60424] script not found or unable to stat: /usr/lib/cgi-bin/newsscript.pl
+[Wed Jul 18 11:30:49.518686 2018] [cgi:error] [pid 26319] [client 41.189.182.218:60468] script not found or unable to stat: /usr/lib/cgi-bin/ovlaunch.exe
+[Wed Jul 18 11:31:34.879783 2018] [:error] [pid 26386] [client 41.189.182.218:60504] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:33:09.951917 2018] [cgi:error] [pid 26386] [client 41.189.182.218:60590] script not found or unable to stat: /usr/lib/cgi-bin/www
+[Wed Jul 18 11:33:48.698818 2018] [:error] [pid 26424] [client 41.189.182.218:60628] script '/usr/lib/cgi-bin/callboth.php' not found or unable to stat
+[Wed Jul 18 11:34:12.570079 2018] [:error] [pid 26457] [client 41.189.182.218:60660] script '/usr/lib/cgi-bin/event_view.php' not found or unable to stat
+[Wed Jul 18 11:35:13.892875 2018] [cgi:error] [pid 26322] [client 41.189.182.218:60714] script not found or unable to stat: /usr/lib/cgi-bin/atomicboard
+[Wed Jul 18 11:36:28.150069 2018] [:error] [pid 26392] [client 41.189.182.218:60782] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:37:57.336040 2018] [cgi:error] [pid 26458] [client 41.189.182.218:60898] script not found or unable to stat: /usr/lib/cgi-bin/flserv.pl
+[Wed Jul 18 11:38:48.028611 2018] [:error] [pid 26645] [client 41.189.182.218:60942] script '/usr/lib/cgi-bin/resetpw.php' not found or unable to stat
+[Wed Jul 18 11:39:56.326893 2018] [cgi:error] [pid 26746] [client 41.189.182.218:32788] script not found or unable to stat: /usr/lib/cgi-bin/sql
+[Wed Jul 18 11:39:58.988217 2018] [cgi:error] [pid 26748] [client 41.189.182.218:32790] script not found or unable to stat: /usr/lib/cgi-bin/modules
+[Wed Jul 18 11:41:14.257840 2018] [:error] [pid 26874] [client 41.189.182.218:32836] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:42:16.000794 2018] [:error] [pid 26641] [client 41.189.182.218:32882] script '/usr/lib/cgi-bin/index.php' not found or unable to stat
+[Wed Jul 18 11:42:55.319765 2018] [cgi:error] [pid 26874] [client 41.189.182.218:32932] script not found or unable to stat: /usr/lib/cgi-bin/neomail-prefs.pl
+[Wed Jul 18 23:36:42.908518 2018] [core:error] [pid 23834] [client 197.251.191.247:38844] AH00126: Invalid URI in request t3s 12.2.1
+[Wed Jul 18 23:37:23.778015 2018] [core:error] [pid 23810] [client 197.251.191.247:39210] AH00126: Invalid URI in request GNUTELLA CONNECT/0.6
+[Wed Jul 18 23:37:28.451293 2018] [core:error] [pid 23802] [client 197.251.191.247:39230] AH00126: Invalid URI in request GNUTELLA CONNECT/0.4
+[Wed Jul 18 23:37:31.273898 2018] [core:error] [pid 23799] [client 197.251.191.247:39252] AH00126: Invalid URI in request some invalid request
+[Wed Jul 18 23:44:21.175309 2018] [authz_core:error] [pid 23810] [client 197.251.191.247:41210] AH01630: client denied by server configuration: /var/www/mobisapp/server-status
+[Wed Jul 18 23:44:37.514905 2018] [authz_core:error] [pid 26416] [client 197.251.191.247:41274] AH01630: client denied by server configuration: /var/www/mobisapp/.htaccess
+[Wed Jul 18 23:44:38.815768 2018] [authz_core:error] [pid 26416] [client 197.251.191.247:41274] AH01630: client denied by server configuration: /var/www/mobisapp/.htpasswd
+[Wed Jul 18 23:45:46.706961 2018] [core:error] [pid 23799] [client 197.251.191.247:41720] AH00126: Invalid URI in request GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd HTTP/1.1
+[Wed Jul 18 23:48:17.601447 2018] [core:error] [pid 23798] [client 197.251.191.247:43228] AH00126: Invalid URI in request GET /../../../../../../../../../../../../windows/win.ini HTTP/1.1
+[Wed Jul 18 23:48:18.879038 2018] [core:error] [pid 23793] [client 197.251.191.247:43252] AH00126: Invalid URI in request GET /../../../../../../../../../../../../winnt/win.ini HTTP/1.1
+[Wed Jul 18 23:48:20.167368 2018] [core:error] [pid 23805] [client 197.251.191.247:43280] AH00126: Invalid URI in request GET ../../../../../../../../../../../../windows/win.ini HTTP/1.1
+[Wed Jul 18 23:48:21.485782 2018] [core:error] [pid 23806] [client 197.251.191.247:43304] AH00126: Invalid URI in request GET ../../../../../../../../../../../../winnt/win.ini HTTP/1.1
+[Wed Jul 18 23:48:23.061791 2018] [core:error] [pid 23792] [client 197.251.191.247:43336] AH00126: Invalid URI in request GET ..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\windows\\win.ini HTTP/1.1
+[Wed Jul 18 23:48:24.339413 2018] [core:error] [pid 23793] [client 197.251.191.247:26108] AH00126: Invalid URI in request GET ..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\winnt\\win.ini HTTP/1.1
+[Wed Jul 18 23:48:39.731964 2018] [access_compat:error] [pid 23805] [client 197.251.191.247:43552] AH01797: client denied by server configuration: /var/www/mobisapp/system/login
+[Wed Jul 18 23:48:47.756869 2018] [core:error] [pid 23803] [client 197.251.191.247:43570] AH00126: Invalid URI in request GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/windows/win.ini HTTP/1.1
+[Wed Jul 18 23:48:49.473565 2018] [core:error] [pid 23792] [client 197.251.191.247:43638] AH00126: Invalid URI in request GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/winnt/win.ini HTTP/1.1
+[Wed Jul 18 23:48:55.306999 2018] [core:error] [pid 23810] [client 197.251.191.247:43724] AH00126: Invalid URI in request GET %5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5cwinnt%5cwin.ini HTTP/1.1
+[Wed Jul 18 23:49:06.052793 2018] [core:error] [pid 23798] [client 197.251.191.247:43894] AH00126: Invalid URI in request GET /././././././../../../../../windows/win.ini HTTP/1.1
+[Wed Jul 18 23:49:07.565928 2018] [core:error] [pid 23803] [client 197.251.191.247:43912] AH00126: Invalid URI in request GET /././././././../../../../../winnt/win.ini HTTP/1.1
+[Wed Jul 18 23:49:09.004016 2018] [core:error] [pid 23806] [client 197.251.191.247:43938] AH00126: Invalid URI in request GET .\\.\\.\\.\\.\\.\\.\\.\\.\\.\\/windows/win.ini HTTP/1.1
+[Wed Jul 18 23:49:10.728787 2018] [core:error] [pid 23793] [client 197.251.191.247:43960] AH00126: Invalid URI in request GET .\\.\\.\\.\\.\\.\\.\\.\\.\\.\\/winnt/win.ini HTTP/1.1
+[Wed Jul 18 23:49:26.213793 2018] [core:error] [pid 23803] [client 197.251.191.247:44116] AH00126: Invalid URI in request GET /../../../../../../../../../../../../etc/passwd HTTP/1.1
+[Wed Jul 18 23:49:35.751480 2018] [core:error] [pid 23834] [client 197.251.191.247:44178] AH00126: Invalid URI in request GET /./../../../../../../../../../../../etc/passwd HTTP/1.1
+[Wed Jul 18 23:49:37.961249 2018] [core:error] [pid 23798] [client 197.251.191.247:44260] AH00126: Invalid URI in request GET //../../../../../../../../../../../../etc/passwd HTTP/1.1
+[Wed Jul 18 23:49:40.069618 2018] [core:error] [pid 23803] [client 197.251.191.247:44290] AH00126: Invalid URI in request GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd HTTP/1.1
+[Wed Jul 18 23:49:48.011976 2018] [core:error] [pid 23806] [client 197.251.191.247:44402] AH00126: Invalid URI in request GET /././././././../../../../../etc/passwd HTTP/1.1
+[Wed Jul 18 23:51:41.422065 2018] [core:error] [pid 23803] [client 197.251.191.247:46028] AH00126: Invalid URI in request GET <script>document.cookie=%22testphzv=1817;%22</script> HTTP/1.1
+[Wed Jul 18 23:51:45.033929 2018] [core:error] [pid 23802] [client 197.251.191.247:46078] AH00126: Invalid URI in request GET <meta%20http-equiv=Set-Cookie%20content=%22testphzv=1817%22> HTTP/1.1
+[Wed Jul 18 23:51:51.523247 2018] [cgi:error] [pid 23805] [client 197.251.191.247:46162] script not found or unable to stat: /usr/lib/cgi-bin/printenv
+[Wed Jul 18 23:52:37.473784 2018] [core:error] [pid 26416] [client 197.251.191.247:46828] AH00126: Invalid URI in request GET ..\\..\\..\\..\\..\\..\\windows\\win.ini HTTP/1.1
+[Wed Jul 18 23:52:40.074451 2018] [core:error] [pid 23805] [client 197.251.191.247:26186] AH00126: Invalid URI in request GET ..\\..\\..\\..\\..\\..\\winnt\\win.ini HTTP/1.1
+[Wed Jul 18 23:54:12.512352 2018] [cgi:error] [pid 23805] [client 197.251.191.247:48412] script not found or unable to stat: /usr/lib/cgi-bin/index.cgi
+[Wed Jul 18 23:54:18.739428 2018] [core:error] [pid 23803] [client 197.251.191.247:48518] AH00126: Invalid URI in request GET c:\\boot.ini HTTP/1.1
+[Wed Jul 18 23:55:03.274032 2018] [core:error] [pid 23802] [client 197.251.191.247:49262] AH00082: an unknown filter was not added: includes
+[Wed Jul 18 23:55:03.274219 2018] [core:error] [pid 23802] [client 197.251.191.247:49262] AH00082: an unknown filter was not added: includes
+[Wed Jul 18 23:55:43.793849 2018] [cgi:error] [pid 23798] [client 197.251.191.247:49684] script not found or unable to stat: /usr/lib/cgi-bin/com5.pl
+[Wed Jul 18 23:56:02.254416 2018] [cgi:error] [pid 23802] [client 197.251.191.247:49990] script not found or unable to stat: /usr/lib/cgi-bin/pub
+[Wed Jul 18 23:57:01.377951 2018] [access_compat:error] [pid 23834] [client 197.251.191.247:51078] AH01797: client denied by server configuration: /var/www/mobisapp/app/ui
+[Wed Jul 18 23:57:12.425218 2018] [access_compat:error] [pid 26416] [client 197.251.191.247:51270] AH01797: client denied by server configuration: /var/www/mobisapp/system/console
+[Wed Jul 18 23:57:54.322495 2018] [access_compat:error] [pid 23798] [client 197.251.191.247:51996] AH01797: client denied by server configuration: /var/www/mobisapp/system/login
+[Wed Jul 18 23:58:14.797523 2018] [cgi:error] [pid 23805] [client 197.251.191.247:52384] script not found or unable to stat: /usr/lib/cgi-bin/client_execute.cgi
+[Wed Jul 18 23:58:19.519252 2018] [cgi:error] [pid 23793] [client 197.251.191.247:52408] script not found or unable to stat: /usr/lib/cgi-bin/guestimage.html
+[Wed Jul 18 23:58:21.885967 2018] [cgi:error] [pid 26416] [client 197.251.191.247:52460] script not found or unable to stat: /usr/lib/cgi-bin/camctrl.cgi
+[Wed Jul 18 23:58:23.515531 2018] [cgi:error] [pid 23810] [client 197.251.191.247:52496] script not found or unable to stat: /usr/lib/cgi-bin/ctrldirect.cgi
+[Wed Jul 18 23:58:27.280895 2018] [access_compat:error] [pid 23805] [client 197.251.191.247:52520] AH01797: client denied by server configuration: /var/www/mobisapp/app/idxasp.html
+[Thu Jul 19 00:00:10.514406 2018] [authz_core:error] [pid 23793] [client 197.251.191.247:53684] AH01630: client denied by server configuration: /var/www/mobisapp/server-status
+[Thu Jul 19 00:01:51.013835 2018] [cgi:error] [pid 26416] [client 197.251.191.247:54442] script not found or unable to stat: /usr/lib/cgi-bin/pdesk.cgi
+[Thu Jul 19 00:02:39.112152 2018] [cgi:error] [pid 23805] [client 197.251.191.247:54900] script not found or unable to stat: /usr/lib/cgi-bin/kvm.cgi
+[Thu Jul 19 00:04:10.878423 2018] [core:error] [pid 26416] [client 197.251.191.247:55804] AH00126: Invalid URI in request GET /././.. HTTP/1.1
+[Thu Jul 19 00:04:13.029567 2018] [core:error] [pid 23798] [client 197.251.191.247:55824] AH00126: Invalid URI in request GET ././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././../../../../../../../../ HTTP/1.1
+[Thu Jul 19 00:04:15.326232 2018] [core:error] [pid 23792] [client 197.251.191.247:55820] AH00126: Invalid URI in request GET /.%252e/.%252e/.%252e/.%252e/windows/win.ini HTTP/1.1
+[Thu Jul 19 00:04:20.106798 2018] [core:error] [pid 27331] [client 197.251.191.247:55850] AH00126: Invalid URI in request GET /.%252e/.%252e/.%252e/.%252e/winnt/win.ini HTTP/1.1
+[Thu Jul 19 00:04:22.618266 2018] [core:error] [pid 23834] [client 197.251.191.247:55868] AH00126: Invalid URI in request GET /.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/etc/passwd HTTP/1.1
+[Thu Jul 19 00:05:22.259025 2018] [cgi:error] [pid 23810] [client 197.251.191.247:56126] script not found or unable to stat: /usr/lib/cgi-bin/filescan
+[Thu Jul 19 00:07:41.364349 2018] [cgi:error] [pid 23834] [client 197.251.191.247:27156] script not found or unable to stat: /usr/lib/cgi-bin/admin.cgi
+[Thu Jul 19 00:07:42.876054 2018] [cgi:error] [pid 23810] [client 197.251.191.247:57424] script not found or unable to stat: /usr/lib/cgi-bin/admin.pl
+[Thu Jul 19 00:07:44.719340 2018] [cgi:error] [pid 23806] [client 197.251.191.247:57430] script not found or unable to stat: /usr/lib/cgi-bin/bugreport.cgi
+[Thu Jul 19 00:07:46.302331 2018] [cgi:error] [pid 23803] [client 197.251.191.247:57438] script not found or unable to stat: /usr/lib/cgi-bin/clwarn.cgi
+[Thu Jul 19 00:07:47.703488 2018] [cgi:error] [pid 23798] [client 197.251.191.247:57444] script not found or unable to stat: /usr/lib/cgi-bin/count.cgi
+[Thu Jul 19 00:07:49.773266 2018] [cgi:error] [pid 23793] [client 197.251.191.247:57450] script not found or unable to stat: /usr/lib/cgi-bin/Count.cgi
+[Thu Jul 19 00:07:51.082978 2018] [cgi:error] [pid 23792] [client 197.251.191.247:57456] script not found or unable to stat: /usr/lib/cgi-bin/faqmanager.cgi
+[Thu Jul 19 00:07:52.808165 2018] [cgi:error] [pid 23802] [client 197.251.191.247:57468] script not found or unable to stat: /usr/lib/cgi-bin/FormHandler.cgi
+[Thu Jul 19 00:07:54.944934 2018] [cgi:error] [pid 23805] [client 197.251.191.247:57476] script not found or unable to stat: /usr/lib/cgi-bin/FormMail.cgi
+[Thu Jul 19 00:07:57.301937 2018] [cgi:error] [pid 26416] [client 197.251.191.247:57484] script not found or unable to stat: /usr/lib/cgi-bin/guestbook.cgi
+[Thu Jul 19 00:07:59.819779 2018] [cgi:error] [pid 23834] [client 197.251.191.247:57494] script not found or unable to stat: /usr/lib/cgi-bin/help.cgi
+[Thu Jul 19 00:08:01.194750 2018] [cgi:error] [pid 23810] [client 197.251.191.247:57504] script not found or unable to stat: /usr/lib/cgi-bin/hi
+[Thu Jul 19 00:08:02.638623 2018] [cgi:error] [pid 23806] [client 197.251.191.247:57510] script not found or unable to stat: /usr/lib/cgi-bin/index.cgi
+[Thu Jul 19 00:08:03.993298 2018] [cgi:error] [pid 23803] [client 197.251.191.247:57518] script not found or unable to stat: /usr/lib/cgi-bin/index.pl
+[Thu Jul 19 00:08:05.374949 2018] [cgi:error] [pid 23798] [client 197.251.191.247:57524] script not found or unable to stat: /usr/lib/cgi-bin/index.sh
+[Thu Jul 19 00:08:06.738120 2018] [cgi:error] [pid 23793] [client 197.251.191.247:57536] script not found or unable to stat: /usr/lib/cgi-bin/mailit.pl
+[Thu Jul 19 00:08:08.155468 2018] [cgi:error] [pid 23792] [client 197.251.191.247:57540] script not found or unable to stat: /usr/lib/cgi-bin/mt
+[Thu Jul 19 00:08:09.561834 2018] [cgi:error] [pid 23802] [client 197.251.191.247:57548] script not found or unable to stat: /usr/lib/cgi-bin/mt
+[Thu Jul 19 00:08:11.103838 2018] [cgi:error] [pid 23805] [client 197.251.191.247:57554] script not found or unable to stat: /usr/lib/cgi-bin/mt-static
+[Thu Jul 19 00:08:12.476787 2018] [cgi:error] [pid 26416] [client 197.251.191.247:57558] script not found or unable to stat: /usr/lib/cgi-bin/mt-static
+[Thu Jul 19 00:08:13.743069 2018] [cgi:error] [pid 23834] [client 197.251.191.247:57564] script not found or unable to stat: /usr/lib/cgi-bin/ncbook
+[Thu Jul 19 00:08:15.242861 2018] [cgi:error] [pid 23810] [client 197.251.191.247:57570] script not found or unable to stat: /usr/lib/cgi-bin/quickstore.cgi
+[Thu Jul 19 00:08:16.505388 2018] [cgi:error] [pid 23806] [client 197.251.191.247:57576] script not found or unable to stat: /usr/lib/cgi-bin/search
+[Thu Jul 19 00:08:18.289053 2018] [cgi:error] [pid 23803] [client 197.251.191.247:57584] script not found or unable to stat: /usr/lib/cgi-bin/search.cgi
+[Thu Jul 19 00:08:19.733732 2018] [cgi:error] [pid 23798] [client 197.251.191.247:57590] script not found or unable to stat: /usr/lib/cgi-bin/search
+[Thu Jul 19 00:08:22.309201 2018] [cgi:error] [pid 23793] [client 197.251.191.247:57596] script not found or unable to stat: /usr/lib/cgi-bin/test.cgi
+[Thu Jul 19 00:08:29.891666 2018] [cgi:error] [pid 23792] [client 197.251.191.247:57610] script not found or unable to stat: /usr/lib/cgi-bin/test.sh
+[Thu Jul 19 00:08:34.823003 2018] [cgi:error] [pid 23802] [client 197.251.191.247:57634] script not found or unable to stat: /usr/lib/cgi-bin/test-cgi
+[Thu Jul 19 00:08:36.825476 2018] [cgi:error] [pid 23805] [client 197.251.191.247:57648] script not found or unable to stat: /usr/lib/cgi-bin/upload.cgi
+[Thu Jul 19 00:08:43.403308 2018] [cgi:error] [pid 26416] [client 197.251.191.247:57662] script not found or unable to stat: /usr/lib/cgi-bin/urlcount.cgi
+[Tue Jul 24 05:41:24.337799 2018] [ssl:error] [pid 11314] [client 178.79.128.185:43318] AH02042: rejecting client initiated renegotiation
+[Tue Jul 24 15:13:08.614667 2018] [ssl:error] [pid 10393] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname m3.mobisapp.net provided via HTTP are different
+[Fri Jul 27 20:23:32.082744 2018] [ssl:error] [pid 13588] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname m3.mobisapp.net provided via HTTP are different
+[Wed Aug 01 01:21:30.308421 2018] [ssl:error] [pid 31244] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname m3.mobisapp.net provided via HTTP are different
+[Thu Aug 02 20:57:21.886451 2018] [ssl:error] [pid 13142] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname m3.mobisapp.net provided via HTTP are different
+[Tue Aug 07 11:02:08.640967 2018] [ssl:error] [pid 1185] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname m3.mobisapp.net provided via HTTP are different
+[Sat Aug 11 08:15:54.457002 2018] [ssl:error] [pid 20883] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname m3.mobisapp.net provided via HTTP are different
+[Mon Aug 13 20:02:28.675197 2018] [ssl:error] [pid 21307] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname m3.mobisapp.net provided via HTTP are different
+[Fri Aug 17 16:51:35.500589 2018] [ssl:error] [pid 4332] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname m3.mobisapp.net provided via HTTP are different
+[Tue Aug 21 06:27:58.115903 2018] [ssl:error] [pid 543] [client 139.162.253.76:59322] AH02042: rejecting client initiated renegotiation
+[Tue Aug 21 23:32:20.776893 2018] [ssl:error] [pid 22026] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname m3.mobisapp.net provided via HTTP are different
+[Thu Aug 30 21:51:34.139597 2018] [ssl:error] [pid 15257] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Tue Sep 04 14:06:25.135248 2018] [ssl:error] [pid 7525] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Fri Oct 12 05:32:25.459812 2018] [ssl:error] [pid 3800] [client 213.32.72.159:55111] AH02042: rejecting client initiated renegotiation
+[Sat Oct 27 03:32:46.259861 2018] [ssl:error] [pid 4136] [client 139.162.172.241:54052] AH02042: rejecting client initiated renegotiation
+[Wed Nov 21 07:00:05.848426 2018] [ssl:error] [pid 27654] [client 217.182.143.96:55429] AH02042: rejecting client initiated renegotiation
+[Thu Nov 22 12:07:18.976881 2018] [ssl:error] [pid 16432] [client 139.162.184.185:42172] AH02042: rejecting client initiated renegotiation
+[Sat Dec 01 00:25:50.903360 2018] [ssl:error] [pid 32495] [client 217.182.143.97:38479] AH02042: rejecting client initiated renegotiation
+[Sun Dec 16 08:24:01.194626 2018] [ssl:error] [pid 2601] [client 139.162.176.220:34436] AH02042: rejecting client initiated renegotiation
+[Sat Jan 19 17:53:09.764426 2019] [core:error] [pid 6820] [client 54.82.124.116:53230] AH00126: Invalid URI in request t3 9.2.0.0
+[Sat Jan 19 20:03:53.336738 2019] [core:error] [pid 6706] [client 54.183.175.41:56822] AH00126: Invalid URI in request t3 9.2.0.0
+[Sat Jan 19 23:45:22.788463 2019] [core:error] [pid 21007] [client 54.87.155.167:36608] AH00126: Invalid URI in request t3 9.2.0.0
+[Sun Jan 20 02:49:56.593188 2019] [core:error] [pid 20422] [client 54.196.255.22:56768] AH00126: Invalid URI in request t3 9.2.0.0
+[Sun Jan 20 03:38:56.354022 2019] [core:error] [pid 20989] [client 3.80.126.75:50796] AH00126: Invalid URI in request t3 9.2.0.0
+[Thu Jan 24 09:31:09.366139 2019] [core:error] [pid 28759] [client 35.163.3.1:55720] AH00126: Invalid URI in request t3 9.2.0.0
+[Fri Jan 25 15:59:38.535958 2019] [cgi:error] [pid 13435] [client 195.22.22.21:52873] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Fri Jan 25 21:46:11.880982 2019] [ssl:error] [pid 25343] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Fri Jan 25 21:51:52.996791 2019] [ssl:error] [pid 25354] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Fri Jan 25 21:52:57.871996 2019] [ssl:error] [pid 22549] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Fri Jan 25 22:03:23.669704 2019] [ssl:error] [pid 25351] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 26 00:17:14.195310 2019] [ssl:error] [pid 25351] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 26 00:19:57.723135 2019] [ssl:error] [pid 22549] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 26 00:24:43.687810 2019] [ssl:error] [pid 27235] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 26 00:25:10.024296 2019] [ssl:error] [pid 32378] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 26 00:39:55.953493 2019] [ssl:error] [pid 25354] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 26 01:18:24.655225 2019] [ssl:error] [pid 25351] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 26 01:30:49.649363 2019] [ssl:error] [pid 32377] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 26 01:32:32.580634 2019] [ssl:error] [pid 32230] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 26 01:56:58.429939 2019] [ssl:error] [pid 32378] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Jan 26 02:11:42.695563 2019] [ssl:error] [pid 32230] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sun Jan 27 21:05:28.301532 2019] [ssl:error] [pid 18334] [client 149.202.184.216:51888] AH02042: rejecting client initiated renegotiation
+[Tue Jan 29 05:02:11.434750 2019] [authz_core:error] [pid 3892] [client 42.236.10.70:12974] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Thu Jan 31 17:54:59.235917 2019] [cgi:error] [pid 1482] [client 128.14.201.42:57193] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Fri Feb 01 21:40:53.447360 2019] [cgi:error] [pid 23277] [client 195.22.22.28:33418] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Mon Feb 04 22:26:55.391095 2019] [cgi:error] [pid 30769] [client 128.14.201.42:51352] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Tue Feb 05 05:19:42.860532 2019] [ssl:error] [pid 24909] [client 178.79.164.44:56752] AH02042: rejecting client initiated renegotiation
+[Wed Feb 13 01:34:34.733075 2019] [cgi:error] [pid 31021] [client 169.197.108.30:47524] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Wed Feb 13 15:56:27.701487 2019] [cgi:error] [pid 12528] [client 169.197.108.34:51072] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Sat Feb 16 09:56:49.591532 2019] [authz_core:error] [pid 22658] [client 180.163.220.47:18589] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Tue Feb 19 18:50:29.561898 2019] [authz_core:error] [pid 15380] [client 27.115.124.68:47870] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Wed Feb 20 11:19:36.238971 2019] [ssl:error] [pid 19233] [client 149.202.169.246:51313] AH02042: rejecting client initiated renegotiation
+[Thu Feb 21 02:19:22.305729 2019] [ssl:error] [pid 10486] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Thu Feb 21 02:43:48.657788 2019] [ssl:error] [pid 10445] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Thu Feb 21 03:48:03.600520 2019] [ssl:error] [pid 10470] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Feb 23 08:02:07.503105 2019] [ssl:error] [pid 21298] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Feb 23 08:56:02.455971 2019] [ssl:error] [pid 9458] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Feb 23 09:31:42.198716 2019] [ssl:error] [pid 9460] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Sat Feb 23 11:59:54.214275 2019] [ssl:error] [pid 13156] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Tue Feb 26 09:39:59.024674 2019] [ssl:error] [pid 6523] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Tue Feb 26 14:16:37.834654 2019] [ssl:error] [pid 15916] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Thu Mar 07 03:39:23.971313 2019] [cgi:error] [pid 12307] [client 198.20.103.178:47512] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Sat Mar 09 08:12:07.874687 2019] [authz_core:error] [pid 2640] [client 27.115.124.70:17435] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Mon Mar 11 14:57:27.699757 2019] [cgi:error] [pid 25941] [client 178.79.181.200:41840] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Tue Mar 12 14:58:04.041093 2019] [ssl:error] [pid 14572] [client 149.202.171.106:60612] AH02042: rejecting client initiated renegotiation
+[Tue Mar 12 21:39:28.450109 2019] [authz_core:error] [pid 26443] [client 27.115.124.6:6397] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Thu Mar 14 23:30:15.013576 2019] [cgi:error] [pid 6395] [client 169.197.108.6:60234] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Wed Mar 20 11:34:27.386467 2019] [ssl:error] [pid 11242] AH02032: Hostname 197.221.128.82:443 provided via SNI and hostname 197.221.128.82 provided via HTTP are different
+[Wed Mar 20 12:20:46.632425 2019] [authz_core:error] [pid 13043] [client 27.115.124.70:42431] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Wed Mar 20 23:40:21.854759 2019] [cgi:error] [pid 29972] [client 128.14.133.58:49578] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Fri Mar 22 17:40:24.164362 2019] [cgi:error] [pid 1013] [client 128.14.134.170:46802] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Tue Mar 26 18:38:30.441453 2019] [authz_core:error] [pid 17617] [client 27.115.124.70:16846] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Fri Mar 29 23:44:53.311576 2019] [authz_core:error] [pid 18711] [client 27.115.124.6:35590] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Mon Apr 01 16:14:03.526229 2019] [authz_core:error] [pid 3819] [client 27.115.124.70:51388] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Tue Apr 02 15:08:35.328017 2019] [ssl:error] [pid 20774] [client 213.32.72.110:43032] AH02042: rejecting client initiated renegotiation
+[Wed Apr 03 23:45:22.160437 2019] [ssl:error] [pid 29764] [client 149.202.170.250:40845] AH02042: rejecting client initiated renegotiation
+[Fri Apr 05 10:31:08.442902 2019] [ssl:error] [pid 10124] [client 139.162.207.173:35434] AH02042: rejecting client initiated renegotiation
+[Tue Apr 09 21:05:09.381870 2019] [cgi:error] [pid 8009] [client 128.14.134.134:56234] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Wed Apr 17 19:14:15.822275 2019] [cgi:error] [pid 17706] [client 107.6.150.242:38750] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Thu Apr 18 11:58:51.703586 2019] [cgi:error] [pid 25693] [client 198.20.103.178:58866] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Sat Apr 20 09:29:41.969352 2019] [authz_core:error] [pid 1388] [client 27.115.124.6:7193] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Tue Apr 23 07:46:05.899366 2019] [authz_core:error] [pid 4914] [client 27.115.124.6:48990] AH01630: client denied by server configuration: /var/www/mobisapp/server-status, referer: http://www.baidu.com
+[Tue Apr 23 18:07:41.803347 2019] [cgi:error] [pid 24228] [client 128.14.133.50:50716] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Tue Apr 23 23:21:01.690175 2019] [cgi:error] [pid 32334] [client 128.14.133.50:51964] script not found or unable to stat: /usr/lib/cgi-bin/config.exp
+[Thu Apr 25 00:34:04.479179 2019] [ssl:error] [pid 19533] [client 139.162.198.123:58642] AH02042: rejecting client initiated renegotiation

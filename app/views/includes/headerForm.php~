@@ -1,0 +1,142 @@
+<?
+/*@fileName: headerForm.php
+ *@date: 2014-09-14
+ *@author: Noah Nambale [namnoah@gmail.com]
+ *@description: 
+ *TODO
+ *
+ */
+ require_once('resources/common.php');
+ require_once('resources/includes/mail/class.phpmailer.php');
+ $cssfiles = array("resources/themes/admire/plugins/selectize/css/selectize.min.css",
+ 		"resources/themes/admire/library/bootstrap/css/bootstrap.min.css",
+ 		"resources/themes/admire/stylesheet/layout.min.css",
+ 		"resources/themes/admire/stylesheet/uielement.min.css",
+ 		"resources/themes/admire/plugins/datatables/css/jquery.datatables.min.css"
+ 		);
+ 		
+ $jsfiles = array("resources/themes/admire/library/modernizr/js/modernizr.min.js",
+ 		"resources/themes/admire/library/jquery/js/jquery.min.js",
+ 		"resources/themes/admire/library/jquery/js/jquery-migrate.min.js",
+ 		"resources/themes/admire/library/bootstrap/js/bootstrap.min.js",
+ 		"resources/themes/admire/library/core/js/core.min.js",
+ 		"resources/themes/admire/plugins/sparkline/js/jquery.sparkline.min.js",
+ 		"resources/themes/admire/javascript/app.min.js",
+ 		"resources/themes/admire/plugins/flot/jquery.flot.min.js",
+ 		"resources/themes/admire/plugins/flot/jquery.flot.categories.min.js",
+ 		"resources/themes/admire/plugins/flot/jquery.flot.tooltip.min.js",
+ 		"resources/themes/admire/plugins/flot/jquery.flot.resize.min.js",
+ 		"resources/themes/admire/plugins/flot/jquery.flot.spline.min.js",
+ 		"resources/themes/admire/plugins/selectize/js/selectize.min.js",
+ 		//"resources/themes/admire/javascript/pages/dashboard.js",
+ 		"resources/themes/admire/plugins/datatables/js/jquery.datatables.min.js",
+       		"resources/themes/admire/plugins/datatables/tabletools/js/tabletools.min.js",
+       		"resources/themes/admire/plugins/datatables/tabletools/js/zeroclipboard.js",        
+        	"resources/themes/admire/plugins/datatables/js/jquery.datatables-custom.min.js",
+       		"resources/themes/admire/javascript/tables/datatable.js",
+       		"resources/themes/admire/plugins/parsley/js/parsley.min.js",
+       		//"resources/themes/admire/javascript/forms/validation.js"
+ 		);
+ if(isset($css)){
+ 	foreach($css as $c)
+ 		array_push($cssfiles,$c);
+ }
+ if(isset($js)){
+ 	foreach($js as $j)
+ 		array_push($jsfiles,$j);
+ }
+ $theme = new themeProc("admire", $jsfiles, $cssfiles);
+ 
+$xajax;
+ if(isset($xajaxOn) && $xajaxOn === true){
+ 	require_once('includes/external/xajax_0.5/xajax_core/xajax.inc.php');
+ 	$xajax = new xajax();
+	$xajax->setFlag('debug',true);
+	if(isset($xjf)){
+		foreach($xjf as $path)
+			require_once($path);
+	}
+	$xajax->registerFunction("testXajax");
+	require_once('resources/xajax/common.php');
+	function testXajax(){
+		$res = new xajaxResponse();
+		$res->alert("Ajax was called");
+		return $res;
+	}
+	
+	$xajax->processRequest();
+ }
+?>
+
+<!DOCTYPE html>
+
+<html class="backend">
+    <!-- START Head -->
+    <head>
+        <!-- START META SECTION -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title><?=$lang['title']?></title>
+        <meta name="author" content="craneapps.com">
+        <meta name="description" content="INU System Developed by Noah and Team alias Elabman">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<base href="<?=base_url()?>">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="resources/themes/admire/image/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="resources/themes/admire/image/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="resources/themes/admire/image/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="resources/themes/admire/image/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="resources/themes/admire/image/favicon.ico">
+        <!--/ END META SECTION -->
+	<?php
+		if(isset($xajaxOn) && $xajaxOn === true){
+			$xajax->printJavascript(base_url().'includes/external/xajax_0.5');
+		}
+	?>
+        <!-- START STYLESHEETS -->
+        <!-- Plugins stylesheet : optional -->
+        <?=$theme->renderCSS()?>
+        <?=$theme->renderJs()?>
+        <script type="text/javascript" src="resources/includes/external/calendar/ng_all.js"></script>
+        <script type="text/javascript" language="javascript">
+        	function createDate(dateField){
+        		
+        		ng.ready(function () {
+        			$("#"+dateField).datepicker({
+        				
+        				changeMonth: true,
+        				changeYear: true,
+        				dateFormat: 'yy-mm-dd'
+   				 });	
+        		});
+        	}
+        	
+        	function createDOB(dateField){
+        		
+        		ng.ready(function () {
+        			$("#"+dateField).datepicker({
+        				
+        				changeMonth: true,
+        				changeYear: true,
+        				yearRange: '-100:-10',
+        				dateFormat: 'yy-mm-dd'
+   				 });	
+        		});
+        	}
+        	
+        </script>
+         <script type="text/javascript" src="resources/js/datatable_xajax.js"></script>
+         
+    </head>
+    <!--/ END Head -->
+     <!-- START Body -->
+    <body>
+        <!-- START Template Header -->
+     <? include_once('header.php');
+     	include_once('menu.php');
+     	include_once('breadcrumb.php');
+      	
+      ?>
+      <div id="status" class="alert alert-success"></div>
+      <div id="display_div">
+      
+      </div>

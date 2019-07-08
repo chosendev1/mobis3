@@ -1,0 +1,16 @@
+$(function(){
+/***********************
+ *organization configuration
+ ***********************/
+ 	$('#organizationSettings').submit(function(){
+ 		//alert("now submit called");
+ 		var url = $(this).attr('action');
+ 		var data = $(this).serialize();
+ 		$.post(url, data, function(o){
+ 			alert(o.status);
+ 			if(o.status == "success")
+ 				alert(o.link);//document.location = o.link;
+ 		}, 'json');
+ 		return false;
+ 	});
+});

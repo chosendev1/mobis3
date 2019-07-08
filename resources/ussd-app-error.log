@@ -1,0 +1,6 @@
+[19-Feb-2015 11:43:55 UTC] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: YES) in /home/craneapp/public_html/mobis/resources/includes/ussdapi/db.php on line 2
+[19-Feb-2015 14:46:55 Africa/Khartoum] PHP Fatal error:  Uncaught exception 'Exception' with message 'Some of the required parameters are not provided' in /home/craneapp/public_html/mobis/resources/includes/ussdapi/libs/MoUssdReceiver.php:40
+Stack trace:
+#0 /home/craneapp/public_html/mobis/resources/ussd.php(22): UssdReceiver->__construct()
+#1 {main}
+  thrown in /home/craneapp/public_html/mobis/resources/includes/ussdapi/libs/MoUssdReceiver.php on line 40

@@ -1,0 +1,4 @@
+<script language="javascript">
+	alert(1);
+	xajax_listUsers();
+</script>

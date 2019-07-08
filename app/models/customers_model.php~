@@ -1,0 +1,76 @@
+<?php
+class Customers_model extends CI_Model{
+	public function __construct(){
+		$this->load->database();
+	}
+	
+	/*public function get_news($slug = FALSE){
+		if($slug === FALSE){
+			$query = $this->db->get('news');
+			return $query->result_array();
+		}
+		$query = $this->db->get_where('news', array('slug' => $slug));
+		return $query->row_array();
+	}
+	
+	public function set_news(){
+		$this->load->helper('url');
+		$slug = url_title($this->input->post('title'),'dash',true);
+		$data = array(
+				'title' => $this->input->post('title'),
+				'slug' => $slug,
+				'text' => $this->input->post('text')
+			);
+			return $this->db->insert('news',$data);
+				
+	}*/
+	
+	public function uploadCustomers($company,$branch,$dbi){
+		try{
+			$n = 0;
+			if(count($dbi) > 0)
+				$n = count($dbi['fname']);
+			for($i=2;$i <= $n+1; ++$i){
+				$last_res = $this->db->query("select max(mem_no) as mem_no from member where branch_id='".$branch."'");
+				$branch_prefix = libinc::getItemById("branch",$branch,"branch_no","prefix"); 
+				$mem_no;
+				//echo($last_res->num_rows());
+				if($last_res->num_rows() > 0){
+					$last = $last_res->row();
+					$pre = strlen($branch_prefix);
+					$all = strlen($last->mem_no);
+					$num = $all - $pre;
+					preg_match("/(\d+){".$num."}/", $last->mem_no, $arg);
+					$last_no = $arg[1];
+					$mem_no = intval($last_no) + 1;
+					//echo($mem_no."--n".$num."--a".$all." --p".$pre."-- pre".$branch_prefix."<br />");
+					//print_r($arg);
+				}
+				else
+					$mem_no = 1;
+			
+				$mem_no = $branch_prefix. str_pad($mem_no, 7, "0", STR_PAD_LEFT);
+				
+				$dataArray = array("branch_no" 	=> $branch, 
+						"first_name" 	=> $dbi['fname'][$i], 
+						"last_name" 	=> $dbi['lname'][$i], 
+						"telno" 	=> $dbi['phone'][$i], 
+						"email"		=> $dbi['email'][$i], 
+						"address" 	=> $dbi['address'][$i], 
+						"kin" 		=> $dbi['kin'][$i], 
+						"kin_telno" 	=> $dbi['kinphone'][$i], 
+						"dob" 		=> $dbi['dob'][$i], 
+						"sex"		=> $dbi['sex'][$i],
+						"branch_id" 	=> $branch,
+						"mem_no" => $mem_no);
+				$q = $this->db->insert("member", $dataArray);
+				
+			}
+			return "success";
+		}
+		catch(Exception $ex){
+			return $ex->getMessage();
+		}
+	}
+}
+?>
